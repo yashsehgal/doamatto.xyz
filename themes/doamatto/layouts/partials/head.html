@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer, same-origin">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
+<link rel="icon" href="{{ .Site.Params.favicon }}">
+<link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz; img-src *; media-src *; font-src https://rsms.me">
+{{ if .Params.hidden }}
+  <meta name="robots" content="noindex">
+{{ else }}
+  <meta name="robots" content="all">
+{{ end }}
+<!-- SEO Start -->
+{% if .Params.title %}
+<title>{{ .Params.title }} - {{ .Site.Title }}</title>
+<meta name="twitter:title" content="{{ .Params.title }} - {{ .Site.Title }}">
+<meta property="og:title" content="{{ .Params.title }} - {{ .Site.Title }}">
+{% else %}
+<title>{{ .Site.Title }}</title>
+<meta name="twitter:title" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Site.Title }}">
+{% endif %}
+{% if .Summary != nil or != "" %}
+<meta name="description" content="{{ .Summary }}">
+<meta property="og:type" content="article">
+<meta property="og:description" content="{{ .Summary }}">
+<meta name="twitter:description" content="{{ .Summary }}">
+<meta name="twitter:card" content="summary">
+{% elsif .Params.description != nil or != "" %}
+<meta name="description" content="{{ .Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{{ .Params.description }}">
+<meta name="twitter:description" content="{{ .Params.description }}">
+<meta name="twitter:card" content="summary">
+{% elsif .Site.Params.description != nil or != "" %}
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta name="twitter:description" content="{{ .Site.Params.description }}">
+<meta name="twitter:card" content="summary">
+{% endif %}
+{% if .Params.social_image != nil or != "" %}
+<meta property="og:image" content="{{ .Params.social_image }}">
+<meta name="twitter:image" content="{{ .Params.social_image }}">
+{% else %}
+<meta property="og:image" content="{{ .Site.Params.logo }}">
+<meta name="twitter:image" content="{{ .Site.Params.logo }}">
+{% endif %}
+<meta name="twitter:creator" content="@doamatto">
+<meta name="author" content="{{ .Site.Author }}">
