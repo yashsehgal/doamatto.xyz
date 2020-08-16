@@ -1,0 +1,4 @@
+baseURL = "https://doamatto.xyz/"
+languageCode = "en-uk"
+title = "doamatto"
+theme = "doamatto"
