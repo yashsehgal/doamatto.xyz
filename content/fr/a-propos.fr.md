@@ -1,8 +1,9 @@
 ---
-layout: page
+type: page
 title: À propos moi
 description: Bonjour et bienvenue! Je m'appelle Matt. Je suis lycéen qui aime à créer un logiciel ce habilite autres faire des choses incroyables.
-translationKey: "about"
+translationKey: about
+slug: a-propos
 ---
 
 ## {{.Title}}

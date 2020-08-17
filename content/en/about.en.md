@@ -1,6 +1,7 @@
 ---
-layout: page
+type: page
 title: About me
+permalink: "/about"
 description: Hello and bienvenue! My name is Matt. I'm a high school student who loves to make software to empower others to do amazing things.
 translationKey: "about"
 ---
