@@ -3,10 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer, same-origin">
 
-{{ $options := (dict "targetPath" "assets/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "css/style.scss" | resources.ToCSS $options }}
-<link rel="stylesheet" href="{{ $style }}" type="text/css">
-<link rel="stylesheet" href="https://cdn.doamatto.xyz/inter.min.css" type="text/css">
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "main.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="https://cdn.doamatto.xyz/inter.min.css">
 
 {{ if isset .Site.Params "favicon" }}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
