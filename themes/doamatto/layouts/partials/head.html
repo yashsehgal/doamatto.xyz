@@ -16,40 +16,40 @@
   <meta name="robots" content="all">
 {{ end }}
 <!-- SEO Start -->
-{% if .Params.title %}
+{{ if .Params.title }}
 <title>{{ .Params.title }} - {{ .Site.Title }}</title>
 <meta name="twitter:title" content="{{ .Params.title }} - {{ .Site.Title }}">
 <meta property="og:title" content="{{ .Params.title }} - {{ .Site.Title }}">
-{% else %}
+{{ else }}
 <title>{{ .Site.Title }}</title>
 <meta name="twitter:title" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ .Site.Title }}">
-{% endif %}
-{% if .Summary != nil or != "" %}
+{{ endif }}
+{{ if .Summary != nil or != "" }}
 <meta name="description" content="{{ .Summary }}">
 <meta property="og:type" content="article">
 <meta property="og:description" content="{{ .Summary }}">
 <meta name="twitter:description" content="{{ .Summary }}">
 <meta name="twitter:card" content="summary">
-{% elsif .Params.description != nil or != "" %}
+{{ elsif .Params.description != nil or != "" }}
 <meta name="description" content="{{ .Params.description }}">
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ .Params.description }}">
 <meta name="twitter:description" content="{{ .Params.description }}">
 <meta name="twitter:card" content="summary">
-{% elsif .Site.Params.description != nil or != "" %}
+{{ elsif .Site.Params.description != nil or != "" }}
 <meta name="description" content="{{ .Site.Params.description }}">
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ .Site.Params.description }}">
 <meta name="twitter:description" content="{{ .Site.Params.description }}">
 <meta name="twitter:card" content="summary">
-{% endif %}
-{% if .Params.social_image != nil or != "" %}
+{{ endif }}
+{{ if .Params.social_image != nil or != "" }}
 <meta property="og:image" content="{{ .Params.social_image }}">
 <meta name="twitter:image" content="{{ .Params.social_image }}">
-{% else %}
+{{ else }}
 <meta property="og:image" content="{{ .Site.Params.logo }}">
 <meta name="twitter:image" content="{{ .Site.Params.logo }}">
-{% endif %}
+{{ endif }}
 <meta name="twitter:creator" content="@doamatto">
 <meta name="author" content="{{ .Site.Author }}">
