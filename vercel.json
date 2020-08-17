@@ -7,7 +7,7 @@
         "Strict-Transport-Security": "max-age=31536000;preload;includeSubDomains",
         "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
-        "X-XSS-Protection": "1"
+        "X-XSS-Protection": "1; mode=block"
       }
     }
   ]
