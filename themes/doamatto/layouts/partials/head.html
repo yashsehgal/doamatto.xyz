@@ -6,7 +6,10 @@
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $style := resources.Get "main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
-<link rel="stylesheet" href="https://cdn.doamatto.xyz/inter.min.css">
+<link rel="stylesheet"
+      href="https://cdn.doamatto.xyz/inter.min.css"
+      integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
+      crossorigin="anonymous">
 
 {{ if isset .Site.Params "favicon" }}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
