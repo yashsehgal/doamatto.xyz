@@ -1,4 +1,4 @@
-@use 'common.scss';
+@import 'common';
 
 html,
 body {
@@ -7,22 +7,30 @@ body {
   @supports (font-variation-settings: normal) { font-family: 'Inter var experimental', sans-serif; }
   font-family: 'Inter', sans-serif;
   font-display: swap;
+  margin: 0 auto;
 }
 
 .banner {
   height: 3em;
   padding: .25em;
   text-align: center;
-  @supports (font-variation-settings: normal) { font-variation-settings: @include common.font-bold; }
-  font-weight: @include common.font-bold;
+  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
+  font-weight: $font-bold;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 500px) {
     font-size: .9em;
     padding: .7em;
   }
   font-size: .95em;
-  & .blm {
+  &.blm {
     color: #fff;
     background: #000;
   }
+}
+
+.app {
+  margin: 1em 5em;
 }
