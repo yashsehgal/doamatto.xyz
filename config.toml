@@ -1,4 +1,26 @@
 baseURL = "https://doamatto.xyz/"
 languageCode = "en-uk"
 title = "doamatto"
-theme = "doamatto"
+
+canonifyURLs = true
+
+[Permalinks]
+  posts = "/posts/:filename/"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 10
+  [languages.fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    weight = 20
+
+[author]
+  name = "doamatto"
+  homepage = "https://doamatto.xyz"
+
+[Params]
+  favicon = "assets/logo.svg"
+  logo = "assets/logo.svg"
