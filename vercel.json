@@ -5,6 +5,7 @@
       "src": "/.*",
       "headers": {
         "Expect-CT": "max-age=86400, enforce",
+        "Referrer-Policy": "no-referrer",
         "Strict-Transport-Security": "max-age=31536000;preload;includeSubDomains",
         "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
