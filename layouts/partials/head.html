@@ -18,6 +18,9 @@
   crossorigin="anonymous"
   defer
 ></script>
+<script>
+  window.onload = () => { Sentry.init({ dsn: 'https://c1d0b70973744eca91cabf12f0853b6a@o424522.ingest.sentry.io/5356438' }); }
+</script>
 
 {{ if isset .Site.Params "favicon" }}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
@@ -25,7 +28,7 @@
 <link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}">
 {{ end }}
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; script-src https://browser.sentry-cdn.com; script-src-elem https://browser.sentry-cdn.com; block-all-mixed-content; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; script-src https://browser.sentry-cdn.com 'sha256-e410c5403ad5b9887011ca0d0cac579ece7c1c322ab30637f9a2af5de8a260b8'; script-src-elem https://browser.sentry-cdn.com 'sha256-e410c5403ad5b9887011ca0d0cac579ece7c1c322ab30637f9a2af5de8a260b8'; block-all-mixed-content; object-src 'none'; base-uri 'self'">
 
 {{ if .Params.hidden }}
 <meta name="robots" content="noindex">
