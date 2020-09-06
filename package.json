@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/doamatto/personal-site.git",
+  "author": "doamatto (Ronchetto, Matt) <hello@doamatto.xyz>",
+  "license": "BSD-3-Clause",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "https://github.com/flaganalytics/gulp-eslint.git",
+  }
+}
