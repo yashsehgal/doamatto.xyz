@@ -3,20 +3,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer, same-origin">
 
-{{ $options := (dict "targetPath" "assets/css/style.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet"
-      href="{{ $style.RelPermalink }}">
+href="{{ $.Site.BaseURL }}assets/css/main.css">
 <link rel="stylesheet"
-      href="https://cdn.doamatto.xyz/inter.min.css"
-      integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
-      crossorigin="anonymous">
+href="https://cdn.doamatto.xyz/inter.min.css"
+integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
+crossorigin="anonymous">
 
 <script
-  src="https://browser.sentry-cdn.com/5.22.3/bundle.tracing.min.js"
-  integrity="sha256-uIXoMloZWnwbTyHwjMjCc0Ef5EebHYa6Go0hSLxDxzI="
-  crossorigin="anonymous"
-  defer
+src="https://browser.sentry-cdn.com/5.22.3/bundle.tracing.min.js"
+integrity="sha256-uIXoMloZWnwbTyHwjMjCc0Ef5EebHYa6Go0hSLxDxzI="
+crossorigin="anonymous"
+defer
 ></script>
 <script>
   window.onload = () => { Sentry.init({ dsn: 'https://c1d0b70973744eca91cabf12f0853b6a@o424522.ingest.sentry.io/5356438' }); }
