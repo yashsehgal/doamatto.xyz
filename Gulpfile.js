@@ -64,7 +64,7 @@ function sasslint() {
 }
 
 function htmllint() {
-  return src('layouts/**/*.html', 'public/**/*.html')
+  return src('layouts/**/*.html')
     .pipe(htmlLint({fix: true}))
     .pipe(htmlLint.format())
     .pipe(htmlLint.failAfterError());
