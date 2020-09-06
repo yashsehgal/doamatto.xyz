@@ -1,14 +1,17 @@
 'use strict';
 
-const {src, parallel, series, dest} = require('gulp');
+const {src, parallel, series, dest, task, watch} = require('gulp');
 const eslint = require('gulp-eslint'),
   sassLint = require('gulp-sass-lint'),
   htmlLint = require('gulp-html-lint'),
   run = require('gulp-run'),
-  lec = require('gulp-line-ending-corrector');
+  lec = require('gulp-line-ending-corrector'),
+  sass = require('gulp-dart-sass'),
+  sourcemaps = require('gulp-sourcemaps');
 
 exports.lint = lint;
 exports.sasslint = sasslint;
+exports.sass = sasscompile;
 exports.htmllint = htmllint;
 exports.lecfix = lecFix;
 exports.default = series(
@@ -17,9 +20,24 @@ exports.default = series(
     lint,
     sasslint
   ),
-  hugobuild,
+  parallel(
+    hugobuild,
+    sasscompile
+  ),
   htmllint
 );
+
+task('sass:watch', function () {
+  watch('./sass/**/*.scss', ['sass']);
+});
+
+function sasscompile() {
+  return src('./assets/scss/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(dest('./public/assets/css'));
+}
 
 function lecFix() {
   return src(['**/*.*', '!node_modules/**'])
@@ -36,14 +54,18 @@ function lint() {
 
 function sasslint() {
   return src('assets/scss/**/*.scss')
-    .pipe(sassLint())
+    .pipe(sassLint({
+      "empty-line-between-blocks": {
+        "include": "true"
+      }
+    }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
 }
 
 function htmllint() {
   return src('layouts/**/*.html', 'public/**/*.html')
-    .pipe(htmlLint())
+    .pipe(htmlLint({fix: true}))
     .pipe(htmlLint.format())
     .pipe(htmlLint.failAfterError());
 }
