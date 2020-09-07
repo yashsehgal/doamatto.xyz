@@ -6,26 +6,29 @@ body {
   background: $l-bg;
   color: $l-text;
   @supports (font-variation-settings: normal) { font-family: 'Inter var experimental', sans-serif; }
-  font-family: 'Inter', sans-serif;
   font-display: swap;
+  font-family: 'Inter', sans-serif;
   margin: 0 auto;
 }
 
 .banner {
+  align-items: center;
+  display: flex;
+  font-size: .95em;
+  font-weight: $font-bold;
   height: 3em;
+  justify-content: center;
   padding: .25em;
   text-align: center;
-  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
-  font-weight: $font-bold;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
+
   @media (max-width: 500px) {
     font-size: .9em;
     padding: .7em;
   }
-  font-size: .95em;
+
+  // A BLM variant
   &.blm {
     background: $blm-bg;
     color: $blm-text;
