@@ -14,7 +14,7 @@ hugo -D --i18n-warnings
 
 When testing, ensure you use the following command:
 ```sh
-hugo server -v -w --i18n-warnings
+hugo server -v -w --i18n-warnings --renderToDisk
 ```
 
 ### Testing and CI/CD Utilities
