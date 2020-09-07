@@ -6,8 +6,6 @@ translationKey: about
 slug: a-propos
 ---
 
-## {{.Title}}
-
 **Bonjour et bienvenue! Je m'appelle Matt.**
 
 Je suis lycéen qui aime à créer un logiciel ce habilite autres faire des choses incroyables.
@@ -19,7 +17,7 @@ En dehors de développement de logiciels, J'aime aussi faire du conception graph
 Je suis en train de travaillant sur contrat comme un développeur web et développeur de jeu avec [Glitch Entertainment](https://glitchbeta.doamatto.xyz). Autrefois, J'ai travaillé avec les entreprises suivantes:
 
 - [Glitch Entertainment](https://playglitch.xyz) (2020-Présent, Développeur Web et développeur en ligne principal)
-- [Mello](https://github.com/mello-app) (2020-Présent, Fondateur, Développeur Backend / API)
+- [Mello](https://github.com/mello-app) (2020-Présent, Fondateur, Développeur Frontend / Web)
 - [Pandemic Engineers](https://github.com/Pandemic-Engineers) (2020-2020)
 - [Knox Software (formerly Knox, Corp.)](https://github.com/knoxsoftware) (2018-2019, PDG et développeur principal)
 
