@@ -1,6 +1,22 @@
 @use 'common' as *;
 @use 'colour' as *;
 
+@mixin nav {
+  display: flex;
+  flex: 0 0 auto;
+  text-align: center;
+
+  li, a { background: none; }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: .25em;
+    padding: .25em;
+  }
+}
+
 html,
 body {
   background: $l-pagebg;
@@ -43,8 +59,8 @@ body {
   a {
     background-image: linear-gradient(
       transparent 0%,
-      transparent calc(50% - 4px),
-      $head-l calc(50% - 4px),
+      transparent calc(50% - 3px),
+      $head-l calc(50% - 3px),
       $head-d 100%
     );
     background-size: 100% 200%;
@@ -77,35 +93,39 @@ body {
       &:hover { text-decoration: underline; }
     }
 
-    ul {
-      display: flex;
-      flex: 0 0 auto;
-      text-align: center;
+    ul { @include nav; }
+  }
 
-      li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        list-style: none;
-        margin: .25em;
-        padding: .25em;
-      }
+  footer {
+    text-align: center;
+    p { margin: .3em; }
+    a {
+      background: none;
+      padding: .25em;
+      text-decoration: underline;
+    }
+  }
+
+  blockquote {
+    background: $block-bg;
+    border-left: 4px solid $head-l;
+    color: $block-text;
+    margin-bottom: 1em;
+    margin-left: 1vw;
+    margin-top: .5em;
+    padding: 1vh;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 { padding: 1.5vh .5vh .25vh 1vh; }
+  }
+
+  ul, ol {
+    li {
+      padding: .15em 0;
     }
   }
 }
 
-blockquote {
-  background: $block-bg;
-  border-left: 4px solid $head-l;
-  color: $block-text;
-  margin-bottom: 1em;
-  margin-left: 1vw;
-  margin-top: .5em;
-  padding: 1vh;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 { padding: 1.5vh .5vh .25vh 1vh; }
-}

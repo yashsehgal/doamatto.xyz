@@ -28,6 +28,19 @@ DefaultContentLanguage = "en"
       url = "/contact"
       name = "Contact"
       weight = 3
+
+    [[languages.en.menu.foot]]
+      url = "/imprint"
+      name = "Imprint."
+      weight = 1
+    [[languages.en.menu.foot]]
+      url = "/privacy"
+      name = "Privacy."
+      weight = 2
+    [[languages.en.menu.foot]]
+      url = "/sitemap"
+      name = "Sitemap."
+      weight = 1
   [languages.fr]
     languageCode = "fr"
     languageName = "Français"
