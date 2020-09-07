@@ -1,6 +1,7 @@
 baseURL = "https://testing.doamatto.xyz/"
 languageCode = "en-uk"
 title = "doamatto"
+contentDir = "content"
 
 canonifyURLs = true
 relativeURLs = true
