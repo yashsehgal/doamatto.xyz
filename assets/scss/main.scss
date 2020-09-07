@@ -1,6 +1,5 @@
 @use 'common' as *;
 @use 'colour' as *;
-@use 'animations' as animations;
 
 html,
 body {
@@ -47,7 +46,12 @@ header {
   justify-content: space-between;
   a {
     h1 {
-      @include animations.link;
+      background-image: linear-gradient(
+        transparent 0%,
+        transparent calc(50% - 4px),
+        $head-l calc(50% - 4px),
+        $head-d 100%
+        );
       font-weight: $font-bold;
       @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
     }
