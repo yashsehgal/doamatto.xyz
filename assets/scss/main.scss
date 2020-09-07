@@ -78,3 +78,19 @@ header {
     }
   }
 }
+
+blockquote {
+  background: $block-bg;
+  border-left: 4px solid $head-l;
+  color: $block-text;
+  margin-bottom: 1em;
+  margin-left: 1vw;
+  margin-top: .5em;
+  padding: 1vh;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { padding: 1.5vh .5vh .25vh 1vh; }
+}
