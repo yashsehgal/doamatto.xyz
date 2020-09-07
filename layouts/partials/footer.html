@@ -1,7 +1,7 @@
 <footer>
-  <p> &copy; 2019-2020 doamatto. </p>
-  {{- $currentPage := . -}}
-  {{ range .Site.Menus.foot -}}
-  <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-  {{- end }}
+    <p> &copy; 2019-2020 doamatto. </p>
+    {{- $currentPage := . -}}
+    {{ range .Site.Menus.foot -}}
+    <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{- end }}
 </footer>
