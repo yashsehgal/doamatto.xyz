@@ -10,15 +10,6 @@ href="https://cdn.doamatto.xyz/inter.min.css"
 integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
 crossorigin="anonymous">
 
-<script
-src="https://browser.sentry-cdn.com/5.22.3/bundle.tracing.min.js"
-integrity="sha256-uIXoMloZWnwbTyHwjMjCc0Ef5EebHYa6Go0hSLxDxzI="
-crossorigin="anonymous"
-defer
-></script>
-<script>
-    window.onload = () => { Sentry.init({ dsn: 'https://c1d0b70973744eca91cabf12f0853b6a@o424522.ingest.sentry.io/5356438' }); }
-</script>
 
 {{ if isset .Site.Params "favicon" }}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
@@ -26,7 +17,7 @@ defer
 <link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}">
 {{ end }}
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; script-src https://browser.sentry-cdn.com 'sha256-5BDFQDrVuYhwEcoNDKxXns58HDIqswY3+aKvXeiiYLg='; script-src-elem https://browser.sentry-cdn.com 'sha256-5BDFQDrVuYhwEcoNDKxXns58HDIqswY3+aKvXeiiYLg='; block-all-mixed-content; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; base-uri 'self'">
 
 {{ if .Params.hidden }}
 <meta name="robots" content="noindex">
