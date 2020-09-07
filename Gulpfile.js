@@ -27,8 +27,9 @@ exports.default = series(
   htmllint
 );
 
-task('sass:watch', function () {
-  watch('./sass/**/*.scss', ['sass']);
+task('sass:watch', () => {
+  sasscompile();
+  watch('./assets/scss/**/*.scss', series('sass'));
 });
 
 function sasscompile() {
