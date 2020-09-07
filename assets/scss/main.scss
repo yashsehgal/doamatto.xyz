@@ -1,9 +1,10 @@
-@import 'common';
+@use 'common' as *;
+@use 'colour' as *;
 
 html,
 body {
-  background: #968f7e;
-  color: #fff;
+  background: $l-bg;
+  color: $l-text;
   @supports (font-variation-settings: normal) { font-family: 'Inter var experimental', sans-serif; }
   font-family: 'Inter', sans-serif;
   font-display: swap;
@@ -26,8 +27,8 @@ body {
   }
   font-size: .95em;
   &.blm {
-    color: #fff;
-    background: #000;
+    background: $blm-bg;
+    color: $blm-text;
   }
 }
 
