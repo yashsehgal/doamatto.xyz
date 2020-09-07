@@ -3,19 +3,46 @@ languageCode = "en-uk"
 title = "doamatto"
 
 canonifyURLs = true
+relativeURLs = true
+
+DefaultContentLanguage = "en"
 
 [Permalinks]
   posts = "/posts/:filename/"
 
 [languages]
   [languages.en]
-    contentDir = "content/en"
+    languageCode = "en"
     languageName = "English"
-    weight = 10
+    weight = 1
+    [[languages.en.menu.nav]]
+      url = "/about"
+      name = "About"
+      weight = 1
+    [[languages.en.menu.nav]]
+      url = "/projects"
+      name = "Projects"
+      weight = 2
+    [[languages.en.menu.nav]]
+      url = "/contact"
+      name = "Contact"
+      weight = 3
   [languages.fr]
-    contentDir = "content/fr"
+    languageCode = "fr"
     languageName = "Français"
-    weight = 20
+    weight = 1
+    [[languages.fr.menu.nav]]
+      url = "/a-propos"
+      name = "À propos"
+      weight = 1
+    [[languages.fr.menu.nav]]
+      url = "/projets"
+      name = "Projets"
+      weight = 2
+    [[languages.fr.menu.nav]]
+      url = "/contact"
+      name = "Contact"
+      weight = 3
 
 [Params]
   author = "doamatto"
