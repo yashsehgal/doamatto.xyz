@@ -1,9 +1,10 @@
 @use 'common' as *;
 @use 'colour' as *;
+@use 'animations' as animations;
 
 html,
 body {
-  background: $l-bg;
+  background: $l-pagebg;
   color: $l-text;
   @supports (font-variation-settings: normal) { font-family: 'Inter var experimental', sans-serif; }
   font-display: swap;
