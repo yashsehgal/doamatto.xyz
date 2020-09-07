@@ -3,14 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer, same-origin">
 
-{{ $options := (dict "targetPath" "assets/css/style.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet"
-      href="{{ $style.RelPermalink }}">
+href="{{ $.Site.BaseURL }}assets/css/main.css">
 <link rel="stylesheet"
-      href="https://cdn.doamatto.xyz/inter.min.css"
-      integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
-      crossorigin="anonymous">
+href="https://cdn.doamatto.xyz/inter.min.css"
+integrity="sha384-qEZA/KrtbBoR2bh9+JzkzK+WdD0MRAHQ+GH+ABOTVhBeelVv3LjyMeGXXpmSvoGv"
+crossorigin="anonymous">
+
 
 {{ if isset .Site.Params "favicon" }}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
@@ -18,7 +17,7 @@
 <link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}">
 {{ end }}
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests;  block-all-mixed-content; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; base-uri 'self'">
 
 {{ if .Params.hidden }}
 <meta name="robots" content="noindex">
