@@ -17,10 +17,7 @@ canonifyURLs = true
     languageName = "Français"
     weight = 20
 
-[author]
-  name = "doamatto"
-  homepage = "https://doamatto.xyz"
-
 [Params]
+  author = "doamatto"
   favicon = "assets/logo.svg"
   logo = "assets/logo.svg"
