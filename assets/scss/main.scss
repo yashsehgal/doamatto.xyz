@@ -44,7 +44,12 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+
   a {
+    color: $l-text;
+    text-decoration: none;
+    transition: 250ms text-decoration;
+
     h1 {
       background-image: linear-gradient(
         transparent 0%,
@@ -55,22 +60,21 @@ header {
       font-weight: $font-bold;
       @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
     }
-    color: $l-text;
-    transition: 250ms text-decoration;
-    text-decoration: none;
     &:hover { text-decoration: underline; }
   }
+
   ul {
     display: flex;
     flex: 0 0 auto;
     text-align: center;
+
     li {
-      margin: .25em;
-      padding: .25em;
       display: flex;
       flex-direction: column;
-      list-style: none;
       justify-content: center;
+      list-style: none;
+      margin: .25em;
+      padding: .25em;
     }
   }
 }
