@@ -20,8 +20,7 @@ hugo server -v -w --i18n-warnings --renderToDisk
 ### Testing and CI/CD Utilities
 The following tools are installed for testing purposes:
 > - SCSS Linting,
-> - HTML linting,
-> - Markdown linting, and:
+> - HTML linting, and:
 > - a General Hugo build test.
 
 These are deployed in two ways: (1) as GitHub actions for CI/CD purposes, and (2) as a Gulp script.
