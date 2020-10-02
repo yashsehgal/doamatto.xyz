@@ -1,4 +1,4 @@
-name: "Gulp Lint/Build Test"
+name: "CI"
 
 on:
   push:
@@ -8,12 +8,16 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-18.04  
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1.4.2
-      
+    - name: Hugo setup
+      uses: peaceiris/actions-hugo@v2.4.12
+      with:
+        extended: true
+
     - name: Install Deps
       run: |
         yarn
