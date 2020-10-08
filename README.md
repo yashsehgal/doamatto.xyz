@@ -1,5 +1,5 @@
 # Personal Site
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doamatto_personal-site&metric=alert_status)](https://sonarcloud.io/dashboard?id=doamatto_personal-site)![Gulp Lint/Build Test](https://github.com/doamatto/personal-site/workflows/Gulp%20Lint/Build%20Test/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doamatto_personal-site&metric=alert_status)](https://sonarcloud.io/dashboard?id=doamatto_personal-site)![CI](https://github.com/doamatto/personal-site/workflows/CI/badge.svg)
 
 This utilises:
 - **Hugo** for page compilation,
