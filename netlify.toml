@@ -21,3 +21,9 @@
   status = 302
   force = false
   conditions = {Language = ["fr"]}
+
+[context.production.environment]
+  HUGO_VERSION = "0.74.3"
+  
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.74.3"
