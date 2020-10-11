@@ -1,0 +1,16 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Security-Policy = "default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; base-uri 'self'"
+    Expect-CT = "max-age=86400, enforce"
+    Feature-Policy = "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-get 'none'; sync-xhr 'none'; usb 'none';xr-spatial-tracking 'none'"
+    Permissions-Policy = "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-get 'none'; sync-xhr 'none'; usb 'none';xr-spatial-tracking 'none'"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = "max-age=31536000;preload;includeSubDomains"
+    Vary = "Origin"
+    X-Content-Security-Policy = "default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; base-uri 'self'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = DENY
+    X-WebKit-CSP = "default-src 'none'; style-src 'self' https://cdn.doamatto.xyz/inter.min.css; img-src *; media-src *; font-src https://rsms.me; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; base-uri 'self'"
+    X-XSS-Protection = "1; mode=block"
