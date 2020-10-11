@@ -1,5 +1,5 @@
 # Personal Site
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doamatto_personal-site&metric=alert_status)](https://sonarcloud.io/dashboard?id=doamatto_personal-site)![CI](https://github.com/doamatto/personal-site/workflows/CI/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doamatto_personal-site&metric=alert_status)](https://sonarcloud.io/dashboard?id=doamatto_personal-site)![CI](https://github.com/doamatto/personal-site/workflows/CI/badge.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/6ededc64-3c3c-4738-a0ed-d5dd5f4b7473/deploy-status)](https://app.netlify.com/sites/quirky-hugle-b222b5/deploys)
 
 This utilises:
 - **Hugo** for page compilation,
