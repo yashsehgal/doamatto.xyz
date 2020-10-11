@@ -3,7 +3,7 @@
 
 This utilises:
 - **Hugo** for page compilation,
-- **Vercel/Zeit Now** for hosting, and:
+- **Netlify** for hosting, and:
 - **GitHub Actions** for linting and code quality.
 
 ### Building
