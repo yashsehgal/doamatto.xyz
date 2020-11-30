@@ -12,7 +12,7 @@
     "eslint-plugin-standard": "4.1.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "1.0.2",
-    "gulp-eslint": "https://github.com/doamatto/gulp-eslint.git#v6.2.2",
+    "gulp-eslint": "https://github.com/doamatto/gulp-eslint.git#v6.2.3",
     "gulp-html-lint": "0.0.2",
     "gulp-line-ending-corrector": "1.0.3",
     "gulp-run": "1.7.1",
