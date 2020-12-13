@@ -1,23 +1,17 @@
 {
-  "repository": "https://github.com/doamatto/personal-site.git",
-  "author": "doamatto (Ronchetto, Matt) <hello@doamatto.xyz>",
-  "license": "BSD-3-Clause",
-  "private": false,
-  "devDependencies": {
-    "eslint": "7.15.0",
-    "eslint-config-standard": "16.0.2",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.1.0",
-    "gulp": "4.0.2",
-    "gulp-dart-sass": "1.0.2",
-    "gulp-eslint": "https://github.com/doamatto/gulp-eslint.git#v6.2.4",
-    "gulp-html-lint": "0.0.2",
-    "gulp-line-ending-corrector": "1.0.3",
-    "gulp-run": "1.7.1",
-    "gulp-sass-lint": "1.4.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-util": "3.0.8"
+  "name": "doamatto.xyz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^10.0.0",
+    "next-seo": "^4.17.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.30.0"
   }
 }

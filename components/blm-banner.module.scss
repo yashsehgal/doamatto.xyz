@@ -1,0 +1,17 @@
+.banner {
+  height: 3em;
+  padding: .25em;
+  background: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  @media(max-width: 500px) {
+    font-size: .9em;
+    padding: .7em;
+  }
+  font-size: .95em;
+}
