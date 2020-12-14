@@ -13,5 +13,12 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.30.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "unified": "^9.2.0",
+    "uuid": "^8.3.2"
   }
 }
