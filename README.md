@@ -3,7 +3,6 @@
 
 This utilises:
 - **Next.js** for page compilation,
-- **Tailwind/PostCSS** for styling,
 - **Vercel** for hosting,
 - **GitHub Actions/SonarCloud** for code quality, and:
 - **Next.js Analytics** (subject to change) for testing
