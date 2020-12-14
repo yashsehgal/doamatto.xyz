@@ -3,6 +3,9 @@ import App from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import '../styles/globals.css'; // global stylesheet
 
+import dynamic from 'next/dynamic'
+const BLM_Banner = dynamic(() => import('../components/blm-banner'))
+
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -21,6 +24,7 @@ export default class MyApp extends App {
             cardType: 'summary',
           }}
         />
+        <BLM_Banner />
         <Component {...pageProps} />
       </React.Fragment>
     )

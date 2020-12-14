@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
 const Navigation = dynamic(() => import('../components/nav'))
-const BLM_Banner = dynamic(() => import('../components/blm-banner'))
-
 
 export default function Home() {
   return (
@@ -13,8 +10,6 @@ export default function Home() {
         <title>doamatto.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <BLM_Banner />
       <Navigation />
       <main>
         <h1 className="title">
