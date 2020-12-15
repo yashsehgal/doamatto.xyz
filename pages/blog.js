@@ -6,11 +6,11 @@ function IndexPage(props) {
         <div>
             <h1>Posts</h1>
             <ul>
-                {props.blogs.map((blog, idx) => {
+                {props.blogs.map((blog) => {
                     return(
                         <li key={blog.id}>
                             <Link href={`/blog/${blog.slug}`}>
-                                <a>{blog.title}</a>
+                                <a>{blog.date}<br />{blog.title}</a>
                             </Link>
                         </li>
                     )
