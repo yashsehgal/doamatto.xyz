@@ -1,17 +1,14 @@
 import styles from './nav.module.scss'
+import Logo from './logo-embed'
 
 export default function Navigation() {
     return (
         <header className={styles.header}>
             <h1 className="logo">
                 <a href="/" rel="Home button" title="Home">
-                    <img 
-                        src="/assets/logo.svg"
-                        alt="Home Button"
-                        className="image"
-                        width="100"
-                        height="100"
-                    />
+                    {
+                    <Logo />
+                    }
                 </a>
             </h1>
             <nav className={styles.nav}>
