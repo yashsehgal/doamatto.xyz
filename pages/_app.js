@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import '../styles/globals.scss'; // global stylesheet
 
@@ -25,6 +26,11 @@ export default class MyApp extends App {
             cardType: 'summary',
           }}
         />
+        <Head>
+          <link rel="icon" href="/assets/logo.svg"/>
+          <link rel="shortcut icon" href="/assets/logo.svg"/>
+          <link rel="apple-touch-icon" href="/assets/logo-bg.svg"/>
+        </Head>
         <BLM_Banner />
         <Component {...pageProps} className="container" />
         <Footer />

@@ -8,7 +8,6 @@ export default function Home() {
     <>
       <Head>
         <title>doamatto.</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
       <main>
