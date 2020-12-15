@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './nav.module.scss'
 
 export default function Navigation() {
@@ -6,11 +5,12 @@ export default function Navigation() {
         <header className={styles.header}>
             <h1 className="logo">
                 <a href="/" rel="Home button" title="Home">
-                    <Image 
+                    <img 
                         src="/assets/logo.svg"
                         alt="Home Button"
-                        width={100}
-                        height={100}
+                        className="image"
+                        width="100"
+                        height="100"
                     />
                 </a>
             </h1>
