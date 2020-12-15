@@ -5,13 +5,21 @@
     height: 100px;
     padding-left: 16px;
     font-size: 14px;
+
+    h1 {
+        margin: 0;
+    }
     
     .nav {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+
         ul {
             flex: 0 0 auto;
             text-align: left;
             display: flex;
-            margin-top: 2.5em;
             
             li {
                 list-style: none;
@@ -37,4 +45,9 @@
             :last-child a { padding-right: 0; }
         }
     }
+}
+
+.image {
+    width: 100px;
+    height: 100px;
 }
