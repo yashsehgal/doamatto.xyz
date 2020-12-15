@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import { DefaultSeo } from 'next-seo';
-import '../styles/globals.css'; // global stylesheet
+import '../styles/globals.scss'; // global stylesheet
 
 import dynamic from 'next/dynamic'
 const BLM_Banner = dynamic(() => import('../components/blm-banner'))
