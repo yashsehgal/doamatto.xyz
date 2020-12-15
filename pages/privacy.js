@@ -24,42 +24,44 @@ export default function Home() {
                         <td>Example of data</td>  
                     </tr>
                 </thead>
-                <tr>
-                    <td>Page</td>
-                    <td>/blog/[slug]</td>
-                </tr>
-                <tr>
-                    <td>URL</td>
-                    <td>/blog/test-post</td>
-                </tr>
-                <tr>
-                    <td>Network speed</td>
-                    <td>4g (or slow-2g, 2g, 3g, 5g)</td>
-                </tr>
-                <tr>
-                    <td>Browser</td>
-                    <td>Chrome 86 (Blink)</td>
-                </tr>
-                <tr>
-                    <td>Device type</td>
-                    <td>Mobile (or Desktop/Tablet)</td>
-                </tr>
-                <tr>
-                    <td>Device OS</td>
-                    <td>Android 10</td>
-                </tr>
-                <tr>
-                    <td>Country (ISO 3166-1)</td>
-                    <td>US</td>
-                </tr>
-                <tr>
-                    <td>Web vital</td>
-                    <td>FCP 1.0s</td>
-                </tr>
-                <tr>
-                    <td>Server-receieved event time</td>
-                    <td>2020-10-29 09:06:30</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Page</td>
+                        <td>/blog/[slug]</td>
+                    </tr>
+                        <tr>
+                            <td>URL</td>
+                            <td>/blog/test-post</td>
+                        </tr>
+                        <tr>
+                            <td>Network speed</td>
+                            <td>4g (or slow-2g, 2g, 3g, 5g)</td>
+                        </tr>
+                        <tr>
+                            <td>Browser</td>
+                            <td>Chrome 86 (Blink)</td>
+                        </tr>
+                        <tr>
+                            <td>Device type</td>
+                            <td>Mobile (or Desktop/Tablet)</td>
+                        </tr>
+                        <tr>
+                            <td>Device OS</td>
+                            <td>Android 10</td>
+                        </tr>
+                        <tr>
+                            <td>Country (ISO 3166-1)</td>
+                            <td>US</td>
+                        </tr>
+                        <tr>
+                            <td>Web vital</td>
+                            <td>FCP 1.0s</td>
+                        </tr>
+                        <tr>
+                        <td>Server-receieved event time</td>
+                        <td>2020-10-29 09:06:30</td>
+                    </tr>
+                </tbody>
             </table> 
         </p>
         <h3>Why is this data collected?</h3>

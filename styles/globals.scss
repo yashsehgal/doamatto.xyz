@@ -44,3 +44,18 @@ main {
     line-height: 1.5;
     font-size: 1.5rem;
 }
+
+table {
+    background: white;
+    color: black;
+    border-collapse: collapse;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 75%;
+    thead tr {
+        background: #909EFF !important;
+    }
+    tbody tr:nth-of-type(odd) {
+        background: #E4DEFF;
+    }
+}
