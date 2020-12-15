@@ -5,6 +5,7 @@ import '../styles/globals.scss'; // global stylesheet
 
 import dynamic from 'next/dynamic'
 const BLM_Banner = dynamic(() => import('../components/blm-banner'))
+const Footer = dynamic(() => import('../components/footer'))
 
 export default class MyApp extends App {
   render() {
@@ -25,7 +26,8 @@ export default class MyApp extends App {
           }}
         />
         <BLM_Banner />
-        <Component {...pageProps} />
+        <Component {...pageProps} className="container" />
+        <Footer />
       </React.Fragment>
     )
   }
