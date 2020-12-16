@@ -20,7 +20,7 @@ body {
     max-width: 42rem;
     margin: 0 auto 1rem auto;
     @media (min-width: 1200px) {
-        max-width: 84rem;
+        max-width: 72rem;
     }
 }
 
@@ -63,4 +63,8 @@ table {
     tbody tr:nth-of-type(odd) {
         background: #E4DEFF;
     }
+}
+
+.container {
+    margin: auto 1rem;
 }
