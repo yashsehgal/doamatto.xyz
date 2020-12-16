@@ -57,11 +57,19 @@ table {
     margin: 1rem auto;
     width: 100%;
     max-width: 75%;
-    thead tr {
-        background: #909EFF !important;
+    thead td, tbody td {
+        border: 1px solid black;
+        padding: .5rem;
     }
-    tbody tr:nth-of-type(odd) {
-        background: #E4DEFF;
+    thead tr {
+        background: #E4DEFF !important;
+        border-bottom: 1px solid black;
+    }
+    tbody {
+        td { padding: .5rem; }
+        tr:nth-of-type(even) {
+            background: rgb(209, 209, 209);
+        }
     }
 }
 
