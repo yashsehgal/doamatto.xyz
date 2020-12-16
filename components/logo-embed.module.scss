@@ -1,0 +1,6 @@
+.logo path {
+    @media (prefers-color-scheme: 'dark') {
+        stroke: white;
+    }
+    transition: 250ms ease-in-out all;
+}
