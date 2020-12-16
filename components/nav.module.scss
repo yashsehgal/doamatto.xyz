@@ -40,7 +40,7 @@
                     text-decoration: none;
                     transition: all 150ms ease-in-out;
                     @media (min-width: 500px) {
-                        background-image: linear-gradient(transparent 0%, transparent calc(50% - 3px), #bac1ee calc(50% - 3px), #929de2 100%);
+                        background-image: linear-gradient(transparent 0%, transparent calc(50% - 3px), #929de2 calc(50% - 3px), #929de2 100%);
                         background-position: 0 0;
                         background-size: 100% 225%;
                         color: inherit;
