@@ -1,5 +1,10 @@
 import React from 'react'
 
+import styles from './[slug].module.scss'
+
+import dynamic from 'next/dynamic'
+const Navigation = dynamic(() => import('../../components/nav'))
+
 /**
   * Major thanks to this Dev.to post:
   * https://dev.to/sagar/building-a-blog-with-next-js-253
@@ -7,12 +12,15 @@ import React from 'react'
 
 function BlogPostPage(props) {
     return(
-        <div>
-            <h1>{props.blog.title}</h1>
-            <section dangerouslySetInnerHTML={{
-                __html: props.blog.content
-            }} />
-        </div>
+        <>
+            <Navigation />
+            <div>
+                <h1 className={styles.header}>{props.blog.title}</h1>
+                <section dangerouslySetInnerHTML={{
+                    __html: props.blog.content
+                }} />
+            </div>
+        </>
     )
 }
 
