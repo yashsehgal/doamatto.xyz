@@ -35,11 +35,10 @@
             li {
                 list-style: none;
                 margin: 0;
-                padding: 0;
+                padding: .25rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: .25rem;
                 a {
                     cursor: pointer;
                     margin: 0 0.8em;
