@@ -2,9 +2,14 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
+    @media(max-width:500px) {
+        height: 90px;
+        h1 a, h1 a svg {
+            height: 90px;
+            width: 90px;
+        }
+    }
     height: 128px;
-    padding-left: 16px;
-    font-size: 14px;
     h1 {
         margin: 0;
         a:hover {
@@ -23,8 +28,9 @@
         justify-content: center;
         margin-right: 2rem;
         ul {
+            padding: 0;
             flex: 0 0 auto;
-            text-align: left;
+            text-align: center;
             display: flex;
             li {
                 list-style: none;
@@ -33,9 +39,11 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                padding: .25rem;
                 a {
                     cursor: pointer;
                     margin: 0 0.8em;
+                    padding: .25rem;
                     font-size: 1.1rem;
                     text-decoration: none;
                     transition: all 150ms ease-in-out;
@@ -57,7 +65,5 @@
                 }
             }
         }
-            :first-child { margin-left: 0; }
-            :last-child a { padding-right: 0; }
     }
 }
