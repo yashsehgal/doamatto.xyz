@@ -1,19 +1,24 @@
 import React from 'react'
 import Head from 'next/head'
-
+import NextSeo from 'next-seo'
+import dynamic from 'next/dynamic'
 import styles from './[slug].module.scss'
 
-import dynamic from 'next/dynamic'
 const Navigation = dynamic(() => import('../../components/nav'))
 
 /**
   * Major thanks to this Dev.to post:
   * https://dev.to/sagar/building-a-blog-with-next-js-253
+  *
   */
 
 function BlogPostPage(props) {
     return(
         <>
+            <NextSeo
+                title={props.blog.title}
+                description={props.blog.description}
+            />
             <Head>
                 <title>{props.blog.title} - doamatto</title>
             </Head>
