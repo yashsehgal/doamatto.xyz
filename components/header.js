@@ -1,8 +1,11 @@
-import Image from 'next/image'
 import styles from './header.module.scss'
 
-export default function Navigation() {
+// <Header title="Insert title here" />
+
+export default function Header({title}) {
     return (
-        <p> Placeholder</p>
+        <div className={styles.header}>
+            <h1>{title}</h1>
+        </div>
     )
 }
