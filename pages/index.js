@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>doamatto.</title>
+        <title>doamatto</title>
       </Head>
       <Navigation />
       <main className={styles.main}>
