@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <Header />
+      <Header title="Privacy Policy" />
       <div className="container">
         <h3>What data is collected?</h3>
         <p>
