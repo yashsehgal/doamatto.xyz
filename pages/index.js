@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import styles from './index.module.scss'
+
 import dynamic from 'next/dynamic'
 const Navigation = dynamic(() => import('../components/nav'))
 
@@ -10,10 +12,13 @@ export default function Home() {
         <title>doamatto.</title>
       </Head>
       <Navigation />
-      <main>
-        <h1 className="title">
-          Hi!<br /> I'm Matt Ronchetto.
-        </h1>
+      <main className={styles.main}>
+        <div>
+          <h1 className={styles.title}>
+            Hi!<br /> I'm Matt Ronchetto.
+          </h1>
+          <img src="/assets/photo.jpeg" width="384" height="384"/>
+        </div>
       </main>
     </>
   )
