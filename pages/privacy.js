@@ -14,9 +14,15 @@ export default function Home() {
       <Navigation />
       <Header title="Privacy Policy" />
       <div className="container">
+        <p>
+            Your privacy is just as important (if not more) than my privacy.
+            For that reason, I make it a commitment to ensure my site isn't
+            privacy-friendly, but private-by-default.
+        </p>
         <h3>What data is collected?</h3>
         <p>
-          I utilise Vercel's Analytics tool which collects the following data:
+          I do not collect any personally identifiable information (PII). I
+          utilise Vercel's Analytics tool which collects the following data:
           <table>
                 <thead>
                     <tr>
@@ -69,11 +75,12 @@ export default function Home() {
             This data is collected to better understand issues with my website
             and fix them before going to a production-level.
         </p>
-        <h3>What data is shared?</h3>
+        <h3>What data is shared, sold, or transfered?</h3>
         <p>
-            I do not share any data collected with any third-parties. I am not
-            responsible with who Vercel shares data with. This is outlined in their
-            privacy policy <a href="https://vercel.com/legal/privacy-policy">here.</a>
+            I do not share, sell, or transfer any data collected with any
+            third-parties. I am not responsible with who Vercel shares data
+            with. This is outlined in their privacy policy
+            &nbsp; <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>
         <h3>Who has access to this data?</h3>
         <p>
@@ -82,7 +89,8 @@ export default function Home() {
             I have no control over. Per their privacy policy as of writing,
             they will provide data "when [they] have a good faith belief it is
             required by law, such as pursuant to a subpoena, warrant or other
-            judicial or administrative order." You can read more <a href="https://vercel.com/legal/privacy-policy"> here.</a>
+            judicial or administrative order." You can read more
+            &nbsp; <a href="https://vercel.com/legal/privacy-policy"> here.</a>
         </p>
         <h3>Who processes this data?</h3>
         <p>
@@ -93,8 +101,9 @@ export default function Home() {
                     them to better the website's speed and performance.
                 </li>
                 <li>
-                    <b>Vercel and subprocessors: </b>They host the site and the statistics
-                    tool. They do not mention, as of writing, who powers their services.
+                    <b>Vercel and their subprocessors: </b>They host the site and
+                    the analytics tool. They do not mention, as of writing, who
+                    powers their services.
                 </li>
             </ul>
         </p>
@@ -107,8 +116,13 @@ export default function Home() {
         <h3>Where can I find past versions of this policy?</h3>
         <p>
             This site's codebase is hosted publicly on GitHub. You can check the list
-            of changes to this policy <a href="https://github.com/doamatto/doamatto.xyz/blob/master/pages/privacy.js">
-            here.</a>
+            of changes to this policy <a href="https://git.io/JLnah">here.</a>
+        </p>
+        <h3>Contact</h3>
+        <p>
+            You can write to <a href="mailto:hello@doamatto.xyz>">hello [at]
+            doamatto.xyz</a> to get help as swiftly as possible on amending and fixing
+            this document, as well as get answers to questions regarding this policy.
         </p>
       </div>
     </>
