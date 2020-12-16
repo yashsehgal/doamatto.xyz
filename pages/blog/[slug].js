@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import styles from './[slug].module.scss'
 
@@ -13,6 +14,9 @@ const Navigation = dynamic(() => import('../../components/nav'))
 function BlogPostPage(props) {
     return(
         <>
+            <Head>
+                <title>{props.blog.title} - doamatto</title>
+            </Head>
             <Navigation />
             <div>
                 <h1 className={styles.header}>{props.blog.title}</h1>
