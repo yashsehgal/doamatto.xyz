@@ -31,6 +31,7 @@ export default class MyApp extends App {
           <link rel="icon" href="/assets/logo.svg"/>
           <link rel="shortcut icon" href="/assets/logo.svg"/>
           <link rel="apple-touch-icon" href="/assets/logo-bg.svg"/>
+          <link rel="author" href="humans.txt"/>
         </Head>
         <BLM_Banner />
         <Navigation />

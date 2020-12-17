@@ -1,0 +1,14 @@
+/* TEAM */
+Your title: Matt Ronchetto (doamatto)
+Site: https://doamatto.xyz | hello@doamatto.xyz
+Twitter: @doamatto
+Location: San Diego, CA
+
+/* THANKS */
+
+The NextJS team for amazing documentation
+The incredible writers on the Dev Community (dev.to) for amazing tutorials for Next.NextJS
+
+/* SITE */
+Standards: HTML5, CSS3
+Software: Next.js
