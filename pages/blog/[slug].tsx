@@ -2,7 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import {NextSeo} from 'next-seo'
 import dynamic from 'next/dynamic'
-import styles from './[slug].module.scss'
+const styles = require('./[slug].module.scss')
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 const Navigation = dynamic(() => import('../../components/nav'))
 
@@ -33,7 +34,7 @@ function BlogPostPage(props) {
     )
 }
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
     const fs = require('fs')
     const html = require('remark-html')
     const unified = require('unified')
@@ -60,7 +61,7 @@ export async function getStaticProps(context) {
     }
 }
 
-export async function getStaticPaths(context) {
+export const getStaticPaths: GetStaticPaths = async (context) => {
     const fs = require('fs')
     const path = `${process.cwd()}/posts`
     const files = fs.readdirSync(path, 'utf-8')
