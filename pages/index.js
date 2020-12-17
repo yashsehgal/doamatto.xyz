@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className={styles.title}>
             Hi!<br/> I'm Matt Ronchetto.
           </h1>
-          <img src="/assets/photo.jpeg" width="320" height="320"/>
+          <img src="/assets/photo.jpeg" alt="Photo of Matt Ronchetto" width="320" height="320"/>
         </div>
       </main>
     </>
