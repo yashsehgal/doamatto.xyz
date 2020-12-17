@@ -83,7 +83,7 @@ export default function Home() {
             I do not share, sell, or transfer any data collected with any
             third-parties. I am not responsible with who Vercel shares data
             with. This is outlined in their privacy policy
-            &nbsp;<a href="https://vercel.com/legal/privacy-policy">here.</a>
+            <a href="https://vercel.com/legal/privacy-policy"> here.</a>
         </p>
         <h3>Who has access to this data?</h3>
         <p>
@@ -92,8 +92,8 @@ export default function Home() {
             I have no control over. Per their privacy policy as of writing,
             they will provide data "when [they] have a good faith belief it is
             required by law, such as pursuant to a subpoena, warrant or other
-            judicial or administrative order." You can read more
-            &nbsp;<a href="https://vercel.com/legal/privacy-policy">here.</a>
+            judicial or administrative order." You can read more&nbsp;
+            <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>
         <h3>Who processes this data?</h3>
         <p>
