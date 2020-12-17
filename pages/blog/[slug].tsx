@@ -20,7 +20,7 @@ function BlogPostPage(props) {
             <Head>
                 <title>{props.blog.title} - doamatto</title>
             </Head>
-            <div>
+            <div className="container">
                 <h1 className={styles.header}>{props.blog.title}</h1>
                 <section dangerouslySetInnerHTML={{
                     __html: props.blog.content
