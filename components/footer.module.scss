@@ -3,6 +3,9 @@
     a {
         text-decoration: none;
         border-bottom: 1px solid black;
+        @media (prefers-color-scheme: 'dark') {
+            border-color: white;
+        }
         transition: border-color 250ms;
         &:hover {
             border-color: #909EFF;
