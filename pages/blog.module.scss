@@ -1,0 +1,25 @@
+.minor {
+    font-size: .9rem;
+    line-height: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.link {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.posts {
+    padding-left: 0;
+    list-style: none;
+    .post {
+        padding: .75rem 1rem;
+        transition: background-color 250ms;
+        &:hover {
+            background: #909eff;
+        }
+    }
+}

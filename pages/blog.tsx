@@ -5,27 +5,27 @@ import fs from 'fs'
 import matter from 'gray-matter'
 const styles = require('./blog.module.scss')
 import {GetStaticProps} from 'next'
+import dynamic from 'next/dynamic'
+const Header = dynamic(() => import('../components/header'))
 
 export default function IndexPage({postData}:{
   postData: {
     title: string
     date: string
-    description: string
     slug: string
     id: string
   }[]
 }) {
   return(
     <div>
-      <h1>Posts</h1>
-      <ul>
-        {postData.map(({title,date,description,slug,id}) => (
-          <li id={id}>
+      <Header title="Blog" />
+      <ul className={styles.posts}>
+        {postData.map(({title,date,slug,id}) => (
+          <li className={styles.post} id={id}>
             <Link href={`/blog/${slug}`}>
-              <a>
-                {date}<br />
-                {title}<br />
-                {description}<br />
+              <a className={styles.link}>
+                <p className={styles.minor}>{date}</p>
+                {title}
                 </a>
             </Link>
           </li>
@@ -56,7 +56,6 @@ export function getSortedPostsData() {
       ...(matterResult.data as {
         title: string
         date: string
-        description: string
         slug: string
         id: string
       })
