@@ -21,7 +21,7 @@ export default function IndexPage({postData}:{
       <Header title="Blog" />
       <ul className={styles.posts}>
         {postData.map(({title,date,slug,id}) => (
-          <li className={styles.post} id={id}>
+          <li className={styles.post} key={id} id={id}>
             <Link href={`/blog/${slug}`}>
               <a className={styles.link}>
                 <p className={styles.minor}>{date}</p>
