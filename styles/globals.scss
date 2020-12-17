@@ -50,3 +50,19 @@ table {
 .container {
     margin: auto 1rem;
 }
+.container, footer {
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        @media (prefers-color-scheme: 'dark') {
+            border-color: white;
+        }
+        color: inherit;
+        transition: border-color 250ms,
+                    color 250ms;
+        &:hover {
+            color: #909eff;
+            border-color: #909EFF;
+        }
+    }
+}
