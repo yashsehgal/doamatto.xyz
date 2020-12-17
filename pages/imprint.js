@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {NextSeo} from 'next-seo'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('../components/header'))
@@ -9,6 +10,10 @@ export default function Privacy() {
             <Head>
                 <title>Imprint - doamatto</title>
             </Head>
+            <NextSeo 
+                title="Imprint - doamatto"
+                description="Legal mumbo jumbo that's required by law in some countries."
+            />
             <Header title="Imprint" />
             <div className="container">
                 <p>

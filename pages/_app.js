@@ -19,6 +19,7 @@ export default class MyApp extends App {
             type: 'website',
             locale: 'en_GB',
             url: 'https://doamatto.xyz',
+            description: 'Hello and bienvenue! My name\'s Matt and this is my website.',
             site_name: 'doamatto',
           }}
           twitter={{

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {NextSeo} from 'next-seo'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('../components/header'))
@@ -6,6 +7,10 @@ const Header = dynamic(() => import('../components/header'))
 export default function Home() {
   return (
     <>
+      <NextSeo
+        title="Privacy - doamatto"
+        description="Your privacy is just as important (if not more) than my privacy. Here's how I protect yours."
+      />
       <Head>
         <title>Privacy - doamatto</title>
         <link rel="icon" href="/favicon.ico" />

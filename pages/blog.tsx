@@ -3,6 +3,7 @@ import Link from 'next/link'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
+import {NextSeo} from 'next-seo'
 const styles = require('./blog.module.scss')
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
@@ -17,6 +18,11 @@ export default function IndexPage({postData}:{
   }[]
 }) {
   return(
+    <>
+    <NextSeo 
+      title="Blog - doamatto"
+      description = "I write blog posts about a lot of different stuff. Some are funny, others are serious, and some are just plain weird."
+    />
     <div>
       <Header title="Blog" />
       <ul className={styles.posts}>
@@ -32,6 +38,7 @@ export default function IndexPage({postData}:{
         ))}
       </ul>
     </div>
+    </>
   )
 }
 
