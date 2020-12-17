@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import dynamic from 'next/dynamic'
-const Navigation = dynamic(() => import('../components/nav'))
 const Header = dynamic(() => import('../components/header'))
 
 export default function Privacy() {
@@ -10,7 +9,6 @@ export default function Privacy() {
             <Head>
                 <title>Imprint - doamatto</title>
             </Head>
-            <Navigation />
             <Header title="Imprint" />
             <div className="container">
                 <p>

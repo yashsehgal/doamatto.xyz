@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import dynamic from 'next/dynamic'
-const Navigation = dynamic(() => import('../components/nav'))
 const Header = dynamic(() => import('../components/header'))
 
 export default function Home() {
@@ -11,7 +10,6 @@ export default function Home() {
         <title>Privacy - doamatto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
       <Header title="Privacy Policy" />
       <div className="container">
         <p>

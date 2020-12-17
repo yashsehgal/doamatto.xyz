@@ -1,11 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import {NextSeo} from 'next-seo'
-import dynamic from 'next/dynamic'
 const styles = require('./[slug].module.scss')
 import { GetStaticProps, GetStaticPaths } from 'next'
-
-const Navigation = dynamic(() => import('../../components/nav'))
 
 /**
   * Major thanks to this Dev.to post:
@@ -23,7 +20,6 @@ function BlogPostPage(props) {
             <Head>
                 <title>{props.blog.title} - doamatto</title>
             </Head>
-            <Navigation />
             <div>
                 <h1 className={styles.header}>{props.blog.title}</h1>
                 <section dangerouslySetInnerHTML={{
