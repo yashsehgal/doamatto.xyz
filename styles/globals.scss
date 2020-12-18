@@ -25,6 +25,10 @@ body {
 }
 
 table {
+    @media (prefers-color-scheme: 'dark') {
+        background: black;
+        color: white;
+    }
     background: white;
     color: black;
     border-collapse: collapse;
@@ -37,12 +41,14 @@ table {
     }
     thead tr {
         background: #E4DEFF !important;
+        color: black;
         border-bottom: 1px solid black;
     }
     tbody {
         td { padding: .5rem; }
         tr:nth-of-type(even) {
             background: rgb(209, 209, 209);
+            color: black;
         }
     }
 }
