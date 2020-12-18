@@ -1,7 +1,6 @@
 # Personal Site
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=doamatto_personal-site&metric=alert_status)](https://sonarcloud.io/dashboard?id=doamatto_personal-site)
 [![SCSS Linting](https://github.com/doamatto/doamatto.xyz/workflows/SCSS%20Linting/badge.svg)](https://github.com/doamatto/doamatto.xyz/actions?query=workflow%3A%22SCSS+Linting%22)
-[![Markdown Linting](https://github.com/doamatto/doamatto.xyz/workflows/Markdown%20Linting/badge.svg)](https://github.com/doamatto/doamatto.xyz/actions?query=workflow%3A%22Markdown+Linting%22)
 [![JS/TS Linting](https://github.com/doamatto/doamatto.xyz/workflows/JS/TS%20Linting/badge.svg)](https://github.com/doamatto/doamatto.xyz/actions?query=workflow%3A%22JS%2FTS+Linting%22)
 
 This utilises:
