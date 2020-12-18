@@ -1,8 +1,8 @@
 import styles from './nav.module.scss'
 import Logo from './logo-embed'
 
-export default function Navigation() {
-    return (
+export default function Navigation () {
+  return (
         <header className={styles.header}>
             <h1 className="logo">
                 <a href="/" rel="Home button" title="Home">
@@ -31,5 +31,5 @@ export default function Navigation() {
                 </ul>
             </nav>
         </header>
-    )
+  )
 }

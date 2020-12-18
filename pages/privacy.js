@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import {NextSeo} from 'next-seo'
+import { NextSeo } from 'next-seo'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('../components/header'))
 
-export default function Home() {
+export default function Home () {
   return (
     <>
       <NextSeo
@@ -30,7 +30,7 @@ export default function Home() {
                 <thead>
                     <tr>
                         <td>Data collected</td>
-                        <td>Example of data</td>  
+                        <td>Example of data</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,7 +71,7 @@ export default function Home() {
                         <td>2020-10-29 09:06:30</td>
                     </tr>
                 </tbody>
-            </table> 
+            </table>
         </p>
         <h3>Why is this data collected?</h3>
         <p>
@@ -100,7 +100,7 @@ export default function Home() {
             The data is processed by the following parties:
             <ul>
                 <li>
-                    <b>Myself: </b>I have access to aggregated statistics and use 
+                    <b>Myself: </b>I have access to aggregated statistics and use
                     them to better the website's speed and performance.
                 </li>
                 <li>

@@ -1,8 +1,8 @@
-import React from 'react';
-import App from 'next/app';
-import Head from 'next/head';
-import { DefaultSeo } from 'next-seo';
-import '../styles/globals.scss'; // global stylesheet
+import React from 'react'
+import App from 'next/app'
+import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
+import '../styles/globals.scss' // global stylesheet
 
 import dynamic from 'next/dynamic'
 const BLM_Banner = dynamic(() => import('../components/blm-banner'))
@@ -10,8 +10,8 @@ const Footer = dynamic(() => import('../components/footer'))
 const Navigation = dynamic(() => import('../components/nav'))
 
 export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+  render () {
+    const { Component, pageProps } = this.props
     return (
       <React.Fragment>
         <DefaultSeo
@@ -20,12 +20,12 @@ export default class MyApp extends App {
             locale: 'en_GB',
             url: 'https://doamatto.xyz',
             description: 'Hello and bienvenue! My name\'s Matt and this is my website.',
-            site_name: 'doamatto',
+            site_name: 'doamatto'
           }}
           twitter={{
             handle: '@doamatto',
             site: '@doamatto',
-            cardType: 'summary',
+            cardType: 'summary'
           }}
         />
         <Head>
