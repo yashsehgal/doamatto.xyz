@@ -5,7 +5,7 @@ import { DefaultSeo } from 'next-seo'
 import '../styles/globals.scss' // global stylesheet
 
 import dynamic from 'next/dynamic'
-const BLM_Banner = dynamic(() => import('../components/blm-banner'))
+const blmBanner = dynamic(() => import('../components/blm-banner'))
 const Footer = dynamic(() => import('../components/footer'))
 const Navigation = dynamic(() => import('../components/nav'))
 
@@ -34,7 +34,7 @@ export default class MyApp extends App {
           <link rel="apple-touch-icon" href="/assets/logo-bg.svg"/>
           <link rel="author" href="humans.txt"/>
         </Head>
-        <BLM_Banner />
+        <blmBanner />
         <Navigation />
         <Component {...pageProps} className="container" />
         <Footer />
