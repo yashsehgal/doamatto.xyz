@@ -10,14 +10,14 @@ exports.lint = eslint
 exports.compileSASS = sassCompile
 
 function eslint () {
-  return src(['**/*.js', '**/*.ts', '**/*.tsx'])
+  return src(['**/*.js', '**/*.ts', '**/*.tsx', '!node_modules/**'])
     .pipe(es({ fix: true }))
     .pipe(es.format())
     .pipe(es.failAfterError())
 }
 
 function sassCompile () {
-  return src('**/*.scss')
+  return src('**/*.scss', '!node_modules/**')
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
