@@ -19,13 +19,13 @@ export default function Home () {
       <div className="container">
         <p>
             Your privacy is just as important (if not more) than my privacy.
-            For that reason, I make it a commitment to ensure my site isn't
+            For that reason, I make it a commitment to ensure my site isn&apos;t
             privacy-friendly, but private-by-default.
         </p>
         <h3>What data is collected?</h3>
         <p>
           I do not collect any personally identifiable information (PII). I
-          utilise Vercel's Analytics tool which collects the following data:
+          utilise Vercel&apos;s Analytics tool which collects the following data:
           <table>
                 <thead>
                     <tr>
@@ -90,9 +90,9 @@ export default function Home () {
             I have access to this data on an aggregated basis via the Vercel
             dashboard. Governments may request this data via Vercel, to which
             I have no control over. Per their privacy policy as of writing,
-            they will provide data "when [they] have a good faith belief it is
+            they will provide data &quot;when [they] have a good faith belief it is
             required by law, such as pursuant to a subpoena, warrant or other
-            judicial or administrative order." You can read more&nbsp;
+            judicial or administrative order.&quot; You can read more&nbsp;
             <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>
         <h3>Who processes this data?</h3>
@@ -101,7 +101,7 @@ export default function Home () {
             <ul>
                 <li>
                     <b>Myself: </b>I have access to aggregated statistics and use
-                    them to better the website's speed and performance.
+                    them to better the website&apos;s speed and performance.
                 </li>
                 <li>
                     <b>Vercel and their subprocessors: </b>They host the site and
@@ -110,7 +110,7 @@ export default function Home () {
                 </li>
             </ul>
         </p>
-        <h3>What if there's a data breach?</h3>
+        <h3>What if there&apos;s a data breach?</h3>
         <p>
             In the event of a data breach at Vercel that may affect analytical data,
             I cannot do anything to notify users as I do not collect identifiable data,
@@ -118,7 +118,7 @@ export default function Home () {
         </p>
         <h3>Where can I find past versions of this policy?</h3>
         <p>
-            This site's codebase is hosted publicly on GitHub. You can check the list
+            This site&apos;s codebase is hosted publicly on GitHub. You can check the list
             of changes to this policy <a href="https://git.io/JLnah">here.</a>
         </p>
         <h3>Contact</h3>
