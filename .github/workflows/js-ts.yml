@@ -1,0 +1,38 @@
+name: "JS/TS Linting"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Use Node LTS
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: '14'
+      - name: Cache Node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          yarn
+          yarn global add eslint
+          export PATH="$(yarn global bin):$PATH"
+      - name: Lint JS/TS
+        run: eslint .
+
