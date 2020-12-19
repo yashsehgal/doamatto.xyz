@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
-// import { SpotifyWidget } from 'react-widgets'
+// import { SpotifyAlbumWidget } from '../node_modules/nextjs-widgets/src/index'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('../components/header'))
@@ -56,11 +56,7 @@ export default function Home () {
                 on the Billboard 100 to as niche as indie bands from foreign
                 countries. Right now, I've been diving into a lot of music
                 from Japan. My favourite album right now is:
-                <a href="https://open.spotify.com/album/5ZCo1wqpAvjgHieipwTXzZ?si=CJFPeWHaRwyNzgHfssiZmA">
-                <b>アニメ『BNA ビー・エヌ・エー』Complete album</b> from 影森みちる(CV:諸星すみれ)
-                Shin Sakiura feat. AAAMYY、日渡なずな(CV:長縄まりあ)、mabanua
-                </a>
-                {/* <SpotifyWidget uri=""/> */}
+                {/* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ"/> */}
                 <br/>
                 I love improving, and because of that, I've taken to
                 learning things, both big and small. Some of the cool
