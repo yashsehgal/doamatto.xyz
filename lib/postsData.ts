@@ -22,6 +22,7 @@ export function getSortedPostsData(type: string) {
         date: string
         slug: string
         id: string
+        tag: string
         description: string
       })
     }
