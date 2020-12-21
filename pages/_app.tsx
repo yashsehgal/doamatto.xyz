@@ -9,7 +9,7 @@ import BLMBanner from '../components/blm-banner'
 import {default as Navigation} from '../components/nav'
 const Footer = dynamic(() => import('../components/footer'))
 
-export default class MyApp extends App {
+export default class _app extends App {
   render () {
     const { Component, pageProps } = this.props
     return (

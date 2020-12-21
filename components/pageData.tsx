@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {NextSeo} from 'next-seo'
 
-export default function Page({title,description,content}:{title:string,description:string,content:string}) {
+export default function pageData({title,description,content}:{title:string,description:string,content:string}) {
     return(
     <>
         <NextSeo
