@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const markdown = require('remark-parse')
     const matter = require('gray-matter')
     const slug = context.params.slug
-    const path = `${process.cwd()}/posts/${slug}.md`
+    const path = `${process.cwd()}/data/posts/${slug}.md`
     const rawContent = fs.readFileSync(path, {
         encoding: 'utf-8',
     })
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
     const fs = require('fs')
-    const path = `${process.cwd()}/posts`
+    const path = `${process.cwd()}/data/posts`
     const files = fs.readdirSync(path, 'utf-8')
     const markdownFileNames = files
         .filter((fn) => fn.endsWith('.md'))

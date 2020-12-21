@@ -52,10 +52,10 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(path.join(process.cwd(), 'posts'))
+  const fileNames = fs.readdirSync(path.join(process.cwd(), 'data/posts'))
   const postData = fileNames.map(fileName => {
     const id = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(process.cwd(), 'posts', fileName)
+    const fullPath = path.join(process.cwd(), 'data/posts', fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
     return {
