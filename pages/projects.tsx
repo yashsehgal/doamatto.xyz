@@ -14,6 +14,7 @@ export default function IndexPage({postData}:{
     title: string
     slug: string
     id: string
+    description: string
   }[]
 }) {
   return(
@@ -25,11 +26,12 @@ export default function IndexPage({postData}:{
     <div>
       <Header title="Projects" />
       <ul className={styles.posts}>
-        {postData.map(({title,slug,id}) => (
+        {postData.map(({title,slug,id,description}) => (
           <li className={styles.post} key={id} id={id}>
             <Link href={`/projects/${slug}`}>
               <a className={styles.link}>
                 {title}
+                <p className={styles.minor}>{description}</p>
                 </a>
             </Link>
           </li>
@@ -62,6 +64,7 @@ export function getSortedPostsData() {
         title: string
         slug: string
         id: string
+        description: string
       })
     }
   })
