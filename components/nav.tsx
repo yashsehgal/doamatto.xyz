@@ -1,7 +1,7 @@
-import styles from './nav.module.scss'
+const styles = require('./nav.module.scss')
 import {default as Logo} from './logo'
 
-export default function Navigation () {
+export default function nav () {
   return (
         <header className={styles.header}>
             <h1 className="logo">

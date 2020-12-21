@@ -6,8 +6,8 @@ import '../styles/globals.scss' // global stylesheet
 
 import dynamic from 'next/dynamic'
 import BLMBanner from '../components/blm-banner'
+import {default as Navigation} from '../components/nav'
 const Footer = dynamic(() => import('../components/footer'))
-const Navigation = dynamic(() => import('../components/nav'))
 
 export default class MyApp extends App {
   render () {
