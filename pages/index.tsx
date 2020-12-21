@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import styles from './index.module.scss'
+const styles = require('./index.module.scss')
 
 export default function Home () {
   return (

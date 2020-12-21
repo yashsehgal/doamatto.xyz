@@ -1,4 +1,4 @@
-import styles from './footer.module.scss'
+const styles = require('./footer.module.scss')
 
 export default function Footer () {
   return (

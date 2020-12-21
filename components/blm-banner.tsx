@@ -1,4 +1,4 @@
-import styles from './blm-banner.module.scss'
+const styles = require('./blm-banner.module.scss')
 
 export default function BLMBanner () {
   return (
