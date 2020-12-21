@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import {NextSeo} from 'next-seo'
+import {staticPaths, staticProps} from '../../lib/postData'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 /**
@@ -30,50 +31,11 @@ function BlogPostPage(props) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const fs = require('fs')
-    const html = require('remark-html')
-    const unified = require('unified')
-    const markdown = require('remark-parse')
-    const matter = require('gray-matter')
-    const slug = context.params.slug
-    const path = `${process.cwd()}/data/projects/${slug}.md`
-    const rawContent = fs.readFileSync(path, {
-        encoding: 'utf-8',
-    })
-    const { data, content } = matter(rawContent)
-    const result = await unified()
-        .use(markdown)
-        .use(html)
-        .process(content)
-    
-    return {
-        props: {
-            blog: {
-                ...data,
-                content: result.toString(),
-            }
-        }
-    }
+    return staticProps(context, 'other')
 }
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
-    const fs = require('fs')
-    const path = `${process.cwd()}/data/projects`
-    const files = fs.readdirSync(path, 'utf-8')
-    const markdownFileNames = files
-        .filter((fn) => fn.endsWith('.md'))
-        .map((fn) => fn.replace('.md', ''))
-
-    return {
-        paths: markdownFileNames.map((fileName) => {
-            return {
-                params: {
-                    slug: fileName,
-                },
-            }
-        }),
-        fallback: false,
-    }
+    return staticPaths(context, 'other')
 }
 
 export default BlogPostPage
