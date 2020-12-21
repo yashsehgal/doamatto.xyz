@@ -3,10 +3,16 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 export function getSortedPostsData(type: string) {
-  const fileNames = fs.readdirSync(path.join(process.cwd(), 'data/projects'))
+  var dir: string;
+  if (type === "blog") {
+    dir = path.join(process.cwd(), 'data/posts')
+  } else {
+    dir = path.join(process.cwd(), 'data/projects')
+  }
+  const fileNames = fs.readdirSync(dir)
   const postData = fileNames.map(fileName => {
     const id = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(process.cwd(), 'data/projects', fileName)
+    const fullPath = path.join(dir, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
     return {
