@@ -4,6 +4,7 @@ slug: static-spotify-widgets
 date: "2020-12-17"
 description: "No one likes waiting ages for widgets and what not to load on websites. I made some concepts of how I could fix that."
 tag: "Concepts"
+tagShort: "concepts"
 ---
 
 I love music. I listen to an assortment of genres, ranging from as large as pop and rock to as niche as the smallest indie bands from foreign countries. I would never have gained this addiction for such an amazing form of entertainment had it not been for platforms like Spotfiy and Bandcamp. I decided that, with the update to my site to a Next.js instead of the old Jekyll version, I should give myself less restricitions to let myself have more fun with this.

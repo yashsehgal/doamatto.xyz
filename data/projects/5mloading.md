@@ -3,6 +3,7 @@ title: 5mLoading
 slug: 5mloading
 description: "Most all of FiveM's loading screen mods have been, in my experience, poor looking and poor performing. Because of this, I made my own."
 tag: "End-of-Life"
+tagShort: "eol"
 ---
 
 <h2>Timeline</h2>

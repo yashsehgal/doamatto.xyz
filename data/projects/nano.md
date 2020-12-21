@@ -3,6 +3,7 @@ title: Nano
 slug: nano
 description: "A Jekyll-based website template that just works."
 tag: "End-of-Life"
+tagShort: "progress"
 ---
 
 <h2>Timeline</h2>
