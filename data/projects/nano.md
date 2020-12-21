@@ -31,6 +31,11 @@ tags: [ "End-of-Life" ]
     <h4 class="minor">2019-12-15</h4>
 </section>
 
+### Useful links
+- [GitHub repo](https://github.com/doamatto/nano)
+- [Demo version](https://git.doamatto.xyz/nano)
+- [RubyGems page](https://rubygems.org/gems/nano-theme)
+
 ---
 
 Truth be told, if you don't have a website these days, you're behind. I've never been a particular fan of website drag-and-drop sites because of their cookie cutter designs and bloated code. When I bought my own domain name, it was only fitting that I'd develop the best experience for both:

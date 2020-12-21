@@ -28,6 +28,10 @@ tags: [ "End-of-Life" ]
   </section> 
 </section>
 
+### Useful links
+- [GitHub repo](https://github.com/doamatto/5mloading)
+- [FiveM forum post](https://forum.cfx.re/t/release-5mloading-yet-another-loading-screen/1459768)
+
 ---
 
 Most all of FiveM's loading screen mods have been, in my experience, poor looking and poor performing. Because of this, I made my own. With the absence of an original name, 5mLoading was born.
