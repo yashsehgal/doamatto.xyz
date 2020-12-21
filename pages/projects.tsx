@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import {NextSeo} from 'next-seo'
-const styles = require('./blog.module.scss')
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
 import { getSortedPostsData } from '../lib/postsData'
@@ -13,6 +12,8 @@ export default function IndexPage({postData}:{
     slug: string
     id: string
     description: string
+    tag: string
+    tagShort: string
   }[]
 }) {
   return(
@@ -23,18 +24,19 @@ export default function IndexPage({postData}:{
     />
     <div>
       <Header title="Projects" />
-      <ul className={styles.posts}>
-        {postData.map(({title,slug,id,description}) => (
-          <li className={styles.post} key={id} id={id}>
+      <div className="posts">
+        {postData.map(({title,slug,id,description,tag,tagShort}) => (
+          <section className="post" key={id} id={id}>
             <Link href={`/projects/${slug}`}>
-              <a className={styles.link}>
+              <a className="link">
                 {title}
-                <p className={styles.minor}>{description}</p>
-                </a>
+                <p className="minor">{description}</p>
+                <p className={`${tagShort} tag`}>{tag}</p>
+              </a>
             </Link>
-          </li>
+          </section>
         ))}
-      </ul>
+      </div>
     </div>
     </>
   )

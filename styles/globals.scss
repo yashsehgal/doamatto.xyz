@@ -118,3 +118,49 @@ table {
     .released { border-color: #10b981; }
     .progress { border-color: #71717a; }
 }
+
+.minor {
+    font-size: .9rem;
+    line-height: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.link {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.posts {
+    padding-left: 0;
+    .post {
+        padding: .75rem 1rem;
+        transition: background-color 250ms;
+        .tag {
+            background: #e4e4e4;
+            margin: .5rem;
+            padding: .2rem .5rem;
+            border-radius: 2rem;
+            display: table;
+            font-size: .8rem;
+        }
+        // Project tag colours
+        .eol { background-color: #f97316; }
+        .progress {
+            background-color: #71717a;
+            color: black;
+        }
+        .active { background-color: #3b82f6; }
+        .released { background-color: #10b981; }
+
+        // Blog tag colours
+        .concepts { background-color: #f994fd; }
+
+        &:hover {
+            background: #909eff;
+        }
+    }
+}
