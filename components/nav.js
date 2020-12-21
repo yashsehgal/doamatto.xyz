@@ -1,5 +1,5 @@
 import styles from './nav.module.scss'
-import Logo from './logo-embed'
+import {default as Logo} from './logo'
 
 export default function Navigation () {
   return (
