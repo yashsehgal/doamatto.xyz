@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import {NextSeo} from 'next-seo'
-const styles = require('./[slug].module.scss')
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 /**
@@ -21,7 +20,7 @@ function BlogPostPage(props) {
                 <title>{props.blog.title} - doamatto</title>
             </Head>
             <div className="container">
-                <h1 className={styles.header}>{props.blog.title}</h1>
+                <h1 className="header">{props.blog.title}</h1>
                 <section dangerouslySetInnerHTML={{
                     __html: props.blog.content
                 }} />
