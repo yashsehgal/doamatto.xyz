@@ -9,6 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.3",
     "next": "^10.0.0",
     "next-seo": "^4.17.0",
     "react": "16.13.1",
