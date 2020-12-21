@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {NextSeo} from 'next-seo'
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
-import { getSortedPostsData } from '../lib/postsData'
+import { getSortedPostsData } from '../lib/feedData'
 const Header = dynamic(() => import('../components/header'))
 
 export default function IndexPage({postData}:{
