@@ -7,6 +7,7 @@ import {NextSeo} from 'next-seo'
 const styles = require('./blog.module.scss')
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
+import { getSortedPostsData } from '../lib/postsData'
 const Header = dynamic(() => import('../components/header'))
 
 export default function IndexPage({postData}:{
@@ -43,36 +44,10 @@ export default function IndexPage({postData}:{
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postData = getSortedPostsData()
+  const postData = getSortedPostsData('blog')
   return {
     props: {
       postData
     }
   }
-}
-
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(path.join(process.cwd(), 'data/posts'))
-  const postData = fileNames.map(fileName => {
-    const id = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(process.cwd(), 'data/posts', fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const matterResult = matter(fileContents)
-    return {
-      id,
-      ...(matterResult.data as {
-        title: string
-        date: string
-        slug: string
-        id: string
-      })
-    }
-  })
-  return postData.sort((a,b) => {
-    if(a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
 }

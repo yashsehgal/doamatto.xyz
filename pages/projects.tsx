@@ -1,12 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import path from 'path'
-import fs from 'fs'
-import matter from 'gray-matter'
 import {NextSeo} from 'next-seo'
 const styles = require('./blog.module.scss')
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
+import { getSortedPostsData } from '../lib/postsData'
 const Header = dynamic(() => import('../components/header'))
 
 export default function IndexPage({postData}:{
@@ -43,30 +41,10 @@ export default function IndexPage({postData}:{
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postData = getSortedPostsData()
+  const postData = getSortedPostsData('other')
   return {
     props: {
       postData
     }
   }
-}
-
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(path.join(process.cwd(), 'data/projects'))
-  const postData = fileNames.map(fileName => {
-    const id = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(process.cwd(), 'data/projects', fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const matterResult = matter(fileContents)
-    return {
-      id,
-      ...(matterResult.data as {
-        title: string
-        slug: string
-        id: string
-        description: string
-      })
-    }
-  })
-  return postData
 }
