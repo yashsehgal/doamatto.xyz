@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
-// import { SpotifyAlbumWidget } from 'nextjs-widgets'
+// import { SpotifyAlbumWidget } from '../node_modules/nextjs-widgets/src/index'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('../components/header'))
@@ -19,14 +19,13 @@ export default function Home () {
       <Header title="About" />
       <div className="container">
           <p>
-              <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I'm
-              a high school student based in sunny California who loves to
-              make software that works and looks great, as well as experiment
-              with as much as I can.
+              <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I’m a high school
+              student based in sunny California who loves to make software that works
+              and looks great, and experiment with as much as I can.
               <br/>
-              Outside of developing software, I alos like doing graphic design,
-              web development, A/V editing, and listening to a wide assortment
-              of music. I've been taking up an interest in:
+              Outside of developing software, I also like doing graphic design, web
+              development, A/V editing, and listening to a wide assortment of music.
+              I’ve taken up an interest in:
               <ul>
                   <li>Homelabbing,</li>
                   <li>The Linux kernel and Linux distros,</li>
@@ -45,20 +44,20 @@ export default function Home () {
 
               <h2>Outside of "work" and work</h2>
               <p>
-                In my free time, I like experimenting with hardware
-                (like Raspberry Pis and Arduinos) and programming
-                languages (like Dart, Elm, and GraphQL). I have gained
-                a large interest in Formula racing, with one of my
-                favourite tracks being <a href="https://en.wikipedia.org/wiki/Albert_Park_Circuit">the Albert Park's circuit.</a>
+                In my free time, I enjoy experimenting with hardware (like Raspberry Pis
+                and Arduinos) and programming languages (like Dart, Elm, and GraphQL).
+                I have gained a large interest in Formula racing, with one of my favourite
+                tracks being <a href="https://en.wikipedia.org/wiki/Albert_Park_Circuit">the Albert Park's circuit.</a>
                 <br/>
-                I have a crippling addiction to music in the best way
-                possible. I listen to things as popular as the new hits
-                on the Billboard 100 to as niche as indie bands from foreign
-                countries. Right now, I've been diving into a lot of music
-                from Japan. My favourite album right now is the soundtrack to
-                Netflix's show "BNA," specifically "NIGHT RUNNING" (both versions)
-                , "Ready to", and "Wish"
-                { /* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token=""/> */ }
+                I have a crippling addiction to music in the best way possible. I listen
+                to things as popular as the new hits on the Billboard 100 to as niche as
+                indie bands from foreign countries. Right now, I’ve been diving into a
+                lot of music from Japan. My favourite album right now is the soundtrack
+                to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
+                “Ready to”, and “Wish”I love improving, and because of that, I’ve taken
+                to learning things, both big and small. Some cool things I’ve picked up
+                are:
+                { /* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token="BQDcCTbvOWWyzt1gCumc6MxlDYeiE1liO4sfaLJsefx1yMXW2pWht7mhHIQs4Qxvb8U7JoI6PmM4Z5puyoVbuVGacRQmYJx53bpWW1WWICVQHq8LfDV3Q3jKTk8moZ7pvV_fBGXT6TPu7wM_FzShyoKMRCNqQa436u8"/> */ }
                 <br/>
                 I love improving, and because of that, I've taken to
                 learning things, both big and small. Some of the cool
@@ -74,7 +73,7 @@ export default function Home () {
                     amount of French).
                   </li>
                   <li>
-                    Using Garageband as it was intended (to make music and/or soundtracks)
+                    Using Garageband as intended (to make music and/or soundtracks)
                   </li>
                   <li>
                     Currently learning Dart (for usage with Flutter), Rust,
