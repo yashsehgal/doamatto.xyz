@@ -1,5 +1,5 @@
 const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/,
+  extension: /\.(md|mdx)$/
 })
 
 module.export = withMDX({
