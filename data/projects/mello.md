@@ -2,7 +2,7 @@
 title: Mello
 slug: mello
 description: "A free, open-source meditation and sleep story app that focuses on you and is here to ease your mind whenever you need it."
-tags: [ "In Development" ]
+tag: "In Development"
 ---
 
 <h2>Timeline</h2>
