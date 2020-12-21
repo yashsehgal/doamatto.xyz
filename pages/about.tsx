@@ -55,7 +55,9 @@ export default function Home () {
                 possible. I listen to things as popular as the new hits
                 on the Billboard 100 to as niche as indie bands from foreign
                 countries. Right now, I've been diving into a lot of music
-                from Japan. My favourite album right now is:
+                from Japan. My favourite album right now is the soundtrack to
+                Netflix's show "BNA," specifically "NIGHT RUNNING" (both versions)
+                , "Ready to", and "Wish"
                 { /* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token=""/> */ }
                 <br/>
                 I love improving, and because of that, I've taken to
@@ -63,16 +65,20 @@ export default function Home () {
                 things I've picked up are:
                 <ul>
                   <li>
-                    ~90 words per minutes on <a href="https://workmanlayout.org/">the Workman layout</a>
-                    in about a month (I can do ~140 words per minute on QWERTY)
+                    ~90 words per minutes on <a href="https://workmanlayout.org/">the Workman layout</a> in
+                    about a month (I can do ~140 words per minute on QWERTY)
                   </li>
                   <li>
-                    (Currently) Learning Japanese as a Third Language
+                    Currently learning Japanese as a third language
                     (My native tongue is English and I've picked up a good
                     amount of French).
                   </li>
                   <li>
                     Using Garageband as it was intended (to make music and/or soundtracks)
+                  </li>
+                  <li>
+                    Currently learning Dart (for usage with Flutter), Rust,
+                    C# (for usage for KSP), and Kotlin (for usage with Flutter). 
                   </li>
                 </ul>
               </p>
