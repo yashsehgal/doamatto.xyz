@@ -9,11 +9,12 @@ const Header = dynamic(() => import('../components/header'))
 export default function IndexPage({postData}:{
   postData: {
     title: string
+    date: string
     slug: string
     id: string
-    description: string
     tag: string
     tagShort: string
+    description: string
   }[]
 }) {
   return(
@@ -25,10 +26,11 @@ export default function IndexPage({postData}:{
     <div>
       <Header title="Projects" />
       <div className="posts">
-        {postData.map(({title,slug,id,description,tag,tagShort}) => (
+        {postData.map(({title,date,slug,id,description,tag,tagShort}) => (
           <section className="post" key={id} id={id}>
             <Link href={`/projects/${slug}`}>
               <a className="link">
+                <p className="minor">Last status update on {date}</p>
                 {title}
                 <p className="minor">{description}</p>
                 <p className={`${tagShort} tag`}>{tag}</p>
