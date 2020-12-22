@@ -28,15 +28,11 @@ export function getSortedPostsData(type: string) {
       })
     }
   })
-  if(type === "blog") {
-    return postData.sort((a,b) => {
-      if(a.date < b.date) {
-        return 1
-      } else {
-        return -1
-      }
-    })
-  } else {
-    return postData
-  }
+  return postData.sort((a,b) => {
+    if(a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
 }
