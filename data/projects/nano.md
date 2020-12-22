@@ -4,6 +4,7 @@ slug: nano
 description: "A Jekyll-based website template that just works."
 tag: "Active Development"
 tagShort: "active"
+date: "2020-03-04"
 ---
 
 <h2>Timeline</h2>
