@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn build:rss && next build",
+    "build": "next build",
     "build:rss": "ts-node ./lib/rss.ts",
     "postbuild": "next-sitemap",
     "start": "next start"
