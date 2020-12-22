@@ -146,18 +146,33 @@ table {
             border-radius: 2rem;
             display: table;
             font-size: .8rem;
+            border: .15rem solid #e4e4e4;
         }
         // Project tag colours
-        .eol { background-color: #f97316; }
+        .eol {
+            background-color: #fd9246;
+            border-color: #f97316;
+        }
         .progress {
-            background-color: #71717a;
+            background-color: #9f9fa1;
+            border-color: #71717a;
             color: black;
         }
-        .active { background-color: #3b82f6; }
-        .released { background-color: #10b981; }
+        .active {
+            background-color: #3b82f6;
+            border-color: #2a77f3;
+        }
+        .released {
+            background-color: #10b981;
+            border-color: #03865b;
+        }
 
         // Blog tag colours
-        .concepts { background-color: #f994fd; }
+        .concepts {
+            background-color: #fb94ff;
+            border-color: #fa65ff;
+            color: black;
+        }
 
         &:hover {
             background: #909eff;
