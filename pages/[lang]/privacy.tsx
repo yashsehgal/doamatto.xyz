@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 import dynamic from 'next/dynamic'
-const Header = dynamic(() => import('../components/header'))
+const Header = dynamic(() => import('../../components/header'))
 
 export default function privacy () {
   return (
@@ -24,6 +24,14 @@ export default function privacy () {
         </p>
         <h3>What data is collected?</h3>
         <p>
+          The following data is used to provide the proper language/locale for
+          you:
+          <ul>
+              <li>
+                  The < a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language">Accept-Language*</a> header of your browser
+              </li>
+          </ul>
+
           I do not collect any personally identifiable information (PII). I
           utilise Vercel&apos;s Analytics tool which collects the following data:
           <table>

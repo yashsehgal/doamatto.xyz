@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 // import { SpotifyAlbumWidget } from '../node_modules/nextjs-widgets/src/index'
 
 import dynamic from 'next/dynamic'
-const Header = dynamic(() => import('../components/header'))
+const Header = dynamic(() => import('../../components/header'))
 
 export default function Home () {
   return (

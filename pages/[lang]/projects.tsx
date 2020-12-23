@@ -3,36 +3,38 @@ import Link from 'next/link'
 import {NextSeo} from 'next-seo'
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
-import { getSortedPostsData } from '../lib/feedData'
-const Header = dynamic(() => import('../components/header'))
+import { getSortedPostsData } from '../../lib/feedData'
+const Header = dynamic(() => import('../../components/header'))
 
 export default function IndexPage({postData}:{
   postData: {
     title: string
     date: string
     slug: string
-    id: string,
-    tag: string,
+    id: string
+    tag: string
     tagShort: string
+    description: string
   }[]
 }) {
   return(
     <>
     <NextSeo 
-      title="Blog - doamatto"
-      description = "I write blog posts about a lot of different stuff. Some are funny, others are serious, and some are just plain weird."
+      title="Projects - doamatto"
+      description = "I've made a lot of stuff over time. Here's a collection of it all."
     />
     <div>
-      <Header title="Blog" />
+      <Header title="Projects" />
       <div className="posts">
-        {postData.map(({title,date,slug,id,tag,tagShort}) => (
+        {postData.map(({title,date,slug,id,description,tag,tagShort}) => (
           <section className="post" key={id} id={id}>
-            <Link href={`/blog/${slug}`}>
+            <Link href={`/projects/${slug}`}>
               <a className="link">
-                <p className="minor">{date}</p>
+                <p className="minor">Last status update on {date}</p>
                 {title}
+                <p className="minor">{description}</p>
                 <p className={`${tagShort} tag`}>{tag}</p>
-                </a>
+              </a>
             </Link>
           </section>
         ))}
@@ -43,7 +45,7 @@ export default function IndexPage({postData}:{
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postData = getSortedPostsData('blog')
+  const postData = getSortedPostsData('other')
   return {
     props: {
       postData
