@@ -7,6 +7,10 @@ module.export = withMDX({
 })
 
 module.exports = {
+  i18n: {
+    locales: ['en', 'fr', 'jp'],
+    defaultLocale: 'en'
+  },
   webpack: (config) => {
     config.node = {
       fs: 'empty',
