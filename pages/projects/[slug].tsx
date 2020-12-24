@@ -1,7 +1,7 @@
 import React from 'react'
-import {default as Page} from '../../../components/pageData'
+import {default as Page} from '../../components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { staticPaths, staticProps } from '../../../lib/postData'
+import { staticPaths, staticProps } from '../../lib/postData'
 
 /**
   * Major thanks to this Dev.to post:
