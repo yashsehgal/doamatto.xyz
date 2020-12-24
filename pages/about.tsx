@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 // import { SpotifyAlbumWidget } from '../node_modules/nextjs-widgets/src/index'
 
 import dynamic from 'next/dynamic'
-const Header = dynamic(() => import('../../components/header'))
+const Header = dynamic(() => import('../components/header'))
 
 export default function Home () {
   return (
@@ -13,7 +13,7 @@ export default function Home () {
         description="I'm a very interesting person, to say the least."
       />
       <Head>
-        <title>about - doamatto</title>
+        <title>About - doamatto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="About" />
@@ -22,7 +22,7 @@ export default function Home () {
               <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I’m a high school
               student based in sunny California who loves to make software that works
               and looks great, and experiment with as much as I can.
-              <br/>
+              <br/><br/>
               Outside of developing software, I also like doing graphic design, web
               development, A/V editing, and listening to a wide assortment of music.
               I’ve taken up an interest in:
@@ -48,17 +48,15 @@ export default function Home () {
                 and Arduinos) and programming languages (like Dart, Elm, and GraphQL).
                 I have gained a large interest in Formula racing, with one of my favourite
                 tracks being <a href="https://en.wikipedia.org/wiki/Albert_Park_Circuit">the Albert Park's circuit.</a>
-                <br/>
+                <br/><br/>
                 I have a crippling addiction to music in the best way possible. I listen
                 to things as popular as the new hits on the Billboard 100 to as niche as
                 indie bands from foreign countries. Right now, I’ve been diving into a
                 lot of music from Japan. My favourite album right now is the soundtrack
                 to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
-                “Ready to”, and “Wish”I love improving, and because of that, I’ve taken
-                to learning things, both big and small. Some cool things I’ve picked up
-                are:
+                “Ready to”, and “Wish.”
                 { /* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token="BQDcCTbvOWWyzt1gCumc6MxlDYeiE1liO4sfaLJsefx1yMXW2pWht7mhHIQs4Qxvb8U7JoI6PmM4Z5puyoVbuVGacRQmYJx53bpWW1WWICVQHq8LfDV3Q3jKTk8moZ7pvV_fBGXT6TPu7wM_FzShyoKMRCNqQa436u8"/> */ }
-                <br/>
+                <br/><br/>
                 I love improving, and because of that, I've taken to
                 learning things, both big and small. Some of the cool
                 things I've picked up are:
