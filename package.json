@@ -31,7 +31,6 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "next-sitemap": "^1.3.16",
-    "nextjs-widgets": "https://github.com/doamatto/nextjs-widgets",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "sass": "^1.30.0",
