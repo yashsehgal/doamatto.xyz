@@ -93,6 +93,7 @@ $light-textcolour: #000;
   align-items: flex-start;
 }
 .ctaText {
+  a & { border: none !important; }
   @include roboto-bold;
   color: $text-black;
   text-align: center;
