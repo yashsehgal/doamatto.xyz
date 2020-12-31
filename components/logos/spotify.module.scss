@@ -1,0 +1,10 @@
+.logo {
+  width: 32px;
+  height: 32px;
+  .st0 {
+    fill: black;
+    @media (prefers-color-scheme: 'dark') {
+      fill: white;
+    }
+  }
+}
