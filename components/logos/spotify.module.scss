@@ -1,6 +1,10 @@
+$dimension: 32px;
+
 .logo {
-  width: 32px;
-  height: 32px;
+  min-width: $dimension;
+  min-height: $dimension;
+  width: $dimension;
+  height: $dimension;
   .st0 {
     fill: black;
     @media (prefers-color-scheme: 'dark') {
