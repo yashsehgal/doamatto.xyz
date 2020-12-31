@@ -1,5 +1,5 @@
 const styles = require('./nav.module.scss')
-import {default as Logo} from './logo'
+import {default as Logo} from './logos/logo'
 
 export default function nav () {
   return (
