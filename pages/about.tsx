@@ -55,7 +55,7 @@ export default function Home () {
                 lot of music from Japan. My favourite album right now is the soundtrack
                 to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
                 “Ready to”, and “Wish.”
-                <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token="BQA4ja6Xy115nakJNrebzhBWDSA7tG7p9eC4Uvy0csRNvGkgXlP_QDo6Nn8iqJS4oBAQbVV7eNvtFf1sKfuOAgRnv3nr76W9AU58oCIOI99F2UlEskqTExHy6tb0Bmb94xxCAJt8AgMuMeyV9dwnPkcgjPCYg9BEGDc"/>
+                <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token={process.env.token} />
                 <br/><br/>
                 I love improving, and because of that, I've taken to
                 learning things, both big and small. Some of the cool
