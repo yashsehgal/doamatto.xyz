@@ -1,6 +1,8 @@
 const styles = require('./footer.module.scss')
 import {useRouter} from 'next/router'
-import Link from 'next/link'
+// import Link from 'next/link'
+
+// TODO: Switch to <Link> for all links in footer
 
 export default function Footer () {
   const router = useRouter()

@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
-import { SpotifyAlbumWidget } from '../components/spotify'
 
 import dynamic from 'next/dynamic'
-const Header = dynamic(() => import('../components/header'))
+import { SpotifyAlbumWidget } from '@/components/spotify'
+const Header = dynamic(() => import('@/components/header'))
 
 export default function Home () {
   return (

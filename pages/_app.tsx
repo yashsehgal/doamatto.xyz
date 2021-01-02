@@ -4,10 +4,9 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import '../styles/globals.scss' // global stylesheet
 
-import dynamic from 'next/dynamic'
-import BLMBanner from '../components/blm-banner'
-import {default as Navigation} from '../components/nav'
-const Footer = dynamic(() => import('../components/footer'))
+import BLMBanner from '@/components/blm-banner'
+import {default as Navigation} from '@/components/nav'
+import {default as Footer} from '@/components/footer'
 
 export default class _app extends App {
   render () {
