@@ -1,7 +1,8 @@
 import React from 'react'
-import {default as Page} from '../../components/pageData'
+import { getFiles, getFileBySlug, MDXComponents } from '@/lib/postData';
+import hydrate from 'next-mdx-remote/hydrate';
+import {default as Page} from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { staticPaths, staticProps } from '../../lib/postData'
 
 /**
   * Major thanks to this Dev.to post:
@@ -9,20 +10,28 @@ import { staticPaths, staticProps } from '../../lib/postData'
   *
   */
 
-function BlogPostPage(props) {
-    return(
-        <>
-            <Page title={props.blog.title} description={props.blog.description} content={props.blog.content} />
-        </>
-    )
+function BlogPostPage({mdxSource, frontMatter}) {
+  const content = hydrate(mdxSource, {
+    components: MDXComponents
+  });
+  return <Page frontMatter={frontMatter}>{content}</Page>
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-    return staticProps(context, 'blog')
-}
-
-export const getStaticPaths: GetStaticPaths = async (context) => {
-    return staticPaths(context, 'blog')
+export const getStaticPaths: GetStaticPaths = async () =>  {
+    const posts = await getFiles('posts');
+    return {
+      paths: posts.map((p) => ({
+        params: {
+          slug: p.replace(/\.mdx/, '')
+        }
+      })),
+      fallback: false
+    };
+  }
+  
+export const getStaticProps: GetStaticProps = async ({params}) => {
+    const post = await getFileBySlug('posts', params.slug);
+    return { props: post };
 }
 
 export default BlogPostPage

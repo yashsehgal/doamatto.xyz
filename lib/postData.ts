@@ -1,55 +1,42 @@
 import fs from 'fs'
-import html from 'remark-html'
-import unified from 'unified'
-import markdown from 'remark-parse'
+import readingTime from 'reading-time'
+import Image from 'next/image'
+import mdxPrism from 'mdx-prism'
+import renderToString from 'next-mdx-remote/render-to-string'
 import matter from 'gray-matter'
+import path from 'path'
 
-export async function staticProps(context:any, type:string) {
-  var slug = context.params.slug
-  var dir: string;
-  if (type === "blog") {
-    dir = `${process.cwd()}/data/posts/${slug}.md`
-  } else {
-    dir = `${process.cwd()}/data/projects/${slug}.md`
-  }
-  const rawContent = fs.readFileSync(dir, {
-    encoding: 'utf-8',
-  })
-  const { data, content } = matter(rawContent)
-  const result = await unified()
-  .use(markdown)
-  .use(html)
-  .process(content)
-  return {
-    props: {
-      blog: {
-        ...data,
-        content: result.toString()
-      }
+const root = process.cwd()
+export const MDXComponents = { Image }
+
+export async function getFileBySlug(type, slug) {
+  const source = slug
+    ? fs.readFileSync(path.join(root, 'data', type, `${slug}.mdx`), 'utf8')
+    : fs.readFileSync(path.join(root, 'data', `${type}.mdx`), 'utf8');
+
+  const { data, content } = matter(source);
+  const mdxSource = await renderToString(content, {
+    components: MDXComponents,
+    mdxOptions: {
+      remarkPlugins: [
+        require('remark-autolink-headings'),
+        require('remark-slug')
+      ],
+      rehypePlugins: [mdxPrism]
     }
-  }
+  });
+
+  return {
+    mdxSource,
+    frontMatter: {
+      wordCount: content.split(/\s+/gu).length,
+      readingTime: readingTime(content),
+      slug: slug || null,
+      ...data
+    }
+  };
 }
 
-export async function staticPaths(context:any, type:string) {
-  var dir: string;
-  if (type === "blog") {
-    dir = `${process.cwd()}/data/posts`
-  } else {
-    dir = `${process.cwd()}/data/projects`
-  }
-  const files = fs.readdirSync(dir, 'utf-8')
-  const markdownFileNames = files
-    .filter((fn) => fn.endsWith('.md'))
-    .map((fn) => fn.replace('.md', ''))
-  
-  return {
-    paths: markdownFileNames.map((fileName) => {
-      return {
-        params: {
-          slug: fileName,
-        },
-      }
-    }),
-    fallback: false,
-  }
+export async function getFiles(type) {
+  return fs.readdirSync(path.join(root, 'data', type));
 }
