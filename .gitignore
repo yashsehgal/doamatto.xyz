@@ -17,3 +17,7 @@ yarn-error.log*
 /public/rss.xml
 /public/robots.txt
 /public/sitemap.xml
+
+# Environment variables
+.env
+.env.local
