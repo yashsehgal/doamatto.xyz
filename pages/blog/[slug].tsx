@@ -4,13 +4,7 @@ import hydrate from 'next-mdx-remote/hydrate';
 import {default as Page} from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-/**
-  * Major thanks to this Dev.to post:
-  * https://dev.to/sagar/building-a-blog-with-next-js-253
-  *
-  */
-
-function BlogPostPage({mdxSource, frontMatter}) {
+export default function BlogPostPage({mdxSource, frontMatter}) {
   const content = hydrate(mdxSource, {
     components: MDXComponents
   });
@@ -33,5 +27,3 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     const post = await getFileBySlug('posts', params.slug);
     return { props: post };
 }
-
-export default BlogPostPage
