@@ -1,11 +1,3 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/
-})
-
-module.export = withMDX({
-  pageExtensions: ['mdx', 'jsx', 'js', 'md', 'ts', 'tsx']
-})
-
 module.exports = {
   i18n: {
     locales: ['en', 'fr', 'jp'],

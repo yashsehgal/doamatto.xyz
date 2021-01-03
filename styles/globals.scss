@@ -139,7 +139,7 @@ table {
     padding-left: 0;
     .post {
         padding: .75rem 1rem;
-        transition: background-color 250ms;
+        a { transition: 250ms color ease-in-out; }
         .tag {
             background: #e4e4e4;
             margin: .5rem;
@@ -148,35 +148,36 @@ table {
             display: table;
             font-size: .8rem;
             border: .15rem solid #e4e4e4;
+            color: black;
         }
         // Project tag colours
         .eol {
-            background-color: #fd9246;
-            border-color: #f97316;
+            background-color: #f69e7b;
+            border-color: #f88f65;
         }
         .progress {
-            background-color: #9f9fa1;
-            border-color: #71717a;
-            color: black;
+            background-color: rgb(152 162 177);
+            border-color: rgb(152 162 177);
         }
         .active {
-            background-color: #3b82f6;
-            border-color: #2a77f3;
+            background-color: #8096f0;
+            border-color: #6b83e4;
         }
         .released {
-            background-color: #10b981;
-            border-color: #03865b;
+            background-color: #7adf82;
+            border-color: #7adf82;
         }
         
         // Blog tag colours
         .concepts {
-            background-color: #fb94ff;
-            border-color: #fa65ff;
-            color: black;
+            background-color: #ffabe1;
+            border-color: #f090ce;
         }
         
         &:hover {
-            background: #909eff;
+            a {
+                color: #909EFF;
+            }
         }
     }
 }
