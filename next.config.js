@@ -51,6 +51,11 @@ module.exports = {
         permanent: true
       },
       {
+        source: '/nano',
+        destination: 'https://git.doamatto.xyz/nano',
+        permanent: true
+      },
+      {
         source: '/updates/mello/:slug*',
         destination: '/projects/mello',
         permanent: true
