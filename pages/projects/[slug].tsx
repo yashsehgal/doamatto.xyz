@@ -4,12 +4,6 @@ import hydrate from 'next-mdx-remote/hydrate';
 import {default as Page} from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-/**
-  * Major thanks to this Dev.to post:
-  * https://dev.to/sagar/building-a-blog-with-next-js-253
-  *
-  */
-
 export default function ProjectPage({mdxSource, frontMatter}) {
     const content = hydrate(mdxSource, {
       components: MDXComponents
