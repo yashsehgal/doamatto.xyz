@@ -4,7 +4,8 @@ import {parseISO, format} from 'date-fns'
 
 export default function pageData({children, frontMatter}: {children: any, frontMatter: any}) {
     var title = frontMatter.title,
-        description = frontMatter.description
+        description = frontMatter.description,
+        date = frontMatter.date
     return(
       <>
         <NextSeo
@@ -16,7 +17,7 @@ export default function pageData({children, frontMatter}: {children: any, frontM
         </Head>
         <div className="container">
           <h1 className="header">{title}</h1>
-          <p className="minor">{frontMatter.readingTime.text}{` • `}{format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}</p>
+          <p className="minor">{frontMatter.readingTime.text}{` • `}{format(parseISO(date), 'MMMM dd, yyyy')}</p>
           <section>
             {children}
           </section>
