@@ -15,9 +15,16 @@ parserOptions:
 plugins:
   - react
   - '@typescript-eslint'
+  - 'mdx'
 rules: {
   "react/react-in-jsx-scope": "off"
 }
+overrides: [
+  {
+    files: ["*.mdx", "*.md"],
+    extends: ["plugin:mdx/overrides"]
+  }
+]
 settings:
   react:
     version: "detect"
