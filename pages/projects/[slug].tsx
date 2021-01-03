@@ -12,7 +12,7 @@ export default function ProjectPage({mdxSource, frontMatter}) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () =>  {
-    const posts = await getFiles('posts');
+    const posts = await getFiles('projects');
     return {
       paths: posts.map((p) => ({
         params: {
@@ -24,6 +24,6 @@ export const getStaticPaths: GetStaticPaths = async () =>  {
   }
   
 export const getStaticProps: GetStaticProps = async ({params}) => {
-    const post = await getFileBySlug('posts', params.slug);
+    const post = await getFileBySlug('projects', params.slug);
     return { props: post };
 }
