@@ -36,43 +36,31 @@ export async function getAccessToken() {
 
 export async function albumRequest(albumId:string) {
   const {access_token} = await getAccessToken()
-  console.log('=== ==== ===')
-  https.get(`https://api.spotify.com/v1/albums/${albumId}`, {
-    method: 'GET',
+  return fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
     headers: {
-      'Accept': 'application/json',
       'Authorization': `Bearer ${access_token}`,
-      'Content-Type': 'application/json'
     }
-  }, (res: any) => {
-    let data: any = '';
-    res.on('data', (chunk: any) => { data += chunk; })
-    res.on('end', () => {
-      let d = JSON.parse(data)
-      return obj = {
-        albumArt: d.images[1].url,
-        albumName: d.name,
-        artist: d.artists[0].name,
-        url: d.external_urls.spotify
-      }
-    })
-  }).on('error', (err: string) => { return console.error(err) })
-  return obj
+  })
 }
 
 export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
-  const {
-    albumArt,
-    albumName,
-    artist,
-    url
-  }:{
-    albumArt:string,
-    albumName:string,
-    artist:string,
-    url:string
-  } = await albumRequest(albumId)
-  console.log(`albumArt \n albumName \n artist \n url`)
+  let res = await albumRequest(albumId)
+  console.log(res)
+  const { items } = await res.json()
+
+  const data = items.map((d) => ({
+    art: d.images[1].url,
+    name: d.name,
+    artist: d.artists[0].name,
+    url: d.external_urls.spotify
+  }))
+
+  var albumArt = data.albumArt,
+      albumName = data.name,
+      artist = data.artist,
+      url = data.url
+  console.log(`${albumArt} ${albumName} ${artist} ${url}`)
+  console.log('#=== ==== ===#')
   return (
     <div className={styles.widget}>
       <img
