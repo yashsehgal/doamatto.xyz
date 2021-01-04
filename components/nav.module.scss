@@ -2,6 +2,13 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
+
+    /* Sticky nav backdrop from Lee Robinson: https://leerob.io */
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+
     @media(max-width:500px) {
         height: 90px;
         h1 a, h1 a svg {
