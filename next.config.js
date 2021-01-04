@@ -72,6 +72,12 @@ module.exports = {
         source: '/updates%20projects/:date*/ppg',
         destination: 'https://github.com/doamatto/phone-passcode-gen',
         permanent: true
+      },
+
+      {
+        source: '/stack',
+        destination: '/uses',
+        permanent: true
       }
     ]
   }
