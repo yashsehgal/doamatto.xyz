@@ -61,7 +61,18 @@ export async function albumRequest(albumId:string) {
 }
 
 export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
-  const {albumArt, albumName, artist, url} = await albumRequest(albumId)
+  const {
+    albumArt,
+    albumName,
+    artist,
+    url
+  }:{
+    albumArt:string,
+    albumName:string,
+    artist:string,
+    url:string
+  } = await albumRequest(albumId)
+  console.log(`albumArt \n albumName \n artist \n url`)
   return (
     <div className={styles.widget}>
       <img
