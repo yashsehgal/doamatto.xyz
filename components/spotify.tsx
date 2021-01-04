@@ -78,7 +78,9 @@ export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
           <p className={styles.artist}>by <b className={styles.artistBold}>{artist}</b></p>
         </div>
         <div className={styles.cta}>
-          <a href={url} title="Open in Spotify"><p className={styles.ctaText}>Open in Spotify</p></a>
+          <a href={url} title="Open in Spotify">
+            <p className={styles.ctaText}>Open in Spotify</p>
+          </a>
         </div>
       </div>
       <Logo />
@@ -94,21 +96,23 @@ export async function SpotifyTrackWidget({trackId}:{trackId: string}) {
       artist = res.artists[0].name,
       url = res.external_urls.spotify
   return (
-    <div className="widget">
+    <div className={styles.widget}>
       <img src={albumArt}
            alt={albumName}
            width="128"
            height="128"
-           className="albumArt"
+           className={styles.albumArt}
       />
-      <div>
-        <p className="title">{title}</p>
-        <p className="artist">{artist}</p>
-        <a href={url}
-           title={`Listen to ${title} on Spotify`}
-           className="open">
-              Open in Spotify
-        </a>
+      <div className={styles.mid}>
+        <div className={styles.albumInfo}>
+          <p className={styles.title}>{title}</p>
+          <p className={styles.artist}>{artist}</p>
+        </div>
+        <div className={styles.cta}>
+          <a href={url} title="Open in Spotify">
+            <p className={styles.ctaText}>Open in Spotify</p>
+          </a>
+        </div>
       </div>
       <Logo />
     </div>
