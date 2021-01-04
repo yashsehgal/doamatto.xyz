@@ -30,32 +30,31 @@ export async function getAccessToken() {
       refresh_token
     })
   })
-
   return res.json()
 }
 
-export async function albumRequest(albumId:string) {
+export const albumRequest = async (albumId:string) => {
   const {access_token} = await getAccessToken()
-  return fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
+  const res = await fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
     headers: {
+      'Accept': 'application/json',
       'Authorization': `Bearer ${access_token}`,
+      'Content-Type': 'application/json'
     }
   })
+  return res.json()
 }
 
 export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
-  let res = await albumRequest(albumId)
-  console.log(res)
-  const { items } = await res.json()
-
-  const data = items.map((d) => ({
+  const res = await albumRequest(albumId)
+  const data = await res.map((d) => ({
     art: d.images[1].url,
     name: d.name,
     artist: d.artists[0].name,
     url: d.external_urls.spotify
   }))
 
-  var albumArt = data.albumArt,
+  var albumArt = data.art,
       albumName = data.name,
       artist = data.artist,
       url = data.url
