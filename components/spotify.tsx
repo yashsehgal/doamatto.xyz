@@ -5,9 +5,7 @@ import querystring from 'querystring'
 import {default as Logo} from './logos/spotify'
 import styles from './spotify.module.scss'
 
-export default function Main() {
-  return console.error("You need to specify one of the widgets to use this");
-}
+export default function Main() { return console.error("You need to specify one of the widgets to use this"); }
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
