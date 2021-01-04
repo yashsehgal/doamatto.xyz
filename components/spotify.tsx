@@ -1,5 +1,4 @@
 import React from 'react'
-import * as https from 'https'
 import fetch from 'isomorphic-unfetch'
 import querystring from 'querystring'
 
@@ -10,7 +9,6 @@ export default function Main() {
   return console.error("You need to specify one of the widgets to use this");
 }
 
-var obj: any
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
