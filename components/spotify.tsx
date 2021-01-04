@@ -1,4 +1,4 @@
-const React = require('react')
+import React from 'react'
 import * as https from 'https'
 import fetch from 'isomorphic-unfetch'
 import querystring from 'querystring'
@@ -45,21 +45,24 @@ export const albumRequest = async (albumId:string) => {
   return res.json()
 }
 
+export const trackRequest = async (trackId:string) => {
+  const {access_token} = await getAccessToken()
+  const res = await fetch(`https://api.spotify.com/v1/tracks/${trackId}`, {
+    headers: {
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${access_token}`,
+      'Content-Type': 'application/json'
+    }
+  })
+  return res.json()
+}
+
 export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
   const res = await albumRequest(albumId)
-  const data = await res.map((d) => ({
-    art: d.images[1].url,
-    name: d.name,
-    artist: d.artists[0].name,
-    url: d.external_urls.spotify
-  }))
-
-  var albumArt = data.art,
-      albumName = data.name,
-      artist = data.artist,
-      url = data.url
-  console.log(`${albumArt} ${albumName} ${artist} ${url}`)
-  console.log('#=== ==== ===#')
+  const albumArt = res.images[1].url,
+        albumName = res.name,
+        artist = res.artists[0].name,
+        url = res.external_urls.spotify
   return (
     <div className={styles.widget}>
       <img
@@ -83,43 +86,31 @@ export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
   )
 }
 
-export function SpotifyTrackWidget({albumId, token}:{albumId: string, token: string}) {
-  https.get(`https://api.spotify.com/v1/tracks/${albumId}`, {
-  method: 'GET',
-  headers: {
-    'Accept': 'application/json',
-    'Authorization': `Bearer ${token}`,
-    'Content-Type': 'application/json'
-  }
-}, (res: any) => {
-  let data: any = '';
-  res.on('data', (chunk: any) => {
-    data += chunk;
-  })
-  res.on('end', () => {
-    let d = JSON.parse(data)
-    var albumArt = d.album.images[1].url,
-    albumName = d.album.name,
-    title = d.name,
-    artist = d.artists[0].name,
-    url = d.external_urls.spotify
-    obj = (
-      <div className="widget">
+export async function SpotifyTrackWidget({trackId}:{trackId: string}) {
+  const res = await trackRequest(trackId)
+  var albumArt = res.album.images[1].url,
+      albumName = res.album.name,
+      title = res.name,
+      artist = res.artists[0].name,
+      url = res.external_urls.spotify
+  return (
+    <div className="widget">
       <img src={albumArt}
-      alt={albumName}
-      width="128"
-      height="128"
-      className="albumArt"
+           alt={albumName}
+           width="128"
+           height="128"
+           className="albumArt"
       />
       <div>
-      <p className="title">{title}</p>
-      <p className="artist">{artist}</p>
-      <a href={url} title={`Listen to ${title} on Spotify`} className="open">Open in Spotify</a>
+        <p className="title">{title}</p>
+        <p className="artist">{artist}</p>
+        <a href={url}
+           title={`Listen to ${title} on Spotify`}
+           className="open">
+              Open in Spotify
+        </a>
       </div>
       <Logo />
-      </div>
-      )
-    })
-  }).on('error', (err: string) => { console.error(err) })
-  return obj
+    </div>
+  )
 }
