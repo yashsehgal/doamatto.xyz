@@ -175,10 +175,26 @@ table {
         }
         
         &:hover {
-            a {
-                color: #909EFF;
-            }
+.stack-list {
+    .stack-item {
+        display: flex;
+        border-radius: .5rem;
+        @media(max-width:500px) { padding: 1rem; }
+        list-style: none;
+        padding: 1rem;
+        transition: 100ms background-color ease-in-out,
+                    100ms border-color ease-in-out;
+        &:hover {
+            background-color: #f4f4f5;
+            @media(prefers-color-scheme: 'dark'){ background-color: rgba(24,24,27); }
+            color: inherit;
+            b {border-color: #000;}
         }
+        b {
+            font-size: 1.2rem;
+            border-bottom: .1rem solid #000;
+        }
+        border: none;
     }
 }
 

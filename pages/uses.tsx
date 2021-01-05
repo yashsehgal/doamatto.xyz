@@ -19,98 +19,98 @@ export default function Home () {
       <div className="container">
         <section id="apps-and-services">
           <h2>Apps and Services</h2>
-          <ul>
-            <a href="https://1password.com">
+          <ul className="stack-list">
+            <a href="https://1password.com" className="stack-item">
               <li>
                 <b>1Password</b><br/>
                 I used Bitwarden for ages (still recommend it for those who need a password maanger). 1Password is way more polished, however.
               </li>
             </a>
-            <a href="https://adguard.com/en/adguard-ios/overview.html">
+            <a href="https://adguard.com/en/adguard-ios/overview.html" className="stack-item">
               <li>
                 <b>AdGuard</b><br/>
                 Thanks to Safari's content blocker API for iOS, AdGuard is easily one of the best tools to keep nasty ads and other trackers at bay.
               </li>
             </a>
-            <a href="https://www.alfredapp.com/">
+            <a href="https://www.alfredapp.com/" className="stack-item">
               <li>
                 <b>Alfred</b><br/>
                 Imagine Spotlight Search, but on steroids.
               </li>
             </a>
-            <a href="https://apolloapp.io/">
+            <a href="https://apolloapp.io/" className="stack-item">
               <li>
                 <b>Apollo</b><br/>
                 As most everyone will tell you, this is easily the best third-party Reddit app on the App Store.
               </li>
             </a>
-            <a href="https://bandcamp.com">
+            <a href="https://bandcamp.com" className="stack-item">
               <li>
                 <b>Bandcamp</b><br/>
                 Although most of this is related to stuff I use during work, Bandcamp is a no brainer for great music from small artists.
               </li>
             </a>
-            <a href="https://duolingo.com">
+            <a href="https://duolingo.com" className="stack-item">
               <li>
                 <b><a href="https://www.duolingo.com/profile/notdoamatto">Duolingo</a></b><br/>
                 I know English, French, and (still working on) Japanese all thanks to good ol' Duo. <a href="https://hg1.funnyjunk.com/pictures/Duolingo+memes_392d45_6518266.png">Just don't skip a lesson, or else.</a>
               </li>
             </a>
-            <a href="https://figma.com">
+            <a href="https://figma.com" className="stack-item">
               <li>
                 <b>Figma</b><br/>
                 As most everyone else will tell you, Figma is smashingly great design tool that lets you do some crazy stuff with almost no effort.
               </li>
             </a>
-            <a href="https://gumroad.com">
+            <a href="https://gumroad.com" className="stack-item">
               <li>
                 <b>Gumroad</b><br/>
                 Easily one of the best places for creators to sell their products online (be it digital or physical).
               </li>
             </a>
-            <a href="https://namecheap.com">
+            <a href="https://namecheap.com" className="stack-item">
               <li>
                 <b>Namecheap</b><br/>
                 Easily one of the best domain providers out there.
               </li>
             </a>
-            <a href="https://nextjs.org">
+            <a href="https://nextjs.org" className="stack-item">
               <li>
                 <b>Next.js</b><br/>
                 The best way to build React-based websites.
               </li>
             </a>
-            <a href="https://pocketcasts.com">
+            <a href="https://pocketcasts.com" className="stack-item">
               <li>
                 <b>Pocket Casts</b><br/>
                 Easily the greatest podcast client ever. Still hate that they switched to a subscription-model. Still love that they grandfathered me to a lifetime plan.
               </li>
             </a>
-            <a href="https://renovate.whitesourcesoftware.com">
+            <a href="https://renovate.whitesourcesoftware.com" className="stack-item">
               <li>
                 <b>Renovate (by Whitesource)</b><br/>
                 Although people sometimes prefer <a href="https://dependabot.com/">GitHub's Dependabot</a> (I use both), Renovate has always been for me a faster way to update dependencies and easily see what needs to be fixed, in the event of breaking changes.
               </li>
             </a>
-            <a href="https://sublimetext.com">
+            <a href="https://sublimetext.com" className="stack-item">
               <li>
                 <b>Sublime Text</b><br/>
                 A wickedly fast and powerful text editor. Only reason I rarely use it is because it doesn't have a lot of convience, even with plugins. (See VSCodium below)
               </li>
             </a>
-            <a href="https://tailwindcss.com">
+            <a href="https://tailwindcss.com" className="stack-item">
               <li>
                 <b>Tailwind CSS</b><br/>
                 At first, you will probably find it stupid. After you deploy one thing with Tailwind though, you probably won't want to go back to SCSS/LESS.
               </li>
             </a>
-            <a href="https://vercel.com">
+            <a href="https://vercel.com" className="stack-item">
               <li>
                 <b>Vercel</b><br/>
                 This site, as well as a crap ton of my web projects, run on Vercel. It's easily one of my favourtie hosting providers and works a treat with Next.js (which this site is built on).
               </li>
             </a>
-            <a href="https://vscodium.com">
+            <a href="https://vscodium.com" className="stack-item">
               <li>
                 <b>VSCodium</b><br/>
                 Imagine Virtual Studio Code, minus the tracking and bloat from Microsoft. Easily my favourite text editor.
