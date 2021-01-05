@@ -69,7 +69,8 @@ table {
     }
 }
 
-.container, footer {
+.container,
+footer {
     a {
         text-decoration: none;
         border-bottom: 1px solid black;
@@ -86,9 +87,7 @@ table {
     }
 }
 
-.header {
-    font-size: 2.5rem;
-}
+.header { font-size: 2.5rem; }
 
 #timeline {
     * {
