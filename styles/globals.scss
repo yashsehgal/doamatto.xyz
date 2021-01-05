@@ -56,16 +56,16 @@ table {
 
 .container {
     margin: auto 1rem;
-}
+    section {
+        width: 100%;
+        max-width: 95%;
+        p img {
+            margin: auto;
+            display: block;
+            text-align: center;
+            max-width: 100%;
+        }
 
-.container section {
-    width: 100%;
-    max-width: 95%;
-    p img {
-        margin: auto;
-        display: block;
-        text-align: center;
-        max-width: 100%;
     }
 }
 
