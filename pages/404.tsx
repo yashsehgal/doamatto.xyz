@@ -13,7 +13,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container four-oh-four">
-        <img src="/assets/404.svg" />
+        <img src="/assets/404.svg" alt="A dead page. But who killed them?" />
         <div>
           <h1>This page is dead!</h1>
           <p>
