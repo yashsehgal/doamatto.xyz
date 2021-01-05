@@ -30,7 +30,7 @@ export default function privacy () {
         </p>
         <h3>What data is shared, sold, or transfered?</h3>
         <p>
-            I do not share, sell, or transfer any data collected with any third-parties. I am not responsible with who Vercel shares data with. This is outlined in their privacy policy <a href="https://vercel.com/legal/privacy-policy"> here.</a>
+            I do not share, sell, or transfer any data collected with any third-parties. I am not responsible with who Vercel shares data with. This is outlined in their privacy policy <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>
         <h3>Who has access to this data?</h3>
         <p>            
