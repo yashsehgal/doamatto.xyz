@@ -15,7 +15,7 @@ export default function pageData({children, frontMatter}: {children: any, frontM
         <Head>
             <title>{title} - doamatto</title>
         </Head>
-        <div className="container">
+        <div className="container" id="mainContent">
           <h1 className="header">{title}</h1>
           <p className="minor">{frontMatter.readingTime.text}{` • `}{format(parseISO(date), 'MMMM dd, yyyy')}</p>
           <section>
