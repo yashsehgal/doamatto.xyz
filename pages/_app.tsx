@@ -33,6 +33,7 @@ export default class _app extends App {
           <link rel="apple-touch-icon" href="/assets/logo-bg.svg"/>
           <link rel="author" href="humans.txt"/>
         </Head>
+        <a href="#maincontent" className="skipToMain">Skip to main content</a>
         <BLMBanner />
         <Navigation />
         <Component {...pageProps} className="container" />

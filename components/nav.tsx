@@ -3,14 +3,15 @@ import {default as Logo} from './logos/logo'
 
 export default function nav () {
   return (
+      <>
         <header className={styles.header}>
-            <h1 className="logo">
+            <div className="logo">
                 <a href="/" rel="Home button" title="Home">
                     {
                     <Logo />
                     }
                 </a>
-            </h1>
+            </div>
             <nav className={styles.nav}>
                 <ul>
                     <li>
@@ -31,5 +32,6 @@ export default function nav () {
                 </ul>
             </nav>
         </header>
+      </>
   )
 }

@@ -16,7 +16,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Uses" subtitle="My favourite tools and software" />
-      <div className="container">
+      <div className="container" id="mainContent">
         <section id="apps-and-services">
           <h2>Apps and Services</h2>
           <ul className="stack-list">

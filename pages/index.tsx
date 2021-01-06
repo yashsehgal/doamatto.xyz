@@ -7,7 +7,7 @@ export default function Home () {
       <Head>
         <title>doamatto</title>
       </Head>
-      <main className={styles.main}>
+      <main className={styles.main} id="mainContent">
         <div>
           <h1 className={styles.title}>
             Hi!<br/> I&apos;m Matt Ronchetto.
