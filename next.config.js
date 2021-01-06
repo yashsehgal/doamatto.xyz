@@ -4,7 +4,7 @@ module.exports = {
     defaultLocale: 'en',
     localeDetection: true
   },
-  webpack: (config) => {
+  webpack: (config, {isServer}) => {
     config.node = {
       fs: 'empty',
       net: 'empty',
