@@ -4,14 +4,11 @@ module.exports = {
     defaultLocale: 'en',
     localeDetection: true
   },
-  webpack: (config, {isServer}) => {
+  webpack: (config) => {
     config.node = {
       fs: 'empty',
       net: 'empty',
       tls: 'empty'
-    }
-    if (isServer) {
-      require('./lib/sitemap');
     }
     return config
   },
