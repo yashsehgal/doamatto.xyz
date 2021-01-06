@@ -10,6 +10,9 @@ module.exports = {
       net: 'empty',
       tls: 'empty'
     }
+    if (isServer) {
+      require('./lib/sitemap');
+    }
     return config
   },
   webpackDevMiddleware: config => {
