@@ -1,5 +1,6 @@
 import React from 'react'
 import App from 'next/app'
+import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import '../styles/globals.scss' // global stylesheet
@@ -10,9 +11,9 @@ import {default as Footer} from '@/components/footer'
 
 export default class _app extends App {
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps }: AppProps = this.props
     return (
-      <React.Fragment>
+      <>
         <DefaultSeo
           openGraph={{
             type: 'website',
@@ -38,7 +39,7 @@ export default class _app extends App {
         <Navigation />
         <Component {...pageProps} className="container" id="mainContent" />
         <Footer />
-      </React.Fragment>
+      </>
     )
   }
 }
