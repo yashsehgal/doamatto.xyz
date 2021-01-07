@@ -7,20 +7,19 @@ $text-black: #000;
 $light-bg: #fbfbfb;
 $light-textcolour: #000;
 
-@mixin roboto-medium {
-  @include roboto;
+@mixin medium {
+  @include base;
   font-weight: 500;
 }
-@mixin roboto-bold {
-  @include roboto;
+@mixin bold {
+  @include base;
   font-weight: 700;
 }
-@mixin roboto-normal {
-  @include roboto;
+@mixin normal {
+  @include base;
   font-weight: 400;
 }
-@mixin roboto {
-  font-family: "Roboto";
+@mixin base {
   line-height: normal; // roughly 1.45 for Roboto
 }
 
@@ -80,9 +79,9 @@ $light-textcolour: #000;
   margin: 0;
   font-size: 1rem;
   @media(max-width:500px) {font-size: .7rem;}
-  @include roboto-normal;
+  @include normal;
   & .artistBold {
-      @include roboto-bold;
+      @include bold;
   }
 }
 .cta {
@@ -94,7 +93,7 @@ $light-textcolour: #000;
 }
 .ctaText {
   a & { border: none !important; }
-  @include roboto-bold;
+  @include bold;
   color: $text-black;
   text-align: center;
   margin: 0;
