@@ -1,0 +1,29 @@
+// Base colours
+$black: #000000;
+$white: #ffffff;
+$light-purple: #909EFF;
+$dark-purple: #2d3fb1;
+
+// Alt colours
+$light-alt: #f4f4f5;
+$dark-alt: #18181b;
+
+// Tag colours
+$eol-alt: #f69e7b;
+$eol: #f97316;
+$active-alt: #8096f0;
+$active-alt1: #6b83e4;
+$active: #3b82f6;
+$released-alt: #7adf82;
+$released: #10b981;
+$progress: #71717a;
+$concepts-alt: #ffabe1;
+$concepts: #f090ce;
+
+// Miscillaneous
+$nav-hover: linear-gradient(
+  transparent 0%,
+  transparent calc(50% - 3px),
+  #929de2 calc(50% - 3px),
+  #929de2 100%
+);
