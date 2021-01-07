@@ -43,7 +43,7 @@ table {
         padding: .5rem;
     }
     thead tr {
-        background: #E4DEFF !important;
+        background: #E4DEFF;
         color: $black;
         border-bottom: 1px solid $black;
     }
@@ -56,19 +56,7 @@ table {
     }
 }
 
-.container {
-    margin: auto 1rem;
-    section {
-        width: 100%;
-        max-width: 95%;
-        p img {
-            margin: auto;
-            display: block;
-            text-align: center;
-            max-width: 100%;
-        }
-    }
-}
+.container { margin: auto 1rem; }
 
 .four-oh-four {
     display: flex;
@@ -97,7 +85,7 @@ table {
 }
 
 
-.container,
+.content,
 footer {
     a {
         text-decoration: none;
@@ -105,8 +93,8 @@ footer {
         @media (prefers-color-scheme: 'dark') {
             border-color: $white;
             &:hover {
-                color: $light-purple !important;
-                border-color:  $light-purple !important;
+                color: $light-purple!important;
+                border-color:  $light-purple!important;
             }
         }
         color: inherit;
