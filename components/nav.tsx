@@ -5,7 +5,7 @@ export default function nav () {
   return (
       <>
         <header className={styles.header}>
-            <div className="logo">
+            <div className={styles.logo}>
                 <a href="/" rel="Home button" title="Home">
                     {
                     <Logo />
