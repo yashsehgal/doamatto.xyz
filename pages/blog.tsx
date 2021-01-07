@@ -25,7 +25,7 @@ export default function IndexPage({postData}:{
     />
     <div>
       <Header title="Blog" />
-      <div className="posts" id="mainContent">
+      <div className="posts">
         {postData.map(({title,date,slug,id,tag,tagShort}) => (
           <section className="post" key={id} id={id}>
             <Link href={`/blog/${slug}`}>

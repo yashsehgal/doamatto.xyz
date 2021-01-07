@@ -36,7 +36,7 @@ export default class _app extends App {
         <a href="#maincontent" className="skipToMain">Skip to main content</a>
         <BLMBanner />
         <Navigation />
-        <Component {...pageProps} className="container" />
+        <Component {...pageProps} className="container" id="mainContent" />
         <Footer />
       </React.Fragment>
     )

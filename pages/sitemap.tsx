@@ -13,7 +13,6 @@ export default function Sitemap() {
     />
     <div>
       <Header title="Sitemap" />
-      <div className="posts" id="mainContent">
         <p>So far, there is only an XML version of the sitemap.An HTML version is coming soon™.</p>
         <a
           href="/sitemap.xml"
@@ -21,7 +20,6 @@ export default function Sitemap() {
           className="button">
             Go to XML sitemap
         </a>
-      </div>
     </div>
     </>
   )
