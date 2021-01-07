@@ -11,7 +11,7 @@ export default function Sitemap() {
       title="Sitemap - doamatto"
       description = "A slew of pages that are available on the site."
     />
-    <div>
+    <div className="content">
       <Header title="Sitemap" />
         <p>So far, there is only an XML version of the sitemap.An HTML version is coming soon™.</p>
         <a

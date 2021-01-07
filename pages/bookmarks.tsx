@@ -18,7 +18,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Bookmarks" subtitle="Cool things that I saved for later." />
-      <div className="container">
+      <div className="content">
         <Bookmark
           title="Sharpen Design"
           description="Randomly generated design prompts. Great practice for all designers."

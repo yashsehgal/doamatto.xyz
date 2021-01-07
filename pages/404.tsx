@@ -12,7 +12,7 @@ export default function Home () {
         <title>404 - doamatto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container four-oh-four">
+      <div className="content four-oh-four">
         <img src="/assets/404.svg" alt="" />
         <div>
           <h1>This page is dead!</h1>

@@ -17,7 +17,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="About" />
-      <div className="container">
+      <div className="content">
           <p>
               <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I’m a high school
               student based in sunny California who loves to make software that works
