@@ -1,3 +1,5 @@
+@import '../styles/colours';
+
 .header {
     text-align: center;
     display: flex;
@@ -22,7 +24,7 @@
         a:hover {
             svg {
                 path {
-                    stroke: #909EFF;
+                    stroke: $light-purple;
                     transition: 250ms ease-in-out all;
                 }
             }
@@ -54,7 +56,7 @@
                     text-decoration: none;
                     transition: all 150ms ease-in-out;
                     @media (min-width: 500px) {
-                        background-image: linear-gradient(transparent 0%, transparent calc(50% - 3px), #929de2 calc(50% - 3px), #929de2 100%);
+                        background-image: $nav-hover;
                         background-position: 0 0;
                         background-size: 100% 225%;
                         color: inherit;
@@ -63,7 +65,7 @@
                                     color 250ms,
                                     background-size 250ms;
                         &:hover {
-                            color: black;
+                            color: $black;
                             background-position: 0 100%;
                             background-size: 100% 200%;
                         }
