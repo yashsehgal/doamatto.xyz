@@ -1,12 +1,14 @@
+@import '../styles/colours';
+
 .banner {
   height: 3rem;
   padding: .25rem;
-  background: #000;
+  background: $black;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: $white;
   font-weight: 800;
   text-decoration: none;
   @media(max-width: 500px) {
@@ -14,11 +16,11 @@
     padding: .7rem;
   }
   font-size: .95rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $white;
   transition: border-color 250ms,
               color 250ms;
   &:hover {
-    color: #909EFF;
-    border-color: #909EFF;
+    color: $light-purple;
+    border-color: $light-purple;
   }
 }

@@ -1,17 +1,19 @@
+@import 'colours';
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: black;
-    background: white;
+    color: $black;
+    background: $white;
     a,
-    nav ul li a { color: black; }
+    nav ul li a { color: $black; }
     @media (prefers-color-scheme: 'dark') {
-        color: white;
-        background: black;
+        color: $white;
+        background: $black;
         a,
-        nav ul li a { color: white; }
+        nav ul li a { color: $white; }
     }
 }
 
@@ -27,29 +29,29 @@ body {
 
 table {
     @media (prefers-color-scheme: 'dark') {
-        background: black;
-        color: white;
+        background: $black;
+        color: $white;
     }
-    background: white;
-    color: black;
+    background: $white;
+    color: $black;
     border-collapse: collapse;
     margin: 1rem auto;
     width: 100%;
     max-width: 75%;
     thead td, tbody td {
-        border: 1px solid black;
+        border: 1px solid $black;
         padding: .5rem;
     }
     thead tr {
         background: #E4DEFF !important;
-        color: black;
-        border-bottom: 1px solid black;
+        color: $black;
+        border-bottom: 1px solid $black;
     }
     tbody {
         td { padding: .5rem; }
         tr:nth-of-type(even) {
-            background: rgb(209, 209, 209);
-            color: black;
+            background: $light-alt;
+            color: $black;
         }
     }
 }
@@ -78,17 +80,20 @@ table {
         flex-direction: column;
     }
     text-align: center;
-    .button {
-        display: inline-block;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding: 1rem 1.5rem;
-        border: none;
-        border-radius: .5rem;
-        background-color: #f4f4f5;
-        @media(prefers-color-scheme: 'dark'){ background-color: #18181b; }
-    }
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: $light-alt;
+    text-decoration: none;
+    @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
+    &:hover { color: $light-purple; }
 }
 
 
@@ -96,20 +101,20 @@ table {
 footer {
     a {
         text-decoration: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $black;
         @media (prefers-color-scheme: 'dark') {
-            border-color: white;
+            border-color: $white;
             &:hover {
-                color: #909EFF !important;
-                border-color:  #909EFF !important;
+                color: $light-purple !important;
+                border-color:  $light-purple !important;
             }
         }
         color: inherit;
         transition: border-color 250ms,
         color 250ms;
         &:hover {
-            color: #2d3fb1;
-            border-color: #2d3fb1;
+            color: $dark-purple;
+            border-color: $dark-purple;
         }
     }
 }
@@ -136,14 +141,14 @@ footer {
     }
     
     section {
-        border: 0 solid #e4e4e4;
+        border: 0 solid $light-alt;
         border-left-width: .2rem;
         padding-left: .5rem;
     }
-    .eol { border-color: #f97316; }
-    .active { border-color: #3b82f6; }
-    .released { border-color: #10b981; }
-    .progress { border-color: #71717a; }
+    .eol { border-color: $eol; }
+    .active { border-color: $active; }
+    .released { border-color: $released; }
+    .progress { border-color: $progress; }
 }
 
 .minor {
@@ -168,43 +173,43 @@ footer {
         padding: .75rem 1rem;
         a { transition: 250ms color ease-in-out; }
         .tag {
-            background: #e4e4e4;
+            background: $light-alt;
             margin: .5rem;
             padding: .2rem .5rem;
             border-radius: 2rem;
             display: table;
             font-size: .8rem;
-            border: .15rem solid #e4e4e4;
+            border: .15rem solid $light-alt;
             color: black;
         }
         // Project tag colours
         .eol {
-            background-color: #f69e7b;
-            border-color: #f88f65;
+            background-color: $eol-alt;
+            border-color: $eol;
         }
         .progress {
-            background-color: rgb(152 162 177);
-            border-color: rgb(152 162 177);
+            background-color: rgb(152, 162, 177);
+            border-color: rgb(152, 162, 177);
         }
         .active {
-            background-color: #8096f0;
-            border-color: #6b83e4;
+            background-color: $active-alt;
+            border-color: $active-alt1;
         }
         .released {
-            background-color: #7adf82;
-            border-color: #7adf82;
+            background-color: $released-alt;
+            border-color: $released-alt;
         }
         
         // Blog tag colours
         .concepts {
-            background-color: #ffabe1;
-            border-color: #f090ce;
+            background-color: $concepts-alt;
+            border-color: $concepts;
         }
 
         &:hover, &:focus, &:focus-within {
             .link { &, * {outline: 0;}}
-            background-color: #f4f4f5;
-            @media(prefers-color-scheme: 'dark'){ background-color: #18181b; }
+            background-color: $light-alt;
+            @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
         }
     }
 }
@@ -219,14 +224,14 @@ footer {
         transition: 100ms background-color ease-in-out,
                     100ms border-color ease-in-out;
         &:hover, &:focus, &:focus-within {
-            background-color: #f4f4f5;
-            @media(prefers-color-scheme: 'dark'){ background-color: #18181b; }
+            background-color: $light-alt;
+            @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
             color: inherit;
-            b {border-color: #000;}
+            b {border-color: $black;}
         }
         b {
             font-size: 1.2rem;
-            border-bottom: .1rem solid #000;
+            border-bottom: .1rem solid $black;
         }
         border: none;
     }
@@ -234,11 +239,11 @@ footer {
 
 .skipToMain {
     // Adapted from https://webaim.org/techniques/css/invisiblecontent/#techniques
-    background-color: #f4f4f5;
-    color: black;
+    background-color: $light-alt;
+    color: $black;
     @media(prefers-color-scheme:'dark') {
-        background-color: #18181b;
-        color: white;
+        background-color: $dark-alt;
+        color: $white;
     }
     font-weight: 700;
     align-self: center;
