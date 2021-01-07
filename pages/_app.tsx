@@ -28,16 +28,10 @@ export default class _app extends App {
             cardType: 'summary'
           }}
         />
-        <Head>
-          <link rel="icon" href="/assets/logo.svg"/>
-          <link rel="shortcut icon" href="/assets/logo.svg"/>
-          <link rel="apple-touch-icon" href="/assets/logo-bg.svg"/>
-          <link rel="author" href="humans.txt"/>
-        </Head>
         <a href="#maincontent" className="skipToMain">Skip to main content</a>
         <BLMBanner />
         <Navigation />
-        <Component {...pageProps} className="container" id="mainContent" />
+        <Component {...pageProps}/>
         <Footer />
       </>
     )
