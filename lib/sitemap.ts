@@ -23,5 +23,4 @@ export default async function sitemap() {
     </urlset>
   `
   fs.writeFileSync('public/sitemap.xml', sitemap)
-  // TODO: generate HTML
 }
