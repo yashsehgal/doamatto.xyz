@@ -29,7 +29,7 @@ export async function getAccessToken() {
   return res.json()
 }
 
-export const albumRequest = async (albumId:string) => {
+export const albumRequest = async ({albumId}:{albumId:string}) => {
   const {access_token} = await getAccessToken()
   const res = await fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
     headers: {
@@ -41,7 +41,7 @@ export const albumRequest = async (albumId:string) => {
   return res.json()
 }
 
-export const trackRequest = async (trackId:string) => {
+export const trackRequest = async ({trackId}:{trackId:string}) => {
   const {access_token} = await getAccessToken()
   const res = await fetch(`https://api.spotify.com/v1/tracks/${trackId}`, {
     headers: {
@@ -54,7 +54,7 @@ export const trackRequest = async (trackId:string) => {
 }
 
 export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
-  const res = await albumRequest(albumId)
+  const res = await albumRequest({albumId})
   const albumArt = res.images[1].url,
         albumName = res.name,
         artist = res.artists[0].name,
@@ -85,7 +85,7 @@ export async function SpotifyAlbumWidget({albumId}:{albumId: string}) {
 }
 
 export async function SpotifyTrackWidget({trackId}:{trackId: string}) {
-  const res = await trackRequest(trackId)
+  const res = await trackRequest({trackId})
   var albumArt = res.album.images[1].url,
       albumName = res.album.name,
       title = res.name,
