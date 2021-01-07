@@ -214,29 +214,6 @@ footer {
     }
 }
 
-.stack-list {
-    .stack-item {
-        display: flex;
-        border-radius: .5rem;
-        @media(max-width:500px) { padding: 1rem; }
-        list-style: none;
-        padding: 1rem;
-        transition: 100ms background-color ease-in-out,
-                    100ms border-color ease-in-out;
-        &:hover, &:focus, &:focus-within {
-            background-color: $light-alt;
-            @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
-            color: inherit;
-            b {border-color: $black;}
-        }
-        b {
-            font-size: 1.2rem;
-            border-bottom: .1rem solid $black;
-        }
-        border: none;
-    }
-}
-
 .skipToMain {
     // Adapted from https://webaim.org/techniques/css/invisiblecontent/#techniques
     background-color: $light-alt;

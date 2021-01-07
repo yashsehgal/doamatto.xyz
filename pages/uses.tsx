@@ -4,6 +4,8 @@ import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('@/components/header'))
 
+import Item from '@/components/item'
+
 export default function Home () {
   return (
     <>
@@ -19,104 +21,87 @@ export default function Home () {
       <div className="container" id="mainContent">
         <section id="apps-and-services">
           <h2>Apps and Services</h2>
-          <ul className="stack-list">
-            <a href="https://1password.com" className="stack-item">
-              <li>
-                <b>1Password</b><br/>
-                I used Bitwarden for ages (still recommend it for those who need a password maanger). 1Password is way more polished, however.
-              </li>
-            </a>
-            <a href="https://adguard.com/en/adguard-ios/overview.html" className="stack-item">
-              <li>
-                <b>AdGuard</b><br/>
-                Thanks to Safari's content blocker API for iOS, AdGuard is easily one of the best tools to keep nasty ads and other trackers at bay.
-              </li>
-            </a>
-            <a href="https://www.alfredapp.com/" className="stack-item">
-              <li>
-                <b>Alfred</b><br/>
-                Imagine Spotlight Search, but on steroids.
-              </li>
-            </a>
-            <a href="https://apolloapp.io/" className="stack-item">
-              <li>
-                <b>Apollo</b><br/>
-                As most everyone will tell you, this is easily the best third-party Reddit app on the App Store.
-              </li>
-            </a>
-            <a href="https://bandcamp.com" className="stack-item">
-              <li>
-                <b>Bandcamp</b><br/>
-                Although most of this is related to stuff I use during work, Bandcamp is a no brainer for great music from small artists.
-              </li>
-            </a>
-            <a href="https://duolingo.com" className="stack-item">
-              <li>
-                <b><a href="https://www.duolingo.com/profile/notdoamatto">Duolingo</a></b><br/>
-                I know English, French, and (still working on) Japanese all thanks to good ol' Duo. <a href="https://hg1.funnyjunk.com/pictures/Duolingo+memes_392d45_6518266.png">Just don't skip a lesson, or else.</a>
-              </li>
-            </a>
-            <a href="https://figma.com" className="stack-item">
-              <li>
-                <b>Figma</b><br/>
-                As most everyone else will tell you, Figma is smashingly great design tool that lets you do some crazy stuff with almost no effort.
-              </li>
-            </a>
-            <a href="https://gumroad.com" className="stack-item">
-              <li>
-                <b>Gumroad</b><br/>
-                Easily one of the best places for creators to sell their products online (be it digital or physical).
-              </li>
-            </a>
-            <a href="https://namecheap.com" className="stack-item">
-              <li>
-                <b>Namecheap</b><br/>
-                Easily one of the best domain providers out there.
-              </li>
-            </a>
-            <a href="https://nextjs.org" className="stack-item">
-              <li>
-                <b>Next.js</b><br/>
-                The best way to build React-based websites.
-              </li>
-            </a>
-            <a href="https://pocketcasts.com" className="stack-item">
-              <li>
-                <b>Pocket Casts</b><br/>
-                Easily the greatest podcast client ever. Still hate that they switched to a subscription-model. Still love that they grandfathered me to a lifetime plan.
-              </li>
-            </a>
-            <a href="https://renovate.whitesourcesoftware.com" className="stack-item">
-              <li>
-                <b>Renovate (by Whitesource)</b><br/>
-                Although people sometimes prefer <a href="https://dependabot.com/">GitHub's Dependabot</a> (I use both), Renovate has always been for me a faster way to update dependencies and easily see what needs to be fixed, in the event of breaking changes.
-              </li>
-            </a>
-            <a href="https://sublimetext.com" className="stack-item">
-              <li>
-                <b>Sublime Text</b><br/>
-                A wickedly fast and powerful text editor. Only reason I rarely use it is because it doesn't have a lot of convience, even with plugins. (See VSCodium below)
-              </li>
-            </a>
-            <a href="https://tailwindcss.com" className="stack-item">
-              <li>
-                <b>Tailwind CSS</b><br/>
-                At first, you will probably find it stupid. After you deploy one thing with Tailwind though, you probably won't want to go back to SCSS/LESS.
-              </li>
-            </a>
-            <a href="https://vercel.com" className="stack-item">
-              <li>
-                <b>Vercel</b><br/>
-                This site, as well as a crap ton of my web projects, run on Vercel. It's easily one of my favourtie hosting providers and works a treat with Next.js (which this site is built on).
-              </li>
-            </a>
-            <a href="https://vscodium.com" className="stack-item">
-              <li>
-                <b>VSCodium</b><br/>
-                Imagine Virtual Studio Code, minus the tracking and bloat from Microsoft. Easily my favourite text editor.
-              </li>
-            </a>
-          </ul>
+          <Item
+            title="1Password"
+            description="I used Bitwarden for ages (still recommend it for those who need a password maanger). 1Password is way more polished, however."
+            url="https://1password.com"
+            />
+          <Item
+            title="AdGuard"
+            description="Thanks to Safari's content blocker API for iOS, AdGuard is easily one of the best tools to keep nasty ads and other trackers at bay."
+            url="https://adguard.com/adguard-ios/overview.html"
+            />
+          <Item
+            title="Alfred"
+            description="Imagine Spotlight Search, but on steriods."
+            url="https://www.alfredapp.com/"
+            />
+          <Item
+            title="Apollo"
+            description="As most everyone will tell you, this is easily the best third-party Reddit app on the App Store."
+            url="https://apolloapp.io"
+            />
+          <Item
+            title="Bandcamp"
+            description="Although most of this is related to stuff I use during work, Bandcamp is a no brainer for great music from small artists."
+            url="https://bandcamp.com"
+            />
+          <Item
+            title="Duolingo"
+            titleUrl="https://duolingo.com/profile/notdoamatto"
+            description="I know English, French, and (still working on) Japanese all thanks to good ol' Duo. Just don't skip a lesson, or else."
+            url="https://duolingo.com"
+            />
+          <Item
+            title="Figma"
+            description="As most everyone else will tell you, Figma is smashingly great design tool that lets you do some crazy stuff with almost no effort."
+            url="https://figma.com"
+            />
+          <Item
+            title="Gumroad"
+            description="Easily one of the best places for creators to sell their products online (be it digital or physical)."
+            url="https://gumroad.com"
+            />
+          <Item
+            title="Namecheap"
+            description="Easily one of the best domain providers out there."
+            url="https://namecheap.com"
+            />
+          <Item
+            title="Next.js"
+            description="The best way to build React-based websites."
+            url="https://nextjs.org"
+            />
+          <Item
+            title="Pocket Casts"
+            description="Easily the greatest podcast client ever. Still hate that they switched to a subscription-model. Still love that they grandfathered me to a lifetime plan."
+            url="https://pocketcasts.com"
+            />
+          <Item
+            title="Renovate (by Whitesource)"
+            description="Although people sometimes prefer GitHub's Dependabot (I use both), Renovate has always been for me a faster way to update dependencies and easily see what needs to be fixed, in the event of breaking changes."
+            url="https://renovate.whitesourcesoftware.com"
+            />
+          <Item
+            title="Sublime Text"
+            description="A wickedly fast and powerful text editor. Only reason I rarely use it is because it doesn't have a lot of convience, even with plugins. (See VSCodium below)"
+            url="https://sublimetext.com"
+            />
+          <Item
+            title="Tailwind CSS"
+            description="At first, you will probably find it stupid. After you deploy one thing with Tailwind though, you probably won't want to go back to SCSS/LESS."
+            url="https://tailwindcss.com"
+            />
+          <Item
+            title="Vercel"
+            description="This site, as well as a crap ton of my web projects, run on Vercel. It's easily one of my favourtie hosting providers and works a treat with Next.js (which this site is built on)."
+            url="https://vercel.com"
+            />
+          <Item
+            title="VSCodium"
+            description="Imagine Virtual Studio Code, minus the tracking and bloat from Microsoft. Easily my favourite text editor."
+            url="https://vscodium.com"
+            />
         </section>
         <section id="hardware">
           <h2>Hardware</h2>
