@@ -72,7 +72,7 @@ $light-textcolour: #000;
   line-height: 1.25 !important;
   width: auto;
   margin: 0;
-  @include roboto-medium;
+  @include medium;
 }
 .artist {
   width: auto;
