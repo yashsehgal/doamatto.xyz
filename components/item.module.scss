@@ -1,0 +1,23 @@
+@import '../styles/colours';
+
+.item {
+  display: flex;
+  border-radius: .5rem;
+  @media(max-width:500px) { padding: 1rem; }
+  list-style: none;
+  padding: 1rem;
+  transition: 100ms background-color ease-in-out,
+              100ms border-color ease-in-out;
+  &:hover, &:focus, &:focus-within {
+      background-color: $light-alt;
+      @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
+      color: inherit;
+      h3 {border-color: $black;}
+  }
+  h3 {
+      font-size: 1.2rem;
+      font-weight: 600; // bold
+      border-bottom: .1rem solid $black;
+  }
+  border: none;
+}
