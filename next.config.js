@@ -1,7 +1,7 @@
 module.exports = {
   images: {
     domains: [
-      'i.scdn.co',
+      'i.scdn.co'
     ]
   },
   i18n: {
