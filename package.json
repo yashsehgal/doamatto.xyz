@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node lib/sitemap.ts",
+    "postbuild": "tsc lib/sitemap.ts && node lib/sitemap.js",
     "start": "next start"
   },
   "dependencies": {

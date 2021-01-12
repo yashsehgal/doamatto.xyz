@@ -1,7 +1,6 @@
 const fs = require('fs')
 const globby = require('globby')
 
-
 export default async function sitemap() {
   const pages = await globby(['pages/**/*']);
   const map = `
