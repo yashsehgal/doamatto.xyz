@@ -14,9 +14,10 @@ yarn-error.log*
 .vscode/
 
 # Generated files
-/public/rss.xml
-/public/robots.txt
-/public/sitemap.xml
+public/rss.xml
+public/robots.txt
+public/sitemap.xml
+lib/sitemap.js
 
 # Environment variables
 .env
