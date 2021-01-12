@@ -6,7 +6,7 @@ const Header = dynamic(() => import('@/components/header'))
 
 import {default as Bookmark} from '@/components/item'
 
-export default function Home () {
+export default function bookmarks() {
   return (
     <>
       <NextSeo
