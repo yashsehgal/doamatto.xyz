@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
-export default function Home () {
+export default function notFound() {
   return (
     <>
       <NextSeo
