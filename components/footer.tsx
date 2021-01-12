@@ -5,7 +5,6 @@ import {useRouter} from 'next/router'
 // TODO: Switch to <Link> for all links in footer
 
 export default function Footer () {
-  const router = useRouter()
   return (
         <footer className={styles.footer}>
             <p>
