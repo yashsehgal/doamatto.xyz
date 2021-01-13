@@ -55,7 +55,7 @@ export default function Home () {
                 lot of music from Japan. My favourite album right now is the soundtrack
                 to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
                 “Ready to”, and “Wish.”
-                <SpotifyAlbumWidget albumId="1CpsvolGmQuellYLBujM0R" />
+                <SpotifyAlbumWidget albumId="3TuHiVtu33sSqtSuLuWnaB" />
                 <br/><br/>
                 I love improving, and because of that, I've taken to
                 learning things, both big and small. Some of the cool
