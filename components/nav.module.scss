@@ -21,6 +21,14 @@
     height: 128px;
     .logo {
         margin: 0;
+        display: flex;
+        justify-content: center;
+        @media(max-width: 500px) {
+            a svg {
+                max-width: 90px;
+                max-height: 90px;
+            }
+        }
         a:hover {
             svg {
                 path {
