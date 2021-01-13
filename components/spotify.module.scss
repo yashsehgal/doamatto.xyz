@@ -47,8 +47,8 @@ $light-textcolour: #000;
 }
 .albumArt {
   align-self: center;
-  margin-right: 15px;
-  border-radius: 5px;
+  margin-right: .9rem;
+  border-radius: .3rem;
 }
 .mid {
   width: 75%;
@@ -62,7 +62,7 @@ $light-textcolour: #000;
   justify-content: center;
 }
 .albumInfo {
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,7 +79,7 @@ $light-textcolour: #000;
   width: auto;
   margin: 0;
   font-size: 1rem;
-  @media(max-width:500px) {font-size: .7rem;}
+  @media(max-width:501px) {font-size: .7rem;}
   @include normal;
   & .artistBold {
       @include bold;
@@ -87,8 +87,12 @@ $light-textcolour: #000;
 }
 .cta {
   background-color: #1ed760; // Spotify Green™
-  border-radius: 10px;
-  padding: 7px 46px;
+  border-radius: .6rem;
+  padding: .5rem 3rem;
+  white-space: nowrap;
+  @media(max-width:501px){
+    padding: 1rem 1.75rem;
+  }
   display: flex;
   align-items: flex-start;
   a { border: none !important; }
