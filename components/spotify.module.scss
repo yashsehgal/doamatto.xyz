@@ -26,14 +26,15 @@ $light-textcolour: #000;
 // Styles
 .widget {
   margin: auto;
-  max-width: 100%;
+  max-width: 500px;
   width: auto;
-  @media(min-width:501px) { max-width: 800px; }
   max-height: 170px;
   background-color: $light-bg;
   @media(prefers-color-scheme:'dark'){background-color:$dark-bg;}
   border-radius: 10px;
   padding: 20px 25px;
+  margin: 1rem 0;
+  justify-self: center;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -46,13 +47,15 @@ $light-textcolour: #000;
   border-radius: 5px;
 }
 .mid {
-  width: auto;
+  width: 75%;
+  height: 128px;
+  max-height: 128px;
   margin-right: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   justify-content: center;
-  height: 100%;
 }
 .albumInfo {
   margin-bottom: 5px;
@@ -84,11 +87,11 @@ $light-textcolour: #000;
   padding: 7px 46px;
   display: flex;
   align-items: flex-start;
-}
-.ctaText {
-  a & { border: none !important; }
-  @include bold;
-  color: $text-black;
-  text-align: center;
-  margin: 0;
+  a { border: none !important; }
+  .ctaText {
+    @include bold;
+    color: $text-black;
+    text-align: center;
+    margin: 0;
+  }
 }
