@@ -15,6 +15,7 @@ export default async (req, res) => {
     albumName: data.album.name,
     title: data.name,
     artist: data.artists[0].name,
-    url: data.external_urls.spotify
+    url: data.external_urls.spotify,
+    id: data.id
   })
 };
