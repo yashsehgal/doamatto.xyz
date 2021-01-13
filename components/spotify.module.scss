@@ -24,6 +24,11 @@ $light-textcolour: #000;
 }
 
 // Styles
+.wdgtCntanr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .widget {
   max-width: 500px;
   width: auto;
