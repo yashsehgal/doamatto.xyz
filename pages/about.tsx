@@ -54,7 +54,7 @@ export default function Home () {
                 indie bands from foreign countries. Right now, I’ve been diving into a
                 lot of music from Japan. My favourite album right now is the soundtrack
                 to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
-                “Ready to”, and “Wish.”
+                “Ready to”, and “Wish.” You can see what I'm listening to now <a href="/favourites">here.</a>
                 <SpotifyAlbumWidget albumId="20vl1N1IXzKOoUGC4BPE0p" />
                 <br/><br/>
                 I love improving, and because of that, I've taken to

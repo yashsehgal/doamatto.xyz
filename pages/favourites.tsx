@@ -4,7 +4,8 @@ import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 import {
   SpotifyTrackWidget as Track,
-  SpotifyAlbumWidget as Album
+  SpotifyAlbumWidget as Album,
+  SpotifyNowPlayingWidget as NowPlaying
 } from '@/components/spotify'
 import styles from './favourites.module.scss'
 const Header = dynamic(() => import('@/components/header'))
@@ -26,9 +27,13 @@ export default function imprint () {
                   Open as a playlist in Spotify
                 </a>
               </div>
+              <Track trackId="5qMaTPF9U4y1NH36jqxkET" />
               <Album albumId="6kf46HbnYCZzP6rjvQHYzg" />
               <Track trackId="06FCvd7rrRcF3DdvWH5Isp" />
               <Album albumId="6VtEyh4lKKk1Yjui9wWKhV" />
+              <hr/>
+              <h1> Currently listening to: </h1>
+              <NowPlaying />
             </div>
         </>
   )
