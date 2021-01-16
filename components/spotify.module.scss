@@ -7,10 +7,6 @@ $text-black: #000;
 $light-bg: #fbfbfb;
 $light-textcolour: #000;
 
-@mixin medium {
-  @include base;
-  font-weight: 500;
-}
 @mixin bold {
   @include base;
   font-weight: 700;
@@ -72,7 +68,7 @@ $light-textcolour: #000;
   line-height: 1.25 !important;
   width: auto;
   margin: 0;
-  @include medium;
+  @include bold;
 }
 .artist {
   width: auto;
