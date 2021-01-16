@@ -14,6 +14,7 @@ export default function IndexPage({postData}:{
     slug: string
     id: string,
     tag: string,
+    description: string,
     tagShort: string
   }[]
 }) {
@@ -26,12 +27,13 @@ export default function IndexPage({postData}:{
     <div>
       <Header title="Blog" />
       <div className="posts">
-        {postData.map(({title,date,slug,id,tag,tagShort}) => (
+        {postData.map(({title,date,description,slug,id,tag,tagShort}) => (
           <section className="post" key={id} id={id}>
             <Link href={`/blog/${slug}`}>
               <a className="link">
                 <p className="minor">{date}</p>
                 {title}
+                <p className="minor">{description}</p>
                 <p className={`${tagShort} tag`}>{tag}</p>
                 </a>
             </Link>
