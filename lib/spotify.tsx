@@ -42,3 +42,14 @@ export const getTrack = async ({trackId}:{trackId:string}) => {
     }
   })
 }
+
+export const getNowPlaying = async () => {
+  const { access_token } = await getAccessToken()
+
+  return fetch(`https://api.spotify.com/v1/me/player/currently-playing`, {
+    headers: {
+      Authorization: `Bearer ${access_token}`
+    }
+  })
+
+}

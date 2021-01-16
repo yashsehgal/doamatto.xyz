@@ -63,3 +63,35 @@ export function SpotifyTrackWidget({trackId}:{trackId: string}) {
     </div>
   )
 }
+
+export function SpotifyNowPlayingWidget() {
+  const { data } = useSWR(`/api/spotify/now-playing`, fetcher)
+  return (
+    <div id={data?.id} className={styles.wdgtCntanr}>
+      <div className={styles.widget}>
+        <img src={data?.albumArt ?? '/assets/placeholder.jpg'}
+            alt={data?.albumName ?? 'Not playing anything right now'}
+            width="128"
+            height="128"
+            className={styles.albumArt}
+        />
+        <div className={styles.mid}>
+          <div className={styles.albumInfo}>
+            <p className={styles.title}>{data?.title ?? 'Not playing music'}</p>
+            <p className={styles.artist}>by <b className={styles.artistBold}>{data?.artist ?? 'the absence of music'}</b></p>
+          </div>
+          {data?.songUrl ? (
+            <p>&nbsp;</p>
+          ) : (
+            <div className={styles.cta}>
+              <a href={data?.url} title="Open in Spotify">
+                <p className={styles.ctaText}>Open in Spotify</p>
+              </a>
+            </div>
+          )}
+        </div>
+        <Logo />
+      </div>
+    </div>
+  )
+}
