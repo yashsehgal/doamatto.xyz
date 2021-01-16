@@ -108,7 +108,13 @@ footer {
 }
 
 .content {
-    img { max-width: 100%; }
+    p {
+        img {
+           max-width: 100%;
+           margin: 0 auto;
+           display: block;
+        }
+    } 
 }
 
 .header { font-size: 2.5rem; }
