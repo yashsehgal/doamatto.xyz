@@ -7,17 +7,17 @@ export default function Home () {
       <Head>
         <title>doamatto</title>
       </Head>
-      <main className={styles.main}>
-        <div>
-          <h1 className={styles.title}>
-            Hi!<br/> I&apos;m Matt Ronchetto.
-          </h1>
-          <img src="/assets/photo.jpeg" alt="Photo of Matt Ronchetto" width="320" height="320"/>
-        </div>
+      <main className={`${styles.main} content`}>
         <section>
-          Dear reader,
-
-          Thanks for visiting the test version of my portfolio. A lot of things, put bluntly, are broken or are in a horiffic test state. If you find bugs or have ideas, however, please send them to this site's GitHub repository via the link in the footer.
+          <div>
+            <h1 className={styles.title}>
+              Hi, I&apos;m Matt Ronchetto
+            </h1>
+            <p>
+              I'm a high school student who does product design and software development in sunny California. I'm currently building <a href="/projects/mello">Mello</a> and <a href="/projects/mono">Mono</a>.
+            </p>
+          </div>
+          <img src="/assets/photo.jpeg" alt="Photo of Matt Ronchetto" width="320" height="320"/>
         </section>
       </main>
     </>
