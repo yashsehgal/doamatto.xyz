@@ -37,7 +37,7 @@ export function SpotifyAlbumWidget({albumId}:{albumId: string}) {
 }
 
 export function SpotifyTrackWidget({trackId}:{trackId: string}) {
-  const { data } = useSWR(`/api/spotify/album?trackId=${trackId}`, fetcher)
+  const { data } = useSWR(`/api/spotify/track?trackId=${trackId}`, fetcher)
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
