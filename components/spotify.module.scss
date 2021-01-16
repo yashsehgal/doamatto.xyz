@@ -34,7 +34,7 @@ $light-textcolour: #000;
   width: auto;
   max-height: 170px;
   background-color: $light-bg;
-  @media(prefers-color-scheme:'dark'){background-color:$dark-bg;}
+  @media(prefers-color-scheme:'dark') { background-color:$dark-bg; }
   border-radius: 10px;
   padding: 20px 25px;
   margin: 1rem 0;
@@ -43,7 +43,7 @@ $light-textcolour: #000;
   align-items: flex-start;
   justify-content: center;
   color: $light-textcolour;
-  @media(prefers-color-scheme:'dark'){color:$dark-textcolour;}
+  @media(prefers-color-scheme:'dark') { color:$dark-textcolour; }
 }
 .albumArt {
   align-self: center;
