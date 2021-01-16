@@ -30,8 +30,7 @@ $light-textcolour: #000;
   justify-content: center;
 }
 .widget {
-  max-width: 500px;
-  width: auto;
+  width: 500px;
   max-height: 170px;
   background-color: $light-bg;
   @media(prefers-color-scheme:'dark') { background-color:$dark-bg; }
