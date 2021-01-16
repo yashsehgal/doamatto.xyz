@@ -31,7 +31,6 @@ export default function IndexPage({postData}:{
           <section className="post" key={id} id={id}>
             <Link href={`/blog/${slug}`}>
               <a className="link">
-                <p className="minor">{date}</p>
                 {title}
                 <p className="minor">{description}</p>
                 <p className={`${tagShort} tag`}>{tag}</p>
