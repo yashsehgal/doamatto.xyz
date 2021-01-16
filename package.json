@@ -13,7 +13,7 @@
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.1.0",
-    "mdx-prism": "^0.3.1",
+    "mdx-prism": "https://github.com/doamatto/mdx-prism#v0.3.2",
     "next": "^10.0.0",
     "next-mdx-remote": "^2.0.1",
     "next-seo": "^4.17.0",
