@@ -14,7 +14,7 @@ export default async function sitemap() {
         return `
           <url>
             <loc>
-              ${`https://v2.testing.doamatto.xyz${route}`}
+              ${`https://doamatto.xyz${route}`}
             </loc>
           </url>
         `
