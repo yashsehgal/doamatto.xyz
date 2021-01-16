@@ -76,7 +76,7 @@ table {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
-    border: none;
+    border: none !important;
     border-radius: .5rem;
     background-color: $light-alt;
     text-decoration: none;
