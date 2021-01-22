@@ -1,6 +1,7 @@
 import React from 'react'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
+import Image from 'next/image'
 
 import {default as Logo} from './logos/spotify'
 import styles from './spotify.module.scss'
@@ -12,12 +13,12 @@ export function SpotifyAlbumWidget({albumId}:{albumId: string}) {
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
-        <img
+        <Image
           alt={data?.albumName ?? 'Error fetching data'}
           className={styles.albumArt}
           src={data?.albumArt ?? '/assets/placeholder.jpg'}
-          width="128"
-          height="128"
+          width={128}
+          height={128}
         />
         <div className={styles.mid}>
           <div className={styles.albumInfo}>
@@ -41,10 +42,11 @@ export function SpotifyTrackWidget({trackId}:{trackId: string}) {
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
-        <img src={data?.albumArt ?? '/assets/placeholder.jpg'}
+        <Image
+            src={data?.albumArt ?? '/assets/placeholder.jpg'}
             alt={data?.albumName ?? 'Error fetching data'}
-            width="128"
-            height="128"
+            width={128}
+            height={128}
             className={styles.albumArt}
         />
         <div className={styles.mid}>
@@ -71,8 +73,8 @@ export function SpotifyNowPlayingWidget() {
       <div className={styles.widget}>
         <img src={data?.albumArt ?? '/assets/placeholder.jpg'}
             alt={data?.albumName ?? 'Not playing anything right now'}
-            width="128"
-            height="128"
+            width={128}
+            height={128}
             className={styles.albumArt}
         />
         <div className={styles.mid}>
