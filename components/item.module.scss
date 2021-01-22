@@ -3,7 +3,10 @@
 .item {
   display: flex;
   border-radius: .5rem;
-  @media(max-width:500px) { padding: 1rem; }
+  @media(max-width:500px) {
+    padding: 1rem;
+    a { flex-direction: column; }
+  }
   list-style: none;
   padding: 1rem;
   margin-top: 1rem;
@@ -15,7 +18,20 @@
   &:hover, &:focus, &:focus-within, a:focus, a:focus-within {
       color: $dark-purple;
   }
-  a { border:none; }
+  a {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    .uses_icon, .uses_icon img {
+      max-width: 64px;
+      max-height: 64px;
+    }
+    .text {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
   h3 {
       font-size: 1.2rem;
       font-weight: 600; // bold
