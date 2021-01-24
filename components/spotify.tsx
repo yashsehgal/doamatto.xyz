@@ -1,7 +1,6 @@
 import React from 'react'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
-import Image from 'next/image'
 
 import {default as Logo} from './logos/spotify'
 import styles from './spotify.module.scss'
@@ -13,7 +12,7 @@ export function SpotifyAlbumWidget({albumId}:{albumId: string}) {
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
-        <Image
+        <img
           alt={data?.albumName ?? 'Error fetching data'}
           className={styles.albumArt}
           src={data?.albumArt ?? '/assets/placeholder.jpg'}
@@ -42,7 +41,7 @@ export function SpotifyTrackWidget({trackId}:{trackId: string}) {
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
-        <Image
+        <img
             src={data?.albumArt ?? '/assets/placeholder.jpg'}
             alt={data?.albumName ?? 'Error fetching data'}
             width={128}
