@@ -4,6 +4,10 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     /* Sticky nav backdrop from Lee Robinson: https://leerob.io */
     position: sticky;
