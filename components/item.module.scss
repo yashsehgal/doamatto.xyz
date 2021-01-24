@@ -3,38 +3,52 @@
 .item {
   display: flex;
   border-radius: .5rem;
-  @media(max-width:500px) {
-    padding: 1rem;
-    a { flex-direction: column; }
-  }
-  list-style: none;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   transition: 100ms background-color ease-in-out,
               100ms border-color ease-in-out;
   background-color: $light-alt;
-  @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
-  &:hover, &:focus, &:focus-within, a:focus, a:focus-within {
-      color: $dark-purple;
-  }
+  border: none;
   a {
+    img { margin: 1rem; }
     border: none;
     display: flex;
+    align-items: center;
     flex-direction: row;
-    .uses_icon, .uses_icon img {
+    .uses_icon,
+    .uses_icon img {
       max-width: 64px;
       max-height: 64px;
     }
     .text {
-      max-width: 50%;
       display: flex;
       flex-direction: column;
+      a { text-align: left;}
+      h3,
+      p {
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+      }
+      h3 {
+          font-size: 1.2rem;
+          font-weight: 600; // bold
+      }
+      p { font-size: .9rem; }
     }
   }
-  h3 {
-      font-size: 1.2rem;
-      font-weight: 600; // bold
+  @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
+  @media(max-width:500px) {
+    padding: 1rem;
+    a { flex-direction: column; }
   }
-  border: none;
+  &:hover,
+  &:focus,
+  &:focus-within,
+  a:focus,
+  a:focus-within {
+      color: $dark-purple;
+  }
 }

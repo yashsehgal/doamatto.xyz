@@ -1,5 +1,4 @@
 const styles = require('./item.module.scss')
-import Image from 'next/image'
 
 export default function Item ({title,titleUrl,description,imageId,url}: {
   title: string
@@ -23,7 +22,7 @@ export default function Item ({title,titleUrl,description,imageId,url}: {
 
 function Icon({title,imageId}: {title:string, imageId: string}) {
   if(imageId !== undefined) return (
-    <Image
+    <img
       src={`/assets/uses/${imageId}.png`}
       alt={title}
       width={64}
