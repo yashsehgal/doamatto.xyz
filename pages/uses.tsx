@@ -29,7 +29,7 @@ export default function uses() {
             />
           <Item
             title="AdGuard"
-            imageId="adguard"
+            imageId="guard"
             description="Thanks to Safari's content blocker API for iOS, AdGuard is easily one of the best tools to keep nasty ads and other trackers at bay."
             url="https://adguard.com/adguard-ios/overview.html"
             />
