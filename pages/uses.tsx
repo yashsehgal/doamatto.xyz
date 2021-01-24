@@ -36,7 +36,7 @@ export default function uses() {
           <Item
             title="Alfred"
             imageId="alfred"
-            description="Imagine Spotlight Search, but on steriods."
+            description="Alfred is essentially Spotlight Search, but on steriods. An essential for anyone who uses a Mac."
             url="https://www.alfredapp.com/"
             />
           <Item
@@ -73,13 +73,13 @@ export default function uses() {
           <Item
             title="Namecheap"
             imageId="namecheap"
-            description="Easily one of the best domain providers out there."
+            description="Namecheap is easily one of the best domain providers out there. They've got crazy fast support and are privacy-friendly."
             url="https://namecheap.com"
             />
           <Item
             title="Next.js"
             imageId="nextjs"
-            description="The best way to build React-based websites."
+            description="Next.js is the best way to build a React-based website. It's used from companies and people big and small (this site was built with Next.js)."
             url="https://nextjs.org"
             />
           <Item
