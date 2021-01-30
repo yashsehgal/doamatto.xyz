@@ -1,13 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import {NextSeo} from 'next-seo'
-import {GetStaticProps} from 'next'
+import { NextSeo } from 'next-seo'
+import { GetStaticProps } from 'next'
 
 import dynamic from 'next/dynamic'
 import { getSortedPostsData } from '@/lib/feedData'
 const Header = dynamic(() => import('@/components/header'))
 
-export default function IndexPage({postData}:{
+export default function IndexPage ({ postData }:{
   postData: {
     title: string
     slug: string
@@ -17,16 +17,16 @@ export default function IndexPage({postData}:{
     tagShort: string
   }[]
 }) {
-  return(
+  return (
     <>
-    <NextSeo 
+    <NextSeo
       title="Blog - doamatto"
       description = "I write blog posts about a lot of different stuff. Some are funny, others are serious, and some are just plain weird."
     />
     <div>
       <Header title="Blog" />
       <div className="posts">
-        {postData.map(({title,description,slug,id,tag,tagShort}) => (
+        {postData.map(({ title, description, slug, id, tag, tagShort }) => (
           <section className="post" key={id} id={id}>
             <Link href={`/blog/${slug}`}>
               <a className="link">

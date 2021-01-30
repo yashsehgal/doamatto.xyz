@@ -54,7 +54,7 @@ export default function Home () {
                 à une niche comme des groupes indépendants de pays étrangers. En ce moment,
                 je me suis plongé dans beaucoup de musiques du Japon. Mon album préféré en ce moment est
                 the soundtrack la bande sonore du spectacle «BNA» de Netflix, spécifiquement
-                "NIGHT RUNNING" (les deux versions), “Ready to” et “Wish”. 
+                "NIGHT RUNNING" (les deux versions), “Ready to” et “Wish”.
                 { /* <SpotifyAlbumWidget albumId="5ZCo1wqpAvjgHieipwTXzZ" token="BQDcCTbvOWWyzt1gCumc6MxlDYeiE1liO4sfaLJsefx1yMXW2pWht7mhHIQs4Qxvb8U7JoI6PmM4Z5puyoVbuVGacRQmYJx53bpWW1WWICVQHq8LfDV3Q3jKTk8moZ7pvV_fBGXT6TPu7wM_FzShyoKMRCNqQa436u8"/> */ }
                 <br/><br/>
                 J'aime m'améliorer et, grâce à cela, j'ai appris beaucoup de choses.
@@ -77,7 +77,7 @@ export default function Home () {
                   </li>
                 </ul>
               </p>
-              
+
               <h2>Divers</h2>
               <p>
                 Vous pouvez me trouver sur ces sites (tout le reste n'est probablement pas moi):
@@ -94,7 +94,7 @@ export default function Home () {
   )
 }
 
-export function LearnMore({ href }: {href: string}) {
+export function LearnMore ({ href }: {href: string}) {
   return (
     <a href={href}>Learn more &rarr;</a>
   )

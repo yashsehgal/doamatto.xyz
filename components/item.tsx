@@ -1,6 +1,6 @@
 const styles = require('./item.module.scss')
 
-export default function Item ({title,titleUrl,description,imageId,url}: {
+export default function Item ({ title, titleUrl, description, imageId, url }: {
   title: string
   titleUrl?: string // optional
   imageId?: string // optional
@@ -20,8 +20,9 @@ export default function Item ({title,titleUrl,description,imageId,url}: {
   )
 }
 
-function Icon({title,imageId}: {title:string, imageId: string}) {
-  if(imageId !== undefined) return (
+function Icon ({ title, imageId }: {title:string, imageId: string}) {
+  if (imageId !== undefined) {
+    return (
     <img
       src={`/assets/uses/${imageId}.png`}
       alt={title}
@@ -29,16 +30,19 @@ function Icon({title,imageId}: {title:string, imageId: string}) {
       height={64}
       className="uses_icon"
     />
-  )
+    )
+  }
   return null
 }
 
-function TitleGen({title, titleUrl}:{title:string,titleUrl:string}) {
-  if(titleUrl !== undefined) return (
+function TitleGen ({ title, titleUrl }:{title:string, titleUrl:string}) {
+  if (titleUrl !== undefined) {
+    return (
     <a href={titleUrl} title={title}>
         <h3 className={styles.itemTitle}>{title}</h3>
     </a>
-  )
+    )
+  }
   return (
     <h3 className={styles.itemTitle}>{title}</h3>
   )

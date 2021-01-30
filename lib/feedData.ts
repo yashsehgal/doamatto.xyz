@@ -2,9 +2,9 @@ import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
 
-export function getSortedPostsData(type: string) {
-  var dir: string;
-  if (type === "blog") {
+export function getSortedPostsData (type: string) {
+  let dir: string
+  if (type === 'blog') {
     dir = path.join(process.cwd(), 'data/posts')
   } else {
     dir = path.join(process.cwd(), 'data/projects')
@@ -28,8 +28,8 @@ export function getSortedPostsData(type: string) {
       })
     }
   })
-  return postData.sort((a,b) => {
-    if(a.date < b.date) {
+  return postData.sort((a, b) => {
+    if (a.date < b.date) {
       return 1
     } else {
       return -1

@@ -75,11 +75,11 @@ export default function Home () {
                   </li>
                   <li>
                     Currently learning Dart (for usage with Flutter), Rust,
-                    C# (for usage for KSP), and Kotlin (for usage with Flutter). 
+                    C# (for usage for KSP), and Kotlin (for usage with Flutter).
                   </li>
                 </ul>
               </p>
-              
+
               <h2>Miscellaneous</h2>
               <p>
                 You can find me on these sites (anything else is most likely not me):
@@ -96,7 +96,7 @@ export default function Home () {
   )
 }
 
-export function LearnMore({ href }: {href: string}) {
+export function LearnMore ({ href }: {href: string}) {
   return (
     <a href={href}>Learn more &rarr;</a>
   )

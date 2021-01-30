@@ -1,4 +1,4 @@
-import { getNowPlaying } from '@/lib/spotify';
+import { getNowPlaying } from '@/lib/spotify'
 
 export default async (_, res) => {
   const response = await getNowPlaying()
@@ -17,4 +17,4 @@ export default async (_, res) => {
     url: data.item.external_urls.spotify,
     id: data.item.id
   })
-};
+}

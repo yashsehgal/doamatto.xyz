@@ -9,29 +9,29 @@ import path from 'path'
 const root = process.cwd()
 export const MDXComponents = { Image }
 
-export async function staticPaths(type) {
-  const posts = await getFiles(type);
-    return {
-      paths: posts.map((p) => ({
-        params: {
-          slug: p.replace(/\.mdx/, '')
-        }
-      })),
-      fallback: false
-  };
+export async function staticPaths (type) {
+  const posts = await getFiles(type)
+  return {
+    paths: posts.map((p) => ({
+      params: {
+        slug: p.replace(/\.mdx/, '')
+      }
+    })),
+    fallback: false
+  }
 }
 
-export async function staticProps(type:string, {params}) {
-  const post = await getFileBySlug(type, params.slug);
-  return { props: post };
+export async function staticProps (type:string, { params }) {
+  const post = await getFileBySlug(type, params.slug)
+  return { props: post }
 }
 
-export async function getFileBySlug(type, slug) {
+export async function getFileBySlug (type, slug) {
   const source = slug
     ? fs.readFileSync(path.join(root, 'data', type, `${slug}.mdx`), 'utf8')
-    : fs.readFileSync(path.join(root, 'data', `${type}.mdx`), 'utf8');
+    : fs.readFileSync(path.join(root, 'data', `${type}.mdx`), 'utf8')
 
-  const { data, content } = matter(source);
+  const { data, content } = matter(source)
   const mdxSource = await renderToString(content, {
     components: MDXComponents,
     mdxOptions: {
@@ -41,7 +41,7 @@ export async function getFileBySlug(type, slug) {
       ],
       rehypePlugins: [mdxPrism]
     }
-  });
+  })
 
   return {
     mdxSource,
@@ -51,9 +51,9 @@ export async function getFileBySlug(type, slug) {
       slug: slug || null,
       ...data
     }
-  };
+  }
 }
 
-export async function getFiles(type) {
-  return fs.readdirSync(path.join(root, 'data', type));
+export async function getFiles (type) {
+  return fs.readdirSync(path.join(root, 'data', type))
 }

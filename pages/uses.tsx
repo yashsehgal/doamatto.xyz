@@ -2,11 +2,11 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 import dynamic from 'next/dynamic'
-const Header = dynamic(() => import('@/components/header'))
 
 import Item from '@/components/item'
+const Header = dynamic(() => import('@/components/header'))
 
-export default function uses() {
+export default function uses () {
   return (
     <>
       <NextSeo
@@ -22,7 +22,7 @@ export default function uses() {
         <section id="apps-and-services">
           <h2>Apps and Services</h2>
           <Item
-            imageId="1password" 
+            imageId="1password"
             title="1Password"
             description="I used Bitwarden for ages (still recommend it for those who need a password maanger). 1Password is way more polished, however."
             url="https://1password.com"

@@ -33,7 +33,7 @@ export default function privacy () {
             I do not share, sell, or transfer any data collected with any third-parties. I am not responsible with who Vercel shares data with. This is outlined in their privacy policy <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>
         <h3>Who has access to this data?</h3>
-        <p>            
+        <p>
             Governments or law enforcement may request data from Vercel, to which I have no control over. Per their privacy policy as of writing, they will provide data &quot;when [they] have a good faith belief it is
             required by law, such as pursuant to a subpoena, warrant or other judicial or administrative order.&quot; You can read more&nbsp; <a href="https://vercel.com/legal/privacy-policy">here.</a>
         </p>

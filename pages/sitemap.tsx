@@ -1,13 +1,13 @@
 import React from 'react'
-import {NextSeo} from 'next-seo'
+import { NextSeo } from 'next-seo'
 
 import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('@/components/header'))
 
-export default function Sitemap() {
-  return(
+export default function Sitemap () {
+  return (
     <>
-    <NextSeo 
+    <NextSeo
       title="Sitemap - doamatto"
       description = "A slew of pages that are available on the site."
     />

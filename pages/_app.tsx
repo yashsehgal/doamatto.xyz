@@ -1,12 +1,12 @@
 import React from 'react'
 import App from 'next/app'
-import type {AppProps} from 'next/app'
+import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import '../styles/globals.scss' // global stylesheet
 
 import BLMBanner from '@/components/blm-banner'
-import {default as Navigation} from '@/components/nav'
-import {default as Footer} from '@/components/footer'
+import { default as Navigation } from '@/components/nav'
+import { default as Footer } from '@/components/footer'
 
 export default class _app extends App {
   render () {

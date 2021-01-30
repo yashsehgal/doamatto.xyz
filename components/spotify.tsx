@@ -2,12 +2,12 @@ import React from 'react'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 
-import {default as Logo} from './logos/spotify'
+import { default as Logo } from './logos/spotify'
 import styles from './spotify.module.scss'
 
-export default function Main() { return console.error("You need to specify one of the widgets to use this") }
+export default function Main () { return console.error('You need to specify one of the widgets to use this') }
 
-export function SpotifyAlbumWidget({albumId}:{albumId: string}) {
+export function SpotifyAlbumWidget ({ albumId }:{albumId: string}) {
   const { data } = useSWR(`/api/spotify/album?albumId=${albumId}`, fetcher)
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
@@ -36,7 +36,7 @@ export function SpotifyAlbumWidget({albumId}:{albumId: string}) {
   )
 }
 
-export function SpotifyTrackWidget({trackId}:{trackId: string}) {
+export function SpotifyTrackWidget ({ trackId }:{trackId: string}) {
   const { data } = useSWR(`/api/spotify/track?trackId=${trackId}`, fetcher)
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
@@ -65,8 +65,8 @@ export function SpotifyTrackWidget({trackId}:{trackId: string}) {
   )
 }
 
-export function SpotifyNowPlayingWidget() {
-  const { data } = useSWR(`/api/spotify/now-playing`, fetcher)
+export function SpotifyNowPlayingWidget () {
+  const { data } = useSWR('/api/spotify/now-playing', fetcher)
   return (
     <div id={data?.id} className={styles.wdgtCntanr}>
       <div className={styles.widget}>
@@ -81,15 +81,17 @@ export function SpotifyNowPlayingWidget() {
             <p className={styles.title}>{data?.title ?? 'Not playing music'}</p>
             <p className={styles.artist}>by <b className={styles.artistBold}>{data?.artist ?? 'the absence of music'}</b></p>
           </div>
-          {data?.songUrl ? (
+          {data?.songUrl
+            ? (
             <p>&nbsp;</p>
-          ) : (
+              )
+            : (
             <div className={styles.cta}>
               <a href={data?.url} title="Open in Spotify">
                 <p className={styles.ctaText}>Open in Spotify</p>
               </a>
             </div>
-          )}
+              )}
         </div>
         <Logo />
       </div>
