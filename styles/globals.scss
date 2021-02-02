@@ -173,17 +173,15 @@ footer {
         .tag {
             background: $light-alt;
             margin: .5rem;
-            padding: .2rem .5rem;
-            border-radius: 2rem;
+            padding: .1rem .5rem;
+            border-radius: .25rem;
             display: table;
             font-size: .8rem;
-            border: .15rem solid $light-alt;
             color: black;
         }
         // Project tag colours
         .eol {
             background-color: $eol-alt;
-            border-color: $eol;
         }
         .progress {
             background-color: #98a2b1;
@@ -191,11 +189,9 @@ footer {
         }
         .active {
             background-color: $active-alt;
-            border-color: $active-alt1;
         }
         .released {
             background-color: $released-alt;
-            border-color: $released-alt;
         }
         
         // Blog tag colours
