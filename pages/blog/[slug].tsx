@@ -1,6 +1,7 @@
 import React from 'react'
 import { staticPaths, staticProps, MDXComponents } from '@/lib/postData'
 import hydrate from 'next-mdx-remote/hydrate'
+import { NextSeo } from 'next-seo'
 import { default as Page } from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
