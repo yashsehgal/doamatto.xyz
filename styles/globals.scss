@@ -179,7 +179,7 @@ footer {
             font-size: .8rem;
             color: black;
         }
-        // Project tag colours
+        // Tag colours
         .eol, .opinion {
             background-color: $eol-alt;
         }
@@ -187,14 +187,12 @@ footer {
             background-color: #98a2b1;
             border-color: #98a2b1;
         }
-        .active {
+        .active, .education {
             background-color: $active-alt;
         }
-        .released {
+        .released, .life {
             background-color: $released-alt;
         }
-        
-        // Blog tag colours
         .concepts {
             background-color: $concepts-alt;
             border-color: $concepts;
