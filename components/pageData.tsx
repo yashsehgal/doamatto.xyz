@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { parseISO, format } from 'date-fns'
 
 export default function pageData ({ children, frontMatter }: {children: any, frontMatter: any}) {
