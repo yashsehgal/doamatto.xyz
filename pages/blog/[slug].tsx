@@ -5,21 +5,17 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import { default as Page } from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import {Post as SEO} from '@/layouts/seo'
 
 export default function BlogPostPage ({ mdxSource, frontMatter }) {
   const title = frontMatter.title
-  const description = frontMatter.description
-  const date = frontMatter.date
   
   const content = hydrate(mdxSource, {
     components: MDXComponents
   })
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-      />
+      <NextSeo {...SEO} />
       <Head>
         <title>{title} - doamatto</title>
       </Head>
