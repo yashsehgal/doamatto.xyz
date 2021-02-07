@@ -163,8 +163,15 @@ footer {
     text-decoration: none;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    @media(max-width: 1200px) { grid-template-columns: 50% 50%; }
+    justify-content: space-evenly;
+    @media (max-width: 600px) { grid-template-columns: auto !important; }
+}
 
-.posts {
+.posts, .projects {
     padding-left: 0;
     .post {
         transition: 100ms background-color ease-in-out;
