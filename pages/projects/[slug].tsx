@@ -15,14 +15,16 @@ export default function ProjectPage ({ mdxSource, frontMatter }) {
   })
   
   return (
-    <NextSeo
-      title={title}
-      description={description}
-    />
-    <Head>
-      <title>{title} - doamatto</title>
-    </Head>
-    <Page frontMatter={frontMatter}>{content}</Page>
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+      />
+      <Head>
+        <title>{title} - doamatto</title>
+      </Head>
+      <Page frontMatter={frontMatter}>{content}</Page>
+    </>
   )
 }
 
