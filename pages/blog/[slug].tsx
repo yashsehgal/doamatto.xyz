@@ -14,14 +14,16 @@ export default function BlogPostPage ({ mdxSource, frontMatter }) {
     components: MDXComponents
   })
   return (
-    <NextSeo
-      title={title}
-      description={description}
-    />
-    <Head>
-      <title>{title} - doamatto</title>
-    </Head>
-    <Page frontMatter={frontMatter}>{content}</Page>
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+      />
+      <Head>
+        <title>{title} - doamatto</title>
+      </Head>
+      <Page frontMatter={frontMatter}>{content}</Page>
+    </>
   )
 }
 
