@@ -5,10 +5,24 @@ import { default as Page } from '@/components/pageData'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 export default function ProjectPage ({ mdxSource, frontMatter }) {
+  const title = frontMatter.title
+  const description = frontMatter.description
+  const date = frontMatter.date
+  
   const content = hydrate(mdxSource, {
     components: MDXComponents
   })
-  return <Page frontMatter={frontMatter}>{content}</Page>
+  
+  return (
+    <NextSeo
+      title={title}
+      description={description}
+    />
+    <Head>
+      <title>{title} - doamatto</title>
+    </Head>
+    <Page frontMatter={frontMatter}>{content}</Page>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
