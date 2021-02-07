@@ -9,7 +9,6 @@ import {Post as SEO} from '@/layouts/seo'
 
 export default function BlogPostPage ({ mdxSource, frontMatter }) {
   const title = frontMatter.title
-  
   const content = hydrate(mdxSource, {
     components: MDXComponents
   })

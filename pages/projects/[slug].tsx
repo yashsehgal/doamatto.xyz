@@ -9,8 +9,6 @@ import {Post as SEO} from '@/layouts/seo'
 
 export default function ProjectPage ({ mdxSource, frontMatter }) {
   const title = frontMatter.title
-  const description = frontMatter.description
-  
   const content = hydrate(mdxSource, {
     components: MDXComponents
   })
