@@ -1,11 +1,12 @@
-import React from 'react'
-import { staticProps, staticPaths, MDXComponents } from '@/lib/postData'
-import { NextSeo } from 'next-seo'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import hydrate from 'next-mdx-remote/hydrate'
+import { NextSeo } from 'next-seo'
+import React from 'react'
+
 import { default as Page } from '@/components/pageData'
-import { GetStaticProps, GetStaticPaths } from 'next'
-import {Post as SEO} from '@/layouts/seo'
+import { staticProps, staticPaths, MDXComponents } from '@/lib/postData'
+import { Post as SEO } from '@/layouts/seo'
 
 export default function ProjectPage ({ mdxSource, frontMatter }) {
   const title = frontMatter.title
@@ -15,7 +16,7 @@ export default function ProjectPage ({ mdxSource, frontMatter }) {
   
   return (
     <>
-      <NextSeo {...SEO} />
+      <NextSeo {...SEO(frontMatter)} />
       <Head>
         <title>{title} - doamatto</title>
       </Head>
