@@ -2,7 +2,6 @@ import { parseISO, format } from 'date-fns'
 
 export default function pageData ({ children, frontMatter }: {children: any, frontMatter: any}) {
   const title = frontMatter.title
-  const description = frontMatter.description
   const date = frontMatter.date
   return (
       <>
