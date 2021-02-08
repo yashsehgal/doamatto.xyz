@@ -1,6 +1,6 @@
-import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import hydrate from 'next-mdx-remote/hydrate'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { NextSeo } from 'next-seo'
 import React from 'react'
 
@@ -13,6 +13,7 @@ export default function BlogPostPage ({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, {
     components: MDXComponents
   })
+  
   return (
     <>
       <NextSeo {...SEO(frontMatter)} />
