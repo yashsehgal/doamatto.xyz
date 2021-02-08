@@ -21,7 +21,7 @@ export function Post(frontMatter){
     canonical: "https://doamatto.xyz",
     openGraph: {
       type: 'website',
-      title: frontMatter.title,
+      title: `${frontMatter.title} - doamatto`,
       description: frontMatter.description
     }
   }
