@@ -4,10 +4,9 @@
 [![JS/TS Linting](https://github.com/doamatto/doamatto.xyz/workflows/JS/TS%20Linting/badge.svg)](https://github.com/doamatto/doamatto.xyz/actions?query=workflow%3A%22JS%2FTS+Linting%22)
 
 This utilises:
-- **Next.js** for page compilation,
-- **Vercel** for hosting,
-- **GitHub Actions/SonarCloud** for code quality, and:
-- **Next.js Analytics** (subject to change) for testing
+- **Next.js** and **MDX** for page compilation,
+- **Vercel** for hosting; and:
+- **GitHub Actions/SonarCloud** for code quality.
 
 ### Acknowledgments
 This codebase is licensed under the BSD 3-Clause license. Content of the website, unless mentioned otherwise, are licensed under the CC-BY-4.0 license. Kudos to [Lee Robinson](https://leerob.io) for writing up how to do API requests with SWR.
