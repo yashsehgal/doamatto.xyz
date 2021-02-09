@@ -81,17 +81,15 @@ export function SpotifyNowPlayingWidget () {
             <p className={styles.title}>{data?.title ?? 'Not playing music'}</p>
             <p className={styles.artist}>by <b className={styles.artistBold}>{data?.artist ?? 'the absence of music'}</b></p>
           </div>
-          {data?.songUrl
-            ? (
+          {data?.songUrl ? (
             <p>&nbsp;</p>
-              )
-            : (
+          ) : (
             <div className={styles.cta}>
               <a href={data?.url} title="Open in Spotify">
                 <p className={styles.ctaText}>Open in Spotify</p>
               </a>
             </div>
-              )}
+          )}
         </div>
         <Logo />
       </div>
