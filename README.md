@@ -10,5 +10,4 @@ This utilises:
 - **Next.js Analytics** (subject to change) for testing
 
 ### Acknowledgments
-
-This codebase is licensed under the BSD 3-Clause license. Content of the website, unless mentioned otherwise, are licensed under the CC-BY-4.0 license. i18n is based off [this guide.](https://biscui.tech/en/blog/i18n-ssg-nextjs-app)
+This codebase is licensed under the BSD 3-Clause license. Content of the website, unless mentioned otherwise, are licensed under the CC-BY-4.0 license. Kudos to [Lee Robinson](https://leerob.io) for writing up how to do API requests with SWR.
