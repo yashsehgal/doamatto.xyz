@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
-
 import dynamic from 'next/dynamic'
 
 import { default as Bookmark } from '@/components/item'
