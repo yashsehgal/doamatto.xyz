@@ -24,7 +24,6 @@ export default function dashboardItem ({
 function LinkIcon() {
   return (
     <svg className={styles.linkIcon}
-      xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor">
