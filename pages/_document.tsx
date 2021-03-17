@@ -29,7 +29,7 @@ export default class _document extends Document {
           <link rel="author" href="humans.txt"/>
         </Head>
         <body>
-          <div className="containe" id="mainContent">
+          <div className="flex align-middle mx-auto max-w-3xl lg:max-w-4xl xl:max-w-6xl" id="mainContent">
             <Main />
             <NextScript />
           </div>
