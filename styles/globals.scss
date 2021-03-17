@@ -1,18 +1,26 @@
 @import 'colours';
 
+:root {
+    --light-purple: #909EFF;
+    --dark-purple: #2d3fb1;
+
+    --light-alt: #f4f4f5;
+    --dark-alt: #18181b;
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
-    color: $black;
-    background: $white;
+    color: black;
+    background: white;
     a,
-    nav ul li a { color: $black; }
+    nav ul li a { color: black; }
     @media (prefers-color-scheme: 'dark') {
-        color: $white;
-        background: $black;
+        color: white;
+        background: black;
         a,
-        nav ul li a { color: $white; }
+        nav ul li a { color: white; }
     }
 }
 
@@ -23,39 +31,36 @@ body {
     @media (min-width: 1200px) {
         max-width: 72rem;
     }
-    font-style: 1.25rem;
 }
 
 table {
     @media (prefers-color-scheme: 'dark') {
-        background: $black;
-        color: $white;
+        background: black;
+        color: white;
     }
-    background: $white;
-    color: $black;
+    background: white;
+    color: black;
     border-collapse: collapse;
     margin: 1rem auto;
     width: 100%;
     max-width: 75%;
     thead td, tbody td {
-        border: 1px solid $black;
+        border: 1px solid black;
         padding: .5rem;
     }
     thead tr {
         background: #E4DEFF;
-        color: $black;
-        border-bottom: 1px solid $black;
+        color: black;
+        border-bottom: 1px solid black;
     }
     tbody {
         td { padding: .5rem; }
         tr:nth-of-type(even) {
-            background: $light-alt;
-            color: $black;
+            background: --var(light-alt);
+            color: black;
         }
     }
 }
-
-.containe { margin: auto 1rem; }
 
 hr {
     margin: .5rem auto !important;
@@ -81,30 +86,30 @@ hr {
     padding: 1rem 1.5rem;
     border: none !important;
     border-radius: .5rem;
-    background-color: $light-alt;
+    background-color: --var(light-alt);
     text-decoration: none;
-    @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
-    &:hover { color: $light-purple; }
+    @media(prefers-color-scheme: 'dark'){ background-color: --var(dark-alt); }
+    &:hover { color: --var(light-purple); }
 }
 
 .content,
 footer {
     a {
         text-decoration: none;
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid black;
         @media (prefers-color-scheme: 'dark') {
-            border-color: $white;
+            border-color: white;
             &:hover {
-                color: $light-purple!important;
-                border-color:  $light-purple!important;
+                color: --var(light-purple) !important;
+                border-color: --var(light-purple) !important;
             }
         }
         color: inherit;
         transition: border-color 250ms,
         color 250ms;
         &:hover {
-            color: $dark-purple;
-            border-color: $dark-purple;
+            color: --var(light-purple);
+            border-color: --var(light-purple);
         }
     }
 }
@@ -141,7 +146,7 @@ footer {
     }
     
     section {
-        border: 0 solid $light-alt;
+        border: 0 solid --var(light-alt);
         border-left-width: .2rem;
         padding-left: .5rem;
     }
@@ -177,7 +182,7 @@ footer {
         padding: .75rem 1rem;
         a { transition: 250ms color ease-in-out; }
         .tag {
-            background: $light-alt;
+            background: --var(light-alt);
             margin: .5rem;
             padding: .1rem .5rem;
             border-radius: .25rem;
@@ -206,26 +211,26 @@ footer {
 
         &:hover, &:focus, &:focus-within {
             .link { &, * {outline: 0;}}
-            background-color: $light-alt;
-            @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
+            background-color: --var(light-alt);
+            @media(prefers-color-scheme: 'dark'){ background-color: --var(dark-alt); }
         }
     }
 }
 
 .skipToMain {
     // Adapted from https://webaim.org/techniques/css/invisiblecontent/#techniques
-    background-color: $light-alt;
-    color: $black;
+    background-color: --var(light-alt);
+    color: black;
     @media(prefers-color-scheme:'dark') {
-        background-color: $dark-alt;
-        color: $white;
+        background-color: --var(dark-alt);
+        color: white;
     }
     font-weight: 700;
     align-self: center;
     padding: 4px;
     position: absolute;
     transition: transform 0.3s;
-    transform: translateY(-200%);
+    transform: translateY(-250%);
     &:focus-within, &:focus {
         transform: translateY(0%);
     }
