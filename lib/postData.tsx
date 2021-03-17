@@ -7,12 +7,7 @@ import matter from 'gray-matter'
 import path from 'path'
 
 const root = process.cwd()
-export const MDXComponents = {
-  Image,
-  ul: (props) => <ul {...props} className="my-2 list-disc list-inside" />,
-  ol: (props) => <ol {...props} className="my-2 list-decimal list-inside" />,
-  li: (props) => <li {...props} className="my-2" />
-}
+export const MDXComponents = { Image }
 
 export async function staticPaths (type) {
   const posts = await getFiles(type)
