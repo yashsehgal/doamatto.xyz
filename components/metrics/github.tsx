@@ -5,7 +5,7 @@ import format from 'comma-number'
 
 const Item = dynamic(() => import('@/components/dashboard-item'))
 
-export default function Unsplash() {
+export default function Github() {
   const { data } = useSWR(`/api/github`, fetcher)
 
   const followers = format(data?.followers)

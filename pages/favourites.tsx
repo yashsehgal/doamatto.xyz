@@ -10,7 +10,7 @@ import {
 import styles from './favourites.module.scss'
 const Header = dynamic(() => import('@/components/header'))
 
-export default function imprint () {
+export default function Favourites () {
   return (
         <>
             <Head>
