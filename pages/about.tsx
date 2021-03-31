@@ -2,7 +2,8 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 import dynamic from 'next/dynamic'
-import { SpotifyAlbumWidget } from '@/components/spotify'
+import Image from 'next/image'
+import { SpotifyMiniAlbumWidget } from '@/components/spotify'
 const Header = dynamic(() => import('@/components/header'))
 
 export default function Home () {
@@ -17,80 +18,46 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="About" />
-      <div className="content">
+      <div className="antialised prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto dark:prose-dark">
+        <div id="intro">
+          <Image
+              src="/assets/landscape.webp"
+              width={256}
+              height={75}
+          />
           <p>
-              <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I’m a high school
-              student based in sunny California who loves to make software that works
-              and looks great, and experiment with as much as I can.
-              <br/><br/>
-              Outside of developing software, I also like doing graphic design, web
-              development, A/V editing, and listening to a wide assortment of music.
-              I’ve taken up an interest in:
-              <ul>
-                  <li>Homelabbing,</li>
-                  <li>The Linux kernel and Linux distros,</li>
-                  <li>iPods,</li>
-                  <li>Forumla racing, and:</li>
-                  <li>Lossless forms of media.</li>
-              </ul>
-
-              <h2>Notable works and contributions</h2>
-              <ul>
-                <li>The Nano Jekyll theme (<LearnMore href="https://git.doamatto.xyz/nano"/>)</li>
-                <li>About 200 additions to PrivacySpy (<LearnMore href="https://privacyspy.org"/>)</li>
-                <li>An ESlint plugin for Gulp (<LearnMore href="https://github.com/doamatto/gulp-eslint"/>)</li>
-                <li>The Mello meditation app (<LearnMore href="https://github.com/mello-app"/>)</li>
-              </ul>
-
-              <h2>Outside of "work" and work</h2>
-              <p>
-                In my free time, I enjoy experimenting with hardware (like Raspberry Pis
-                and Arduinos) and programming languages (like Dart, Elm, and GraphQL).
-                I have gained a large interest in Formula racing, with one of my favourite
-                tracks being <a href="https://en.wikipedia.org/wiki/Albert_Park_Circuit">the Albert Park's circuit.</a>
-                <br/><br/>
-                I have a crippling addiction to music in the best way possible. I listen
-                to things as popular as the new hits on the Billboard 100 to as niche as
-                indie bands from foreign countries. Right now, I’ve been diving into a
-                lot of music from Japan. My favourite album right now is the soundtrack
-                to Netflix’s show “BNA,” specifically “NIGHT RUNNING” (both versions),
-                “Ready to”, and “Wish.” You can see what I'm listening to now <a href="/favourites">here.</a>
-                <SpotifyAlbumWidget albumId="20vl1N1IXzKOoUGC4BPE0p" />
-                <br/><br/>
-                I love improving, and because of that, I've taken to
-                learning things, both big and small. Some of the cool
-                things I've picked up are:
-                <ul>
-                  <li>
-                    ~90 words per minutes on <a href="https://workmanlayout.org/">the Workman layout</a> in
-                    about a month (I can do ~140 words per minute on QWERTY)
-                  </li>
-                  <li>
-                    Currently learning Japanese as a third language
-                    (My native tongue is English and I've picked up a good
-                    amount of French).
-                  </li>
-                  <li>
-                    Using Garageband as intended (to make music and/or soundtracks)
-                  </li>
-                  <li>
-                    Currently learning Dart (for usage with Flutter), Rust,
-                    C# (for usage for KSP), and Kotlin (for usage with Flutter).
-                  </li>
-                </ul>
-              </p>
-
-              <h2>Miscellaneous</h2>
-              <p>
-                You can find me on these sites (anything else is most likely not me):
-                <ul>
-                  <li><a href="https://be.net/doamatto">Behance as @doamatto</a></li>
-                  <li><a href="https://github.com/doamatto">GitHub as @doamatto</a></li>
-                  <li><a href="https://keybase.io/doamatto">Keybase as @doamatto</a></li>
-                  <li><a href="https://twitter.com/doamatto">Twitter as @doamatto</a></li>
-                </ul>
-              </p>
+            <b>Hello and bienvenue! My name is Matt Ronchetto.</b> I'm a high school student in sunny San Diego, CA, that expresses myself through too many medians to count. I'm best known for my software and design work, thought.
+            <br/>
+            Over time, I've picked up hobbies and niches that I enjoy and constantly do (which may explain my lack of freetime during the week haha).
           </p>
+        </div>
+        <div id="interests">
+          <h2>My interests</h2>
+          <h3 id="music">Music</h3>
+          <p>
+            I love music.. almost too much. I've dived head first into being an avid audiophile, and don't plan on looking back. I enjoy making the occasional song or beat still. Most anything I publish is only on <a href="https://soundcloud.com/doamatto">Soundcloud</a> or <a href="https://doamatto.bandcamp.com">Bandcamp</a>. Here are some of my favourite albums:
+          </p>
+          <div className="grid grid-rows-2 grid-flow-col justify-center">
+            <SpotifyMiniAlbumWidget albumId="1kwAv74rVTTGMpawGsXtiE" />
+            <SpotifyMiniAlbumWidget albumId="78ZshSpqcIXyrYBJGgiPK0" />
+            <SpotifyMiniAlbumWidget albumId="6VtEyh4lKKk1Yjui9wWKhV" />
+            <SpotifyMiniAlbumWidget albumId="26IdRjba8f8DNa7c0FwfQb" />
+            <SpotifyMiniAlbumWidget albumId="3DGQ1iZ9XKUQxAUWjfC34w" />
+            <SpotifyMiniAlbumWidget albumId="6KT8x5oqZJl9CcnM66hddo" />
+          </div>
+          <h3 id="sports">Sports</h3>
+          <p>
+            I've never been huge into anything sports-wise. However, I have taken a liking as of late to Formula racing, as well as football (commonly called « soccer » in the states).
+          </p>
+          <h3 id="programming">Programming</h3>
+          <p>
+            I've been messing around with software and programming for the past 5 years or so now. I program mostly in TypeScript and Rust, but I've been trying to get into Golang and Elm as well. Anything I make that's public is on <a href="https://github.com/doamatto">GitHub</a>.
+          </p>
+          <h3 id="art">Art and graphic design</h3>
+          <p>
+            I'm not the greatest, but I take a good amount of pride in my design "tastes" and have slowly worked towards 
+          </p>
+        </div>
       </div>
     </>
   )
