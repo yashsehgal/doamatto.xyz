@@ -3,8 +3,6 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 
-import styles from './dashboard.module.scss'
-
 const Header = dynamic(() => import('@/components/header'))
 const Unsplash = dynamic(() => import('@/components/metrics/unsplash'))
 const GitHub = dynamic(() => import('@/components/metrics/github'))
@@ -21,7 +19,7 @@ export default function dashboard () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Dashboard" subtitle="Some neat numbers that mean just about nothing." />
-      <div className="content grid">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
         <Unsplash />
         <GitHub />
       </div>
