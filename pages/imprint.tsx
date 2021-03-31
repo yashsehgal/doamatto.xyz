@@ -15,7 +15,7 @@ export default function imprint () {
                 description="Legal mumbo jumbo that's required by law in some countries."
             />
             <Header title="Imprint" />
-            <div className="content">
+            <div className="antialised prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto dark:prose-dark">
                 <p>
                     <h2>Contact information</h2>
                     Matthew Ronchetto (doamatto)<br/>
