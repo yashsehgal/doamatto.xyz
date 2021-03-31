@@ -10,7 +10,7 @@
   margin-bottom: 1rem;
   transition: 100ms background-color ease-in-out,
               100ms border-color ease-in-out;
-  background-color: $light-alt;
+  background-color: --var(light-alt);
   border: none;
   a {
     img {
@@ -42,7 +42,7 @@
       p { font-size: .9rem; }
     }
   }
-  @media(prefers-color-scheme: 'dark'){ background-color: $dark-alt; }
+  @media(prefers-color-scheme: 'dark'){ background-color: --var(dark-alt); }
   @media(max-width:500px) {
     padding: 1rem;
     a { flex-direction: column; }
@@ -52,6 +52,6 @@
   &:focus-within,
   a:focus,
   a:focus-within {
-      color: $dark-purple;
+      color: --var(dark-purple);
   }
 }
