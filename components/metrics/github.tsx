@@ -15,12 +15,10 @@ export default function Github() {
     <>
       <Item value={followers}
             caption="GitHub followers"
-            link="https://github.com/doamatto"
-            service="GitHub" />
+            link="https://github.com/doamatto" />
       <Item value={stargazers}
-            caption="Github stars"
-            link="https://github.com/doamatto"
-            service="GitHub" />
+            caption="GitHub stars"
+            link="https://github.com/doamatto" />
     </>
   )
 }
