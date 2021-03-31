@@ -8,9 +8,11 @@ export const fetchData = async () => {
     await fetch('https://api.github.com/users/doamatto/repos?per_page=100')
   ).json()
 
-  var stargazers = await stars.filter((i) => !i.fork).reduce((accumulate,repo) => {
-    return accumulate + repo['stargazers_count']
-  })
+  const stargazers = stars
+    .filter((repo) => !repo.fork)
+    .reduce((accumulator, repository) => {
+      return accumulator + repository['stargazers_count']
+    }, 0)
 
   return {
     followers: user.followers,
