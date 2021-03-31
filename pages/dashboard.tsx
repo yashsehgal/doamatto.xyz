@@ -19,7 +19,7 @@ export default function dashboard () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Dashboard" subtitle="Some neat numbers that mean just about nothing." />
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full pt-4">
         <Unsplash />
         <GitHub />
       </div>
