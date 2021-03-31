@@ -29,7 +29,12 @@ export default class _app extends App {
             cardType: 'summary'
           }}
         />
-        <ThemeProvider attribute="media" enableSystem={true}>
+        <ThemeProvider
+          attribute="class"
+          enableSystem={true}
+          storageKey="nightwind-mode"
+          defaultTheme="system"
+        >
           <a href="#content" className="skipToMain">Skip to main content</a>
           <BLMBanner />
           <Navigation />
