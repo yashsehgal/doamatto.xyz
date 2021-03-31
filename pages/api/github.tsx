@@ -8,5 +8,5 @@ export default async (_, res) => {
     'public, s-maxage=1200, stale-while-revalidate=600'
   )
 
-  return res.status(200).json({data})
+  return res.status(200).json(data)
 }
