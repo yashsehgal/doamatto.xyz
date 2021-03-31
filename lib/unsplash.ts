@@ -10,7 +10,7 @@ export const fetchData = async () => {
   ).json()
 
   return {
-    followers: user.followers,
+    followers: user.followers_count,
     downloads: user.downloads
   }
 }
