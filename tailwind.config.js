@@ -11,20 +11,32 @@ module.exports = {
       './lib/**/*.{ts,tsx}'
     ]
   },
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        'lightPurple': 'var(--light-purple)',
-        'darkPurple': 'var(--dark-purple)',
-        'lightAlt': 'var(--light-alt)',
-        'darkAlt': 'var(--dark-alt)',
-      },
       typography: (theme) => ({
-        DEFAULT: {
+        'light': {
           css: {
-            h1: { color: 'white' },
-            color: 'white',
+            color: colors.black,
+            a: {
+              borderColor: colors.black,
+              '&:hover': {
+                color: theme('colors.darkPurple'),
+                borderColor: theme('colors.darkPurple')
+              }
+            },
+            hr: { borderColor: theme('colors.gray.800') },
+            ul: { li: { '&:before': { backgroundColor: theme('colors.gray.600') } } },
+            'h2,h3,h4': {
+              color: theme('colors.gray.900'),
+              'scroll-margin-top': spacing[32]
+            },
+          }
+        },
+        'dark': {
+          css: {
+            color: theme('colors.white'),
+            'h1,h2,h3,h4': { color: theme('colors.white') },
             a: {
               textDecoration: 'none',
               borderBottom: '1px solid',
@@ -42,30 +54,27 @@ module.exports = {
               'scroll-margin-top': spacing[32]
             },
           }
-        },
-        dark: {
-          css: {
-            color: 'black',
-            a: {
-              borderColor: 'black',
-              '&:hover': {
-                color: theme('colors.darkPurple'),
-                borderColor: theme('colors.darkPurple')
-              }
-            },
-            hr: { borderColor: theme('colors.gray.800') },
-            ul: { li: { '&:before': { backgroundColor: theme('colors.gray.600') } } },
-            'h2,h3,h4': {
-              color: theme('colors.gray.100'),
-              'scroll-margin-top': spacing[32]
-            },
-          }
         }
       }),
+      colors: {
+        'lightPurple': 'var(--light-purple)',
+        'darkPurple': 'var(--dark-purple)',
+        'lightAlt': 'var(--light-alt)',
+        'darkAlt': 'var(--dark-alt)',
+      },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
       }
     }
   },
-  plugins: [require('@tailwindcss/typography')]
+  variants: {
+    extend: {
+      typography: ['dark']
+    }
+  },
+  plugins: [
+    require('@tailwindcss/typography')({
+        modifiers: [],
+    }),
+  ]
 }
