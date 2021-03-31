@@ -18,7 +18,7 @@ export default function uses () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Uses" subtitle="My favourite tools and software" />
-      <div className="content" id="mainContent">
+      <div className="antialised prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto dark:prose-dark" id="mainContent">
         <section id="apps-and-services">
           <h2>Apps and Services</h2>
           <Item
@@ -145,6 +145,7 @@ export default function uses () {
           <ul>
             <li>Apple iPhone 12 Pro Max</li>
             <li>Nintendo Switch</li>
+            <li>Fender Squier Stratocaster + iRig Pro HD 2</li>
           </ul>
         </section>
       </div>
