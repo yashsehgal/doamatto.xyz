@@ -74,7 +74,7 @@ module.exports = {
         'darkAlt': 'var(--dark-alt)',
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans]
+        sans: ['Inter var experimental', 'Inter var', 'Inter', ...fontFamily.sans]
       }
     }
   },
