@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import Item from '@/components/item'
 const Header = dynamic(() => import('@/components/header'))
 
-export default function uses () {
+export default function Uses () {
   return (
     <>
       <NextSeo
