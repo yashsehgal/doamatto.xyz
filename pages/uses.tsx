@@ -55,7 +55,6 @@ export default function Uses () {
             <Item
               title="Duolingo"
               imageId="duolingo"
-              titleUrl="https://duolingo.com/profile/notdoamatto"
               description="I know English, French, and (still working on) Japanese all thanks to good ol' Duo. Just don't skip a lesson, or else."
               url="https://duolingo.com"
               />
