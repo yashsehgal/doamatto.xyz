@@ -35,7 +35,7 @@ export default function Home () {
           <h2>My interests</h2>
           <h3 id="music">Music</h3>
           <p>
-            I love music.. almost too much. I've dived head first into being an avid audiophile, and don't plan on looking back. I enjoy making the occasional song or beat still. Most anything I publish is only on <a href="https://soundcloud.com/doamatto">Soundcloud</a> or <a href="https://doamatto.bandcamp.com">Bandcamp</a>. Here are some of my favourite albums:
+            I love music.. almost too much. I've dived head first into being an avid audiophile, and don't plan on looking back. I enjoy making the occasional song or beat still. Most anything I publish is only on <a href="https://soundcloud.com/doamatto">Soundcloud</a> or <a href="https://doamatto.bandcamp.com">Bandcamp</a>. Here are some of my favourite albums as of late:
           </p>
           <div className="grid grid-rows-2 grid-flow-col justify-center">
             <SpotifyMiniAlbumWidget albumId="1kwAv74rVTTGMpawGsXtiE" />
