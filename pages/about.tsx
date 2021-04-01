@@ -47,7 +47,7 @@ export default function Home () {
           </div>
           <h3 id="sports">Sports</h3>
           <p>
-            I've never been huge into anything sports-wise. However, I have taken a liking as of late to Formula racing, as well as football (commonly called « soccer » in the states).
+            I've never been huge into anything sports-wise. However, I have taken a liking as of late to Formula racing, as well as football (commonly called « soccer » in the states). <span className="text-orange">McLaren all the way :)</span>
           </p>
           <h3 id="programming">Programming</h3>
           <p>
