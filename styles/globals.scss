@@ -24,9 +24,7 @@ body {
     }
 }
 
-#mainContent {
-    @apply mx-4;
-}
+#mainContent { @media (max-width: 768px) { @apply mx-4; } }
 
 code::before,
 code::after {
