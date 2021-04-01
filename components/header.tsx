@@ -2,7 +2,7 @@ export default function Header ({ title, subtitle }: {title: string, subtitle?: 
   if (subtitle === undefined) {
     return (
         <div className="text-center">
-            <h1 className="text-6xl leading-normal font-bold">{title}</h1>
+            <h1 className="text-5xl leading-normal font-bold">{title}</h1>
         </div>
     )
   } else {
