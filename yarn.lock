@@ -8566,7 +8566,7 @@ trough@^1.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-migrate-plugins@^0.1.15:
+ts-migrate-plugins@^0.1.16:
   version "0.1.16"
   resolved "https://registry.yarnpkg.com/ts-migrate-plugins/-/ts-migrate-plugins-0.1.16.tgz#5aab5b9dcf0684c938abc8783a1d8b289d0145b2"
   integrity sha512-83SLBsIRZqvVFo1v/GQ2IqD7yXxY827snkjJyW7CIGiQuqzitkfpE82sqcdO7VLL/5HjYmBmsxXBc74g9+qMZg==
@@ -8576,7 +8576,7 @@ ts-migrate-plugins@^0.1.15:
     ts-migrate-server "^0.1.16"
     typescript "4.1.2"
 
-ts-migrate-server@^0.1.15, ts-migrate-server@^0.1.16:
+ts-migrate-server@^0.1.16:
   version "0.1.16"
   resolved "https://registry.yarnpkg.com/ts-migrate-server/-/ts-migrate-server-0.1.16.tgz#a7004cc08b2c5ea4502e16cc05311c3113825145"
   integrity sha512-KDGJx5ATvzMONSkwLhf9TDi5obXWuzxhmGw086nuD5QCwUZXKFGzxuwj619r1vusrLoRquOelJz9Xe8SMBnLEg==
@@ -8586,16 +8586,16 @@ ts-migrate-server@^0.1.15, ts-migrate-server@^0.1.16:
     typescript "4.1.2"
     updatable-log "^0.2.0"
 
-ts-migrate@0.1.15:
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/ts-migrate/-/ts-migrate-0.1.15.tgz#c8cc436a58afd08a54498bd7b089f4356a6e1c06"
-  integrity sha512-BdUwdz3TRk+70AEp+w8IMAw5EPs1UhAyRLYysepaXlPYjo0KAgAP8wl27MSIo0XWAauMeZwjxnR90UVOaG6/yA==
+ts-migrate@0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/ts-migrate/-/ts-migrate-0.1.16.tgz#889dfbc7aebe9b6ba3e19c773dc35940cd57299b"
+  integrity sha512-2ckzTtkzwpdakBRw6quUdsSQDOIzxTbYsjGY3W8kH6LYkMnYI/TUJzjUCCkqNqQINyJ9l1v0NRcGc1UNE+wCow==
   dependencies:
     create-jest-runner "^0.5.3"
     json5 "^2.1.1"
     json5-writer "^0.1.8"
-    ts-migrate-plugins "^0.1.15"
-    ts-migrate-server "^0.1.15"
+    ts-migrate-plugins "^0.1.16"
+    ts-migrate-server "^0.1.16"
     typescript "4.1.2"
     updatable-log "^0.2.0"
     yargs "^15.0.2"
