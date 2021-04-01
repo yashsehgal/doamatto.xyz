@@ -22,11 +22,13 @@ export default function Favourites () {
             />
             <Header title="Favourites" />
             <div className="content">
+              <p>I mostly am scattered amongst my playlists, so you can see all the ones I've made public <a href="https://open.spotify.com/user/rr0fpmxz77lzn7vktz1fzg4ai">here</a>.</p>
               <div className={styles.buttons}>
                 <a href="https://open.spotify.com/playlist/1TgcMEtUJs4zjnRoc5ug4i?si=u35un3OETHefGgkM0s_xlw" className="button">
                   Open as a playlist in Spotify
                 </a>
               </div>
+              <Track trackId="6wpx4u1PeQlXEvZMPQ49sU" />
               <Album albumId="4LNYKUdrU1uveWwFBs61B6" />
               <Track trackId="0KSwRztSienVSJMD0l6zxF" />
               <Track trackId="4GJAd1nBylAEbw1dZDVzEQ" />
