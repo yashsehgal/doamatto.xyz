@@ -28,6 +28,7 @@ export default function Favourites () {
                   Open as a playlist in Spotify
                 </a>
               </div>
+              <Track trackId="1isXdpzFMO6EIkgdWjV2D8" />
               <Track trackId="6wpx4u1PeQlXEvZMPQ49sU" />
               <Album albumId="4LNYKUdrU1uveWwFBs61B6" />
               <Track trackId="0KSwRztSienVSJMD0l6zxF" />
