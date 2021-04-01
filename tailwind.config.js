@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       typography: (theme) => ({
-        'light': {
+        light: {
           css: {
             code: { color: colors.black },
             color: colors.black,
@@ -31,10 +31,10 @@ module.exports = {
             'h2,h3,h4': {
               color: theme('colors.gray.900'),
               'scroll-margin-top': spacing[32]
-            },
+            }
           }
         },
-        'dark': {
+        dark: {
           css: {
             code: { color: colors.white },
             color: theme('colors.white'),
@@ -54,7 +54,7 @@ module.exports = {
             'h2,h3,h4': {
               color: theme('colors.gray.50'),
               'scroll-margin-top': spacing[32]
-            },
+            }
           }
         },
         default: {
@@ -62,16 +62,16 @@ module.exports = {
             code: {
               fontFamily: 'monospace'
             },
-            "code::before": { content: '' },
-            "code::after": { content: '' },
+            'code::before': { content: '' },
+            'code::after': { content: '' }
           }
         }
       }),
       colors: {
-        'lightPurple': 'var(--light-purple)',
-        'darkPurple': 'var(--dark-purple)',
-        'lightAlt': 'var(--light-alt)',
-        'darkAlt': 'var(--dark-alt)',
+        lightPurple: 'var(--light-purple)',
+        darkPurple: 'var(--dark-purple)',
+        lightAlt: 'var(--light-alt)',
+        darkAlt: 'var(--dark-alt)'
       },
       fontFamily: {
         sans: ['Inter var experimental', 'Inter var', 'Inter', ...fontFamily.sans]
@@ -85,7 +85,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography')({
-        modifiers: [],
-    }),
+      modifiers: []
+    })
   ]
 }
