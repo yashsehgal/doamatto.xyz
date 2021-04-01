@@ -8,7 +8,7 @@ export default function dashboardItem ({
   link : string
 }) {
   return (
-    <div className="metric-card border border-gray-200 dark:border-gray-800 rounded p-4 max-w-72 w-full">
+    <div className="border border-gray-200 dark:border-gray-800 rounded p-4 max-w-72 w-full">
       <a
         aria-label={caption}
         target="_blank"
