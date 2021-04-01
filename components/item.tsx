@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const styles = require('./item.module.scss')
 
 export default function Item ({ title, titleUrl, description, imageId, url }: {
@@ -8,12 +10,12 @@ export default function Item ({ title, titleUrl, description, imageId, url }: {
   url: string
 }) {
   return (
-    <section className={styles.item}>
+    <section className="border border-gray-200 dark:border-gray-800 roudned p-4 max-w-72 w-full">
       <a href={url} title={title}>
         <Icon title={title} imageId={imageId} />
         <div className={styles.text}>
           <TitleGen title={title} titleUrl={titleUrl} />
-          <p>{description}</p>
+          <p className="my-1">{description}</p>
         </div>
       </a>
     </section>
@@ -23,13 +25,13 @@ export default function Item ({ title, titleUrl, description, imageId, url }: {
 function Icon ({ title, imageId }: {title:string, imageId: string}) {
   if (imageId !== undefined) {
     return (
-    <img
-      src={`/assets/uses/${imageId}.png`}
-      alt={title}
-      width={64}
-      height={64}
-      className="uses_icon"
-    />
+        <img
+          src={`/assets/uses/${imageId}.png`}
+          alt={title}
+          width={64}
+          height={64}
+          className="max-w-16 max-w-16"
+        />
     )
   }
   return null
