@@ -8,15 +8,15 @@ const Item = dynamic(() => import('@/components/dashboard-item'))
 export default function Youtube() {
   const { data } = useSWR(`/api/youtube`, fetcher)
 
-  const followers = format(data?.followers)
-  const downloads = format(data?.downloads)
+  const views = format(data?.views)
+  const subscribers = format(data?.subscribers)
   
   return (
     <>
-      <Item value={followers}
+      <Item value={views}
             caption="YouTube views"
             link="https://overto.doamatto.xyz/youtube" />
-      <Item value={downloads}
+      <Item value={subscribers}
             caption="YouTube subscribers"
             link="https://overto.doamatto.xyz/youtube" />
     </>
