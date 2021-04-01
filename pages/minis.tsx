@@ -50,7 +50,7 @@ export default function Minis() {
         <div id="video">
           <h2>Video</h2>
           <p>
-            I make videos of such a weird variety of stuff: be it games, mini documentaries, and series about learning random stuff I felt like learning. I haven't had a lot of time as of late to put a huge amount of time into it, but I plan to try to release one project a month or so.
+            I make videos of such a weird variety of stuff: be it games, mini documentaries, and series about learning random stuff I felt like learning. I haven't had a lot of time as of late to put a huge amount of time into it, but I plan to try to release one project a month or so. I usually upload to <a href="https://overto.doamatto.xyz/youtube">YouTube</a> and <a href="https://app.studioneuf.net/c/doamatto">Studio9 (when it launches).</a> You can go <Link href="/cinema">here</Link> for a meta page on all my cinematography and editing works.
           </p>
         </div>
         <div id="other">

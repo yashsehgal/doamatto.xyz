@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 const Header = dynamic(() => import('@/components/header'))
 const Unsplash = dynamic(() => import('@/components/metrics/unsplash'))
 const GitHub = dynamic(() => import('@/components/metrics/github'))
+const Youtube = dynamic(() => import('@/components/metrics/youtube'))
 
 export default function dashboard () {
   return (
@@ -22,6 +23,7 @@ export default function dashboard () {
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full pt-4">
         <Unsplash />
         <GitHub />
+        <Youtube />
       </div>
     </>
   )

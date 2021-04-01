@@ -35,7 +35,7 @@ export default function Home () {
           <h2>My interests</h2>
           <h3 id="music">Music</h3>
           <p>
-            I love music.. almost too much. I've dived head first into being an avid audiophile, and don't plan on looking back. I enjoy making the occasional song or beat still. Most anything I publish is only on <a href="https://soundcloud.com/doamatto">Soundcloud</a> or <a href="https://doamatto.bandcamp.com">Bandcamp</a>. Here are some of my favourite albums:
+            I love music.. almost too much. I've dived head first into being an avid audiophile, and don't plan on looking back. I enjoy making the occasional song or beat still. Most anything I publish is only on <a href="https://soundcloud.com/doamatto">Soundcloud</a> or <a href="https://doamatto.bandcamp.com">Bandcamp</a>. Here are some of my favourite albums as of late:
           </p>
           <div className="grid grid-rows-2 grid-flow-col justify-center">
             <SpotifyMiniAlbumWidget albumId="1kwAv74rVTTGMpawGsXtiE" />
@@ -47,7 +47,7 @@ export default function Home () {
           </div>
           <h3 id="sports">Sports</h3>
           <p>
-            I've never been huge into anything sports-wise. However, I have taken a liking as of late to Formula racing, as well as football (commonly called « soccer » in the states).
+            I've never been huge into anything sports-wise. However, I have taken a liking as of late to Formula racing, as well as football (commonly called « soccer » in the states). <span className="text-orange">McLaren all the way :)</span>
           </p>
           <h3 id="programming">Programming</h3>
           <p>
@@ -55,7 +55,7 @@ export default function Home () {
           </p>
           <h3 id="art">Art and graphic design</h3>
           <p>
-            I'm not the greatest, but I take a good amount of pride in my design "tastes" and have slowly worked towards 
+            I'm not the greatest, but I take a good amount of pride in my design "tastes" and have slowly worked towards.
           </p>
         </div>
       </div>

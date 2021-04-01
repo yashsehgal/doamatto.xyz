@@ -24,6 +24,13 @@ body {
     }
 }
 
+#mainContent { @media (max-width: 768px) { @apply mx-4; } }
+
+code::before,
+code::after {
+    content: '' !important
+}
+
 #__next {
     width: 100%;
     max-width: 42rem;
