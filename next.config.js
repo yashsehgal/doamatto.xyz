@@ -83,6 +83,11 @@ module.exports = {
         source: '/stack',
         destination: '/uses',
         permanent: true
+      },
+      {
+        source: '/favorites',
+        destination: '/favourites',
+        permanent: true
       }
     ]
   }
