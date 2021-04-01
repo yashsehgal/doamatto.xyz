@@ -18,9 +18,9 @@ export default function Uses () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header title="Uses" subtitle="My favourite tools and software" />
-      <div className="antialised prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto dark:prose-dark" id="mainContent">
+      <div id="mainContent">
         <section id="apps-and-services">
-          <h2>Apps and Services</h2>
+          <h2 className="text-2xl font-semibold">Apps and Services</h2>
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 my-2 w-full pt-4">
             <Item
               imageId="1password"
@@ -121,7 +121,7 @@ export default function Uses () {
               />
           </div>
         </section>
-        <section id="hardware">
+        <section className="mt-8 antialised prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto dark:prose-dark" id="hardware">
           <h2>Hardware</h2>
           <h4>Computer / Office</h4>
           <ul>
