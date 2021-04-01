@@ -1,17 +1,6 @@
 @import '../styles/colours';
 
 .item {
-  display: flex;
-  border-radius: .5rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: 100ms background-color ease-in-out,
-              100ms border-color ease-in-out;
-  background-color: --var(light-alt);
-  border: none;
   a {
     img {
       border-radius: 10px;
