@@ -55,7 +55,7 @@ export default function Home () {
           </p>
           <h3 id="art">Art and graphic design</h3>
           <p>
-            I'm not the greatest, but I take a good amount of pride in my design "tastes" and have slowly worked towards 
+            I'm not the greatest, but I take a good amount of pride in my design "tastes" and have slowly worked towards.
           </p>
         </div>
       </div>
