@@ -17,6 +17,7 @@ module.exports = {
       typography: (theme) => ({
         'light': {
           css: {
+            code: { color: colors.black },
             color: colors.black,
             a: {
               borderColor: colors.black,
@@ -35,6 +36,7 @@ module.exports = {
         },
         'dark': {
           css: {
+            code: { color: colors.white },
             color: theme('colors.white'),
             'h1,h2,h3,h4': { color: theme('colors.white') },
             a: {
@@ -53,6 +55,15 @@ module.exports = {
               color: theme('colors.gray.50'),
               'scroll-margin-top': spacing[32]
             },
+          }
+        },
+        default: {
+          css: {
+            code: {
+              fontFamily: 'monospace'
+            },
+            "code::before": { content: '' },
+            "code::after": { content: '' },
           }
         }
       }),
