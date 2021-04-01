@@ -5,7 +5,7 @@ import format from 'comma-number'
 
 const Item = dynamic(() => import('@/components/dashboard-item'))
 
-export default function Unsplash() {
+export default function Youtube() {
   const { data } = useSWR(`/api/youtube`, fetcher)
 
   const followers = format(data?.followers)
