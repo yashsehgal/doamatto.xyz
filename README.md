@@ -5,6 +5,7 @@
 
 This utilises:
 - **Next.js** and **MDX** for page compilation,
+- **Tailwind** for stylesheets (phasing out SCSS slowly),
 - **Vercel** for hosting; and:
 - **GitHub Actions/SonarCloud** for code quality.
 
