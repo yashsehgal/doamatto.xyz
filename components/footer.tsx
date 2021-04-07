@@ -9,8 +9,8 @@ export default function Footer () {
               <a className="border-gray-600 dark:border-gray-500  hover:text-darkPurple dark:hover:text-lightPurple hover:border-darkPurple dark:hover:border-lightPurple">View this page&apos;s source code.</a>
             </Link>
           </p>
-          <div className="w-full max-w-2xl grid grid-cols-1 pt-1 pb-1 sm:grid-cols-2">
-            <div className="flex flex-col space-y-2 pt-2">
+          <div className="w-full grid grid-cols-1 pt-1 pb-1 sm:grid-cols-2">
+            <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
               <Link href="/dashboard">
                 <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Dashboard</a>
               </Link>
@@ -21,7 +21,7 @@ export default function Footer () {
                 <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Uses</a>
               </Link>
             </div>
-            <div className="flex flex-col space-y-2 pt-2">
+            <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
                 <Link href="/imprint">
                   <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Imprint</a>
                 </Link>
