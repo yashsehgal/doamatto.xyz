@@ -32,7 +32,6 @@ export default class _app extends App {
         <ThemeProvider
           attribute="class"
           enableSystem={true}
-          storageKey="nightwind-mode"
           defaultTheme="system"
         >
           <a href="#content" className="skipToMain">Skip to main content</a>
