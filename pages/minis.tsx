@@ -61,6 +61,7 @@ export default function Minis() {
               <li><a href="https://unsplash.com/@doamatto">Photography</a> (I use Unsplash)</li>
               <li>Art (I don't really upload anything)</li>
               <li>Hardcore elite wild coding (I use the <Link href="/projects">Projects</Link> page)</li>
+              <li>Game design and development (I use <a href="https://doamatto.itch.io">Itch</a>)</li>
             </ul>
           </p>
         </div>
