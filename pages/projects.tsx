@@ -35,10 +35,10 @@ export default function IndexPage ({ postData }:{
       />
       <div className="relative w-full mb-4">
           <input
-            aria-label="Search articles"
+            aria-label="Search projects"
             type="text"
             onChange={(e) => setSearchVal(e.target.value)}
-            placeholder="Search articles"
+            placeholder="Search projects"
             className="px-4 py-2 border border-gray-300 dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
           <svg
@@ -55,14 +55,14 @@ export default function IndexPage ({ postData }:{
             />
           </svg>
         </div>
-      <div className="projects">
+      <div className="grid grid-cols-1 justify-evenly sm:grid-cols-2 lg:grid-cols-3 projects">
         {!filteredPosts.length &&
           <p>No projects found. Maybe you misspelt something?</p>
         }
         {filteredPosts.map((frontMatter) => (
-          <section className="post" key={frontMatter.id} id={frontMatter.id}>
+          <section className="border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 rounded p-2 m-2 transition-colors post" key={frontMatter.id} id={frontMatter.id}>
             <Link href={`/projects/${frontMatter.slug}`}>
-              <a className="link">
+              <a className="text-xl font-bold">
                 <p className="text-sm font-normal">Last status update on {frontMatter.date}</p>
                 {frontMatter.title}
                 <p className="text-sm font-normal">{frontMatter.description}</p>
