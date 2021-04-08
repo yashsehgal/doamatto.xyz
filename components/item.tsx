@@ -7,7 +7,7 @@ export default function Item ({ title, description, imageId, url }: {
   url: string
 }) {
   return (
-    <div className="border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 roudned p-4 max-w-72 w-full transition-colors">
+    <div className="border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 rounded p-4 max-w-72 w-full transition-colors">
       <a href={url} title={title} className="flex justify-items-center flex-col border-none">
         <Icon title={title} imageId={imageId} />
         <div className="flex flex-col text-left">
