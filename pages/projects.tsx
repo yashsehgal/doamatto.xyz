@@ -26,10 +26,13 @@ export default function IndexPage ({ postData }:{
     <>
     <NextSeo
       title="Projects - doamatto"
-      description = {`I've made a lot of stuff over time. Here's a collection of it all. Currently have made ${postData.length}`}
+      description = "I've made a lot of stuff over time. Here's a collection of it all."
     />
     <div>
-      <Header title="Projects" />
+      <Header
+        title="Projects" 
+        subtitle= "I've made a lot of stuff over time. Here's a collection of it all."
+      />
       <div className="relative w-full mb-4">
           <input
             aria-label="Search articles"
@@ -60,9 +63,9 @@ export default function IndexPage ({ postData }:{
           <section className="post" key={frontMatter.id} id={frontMatter.id}>
             <Link href={`/projects/${frontMatter.slug}`}>
               <a className="link">
-                <p className="minor">Last status update on {frontMatter.date}</p>
+                <p className="text-sm font-normal">Last status update on {frontMatter.date}</p>
                 {frontMatter.title}
-                <p className="minor">{frontMatter.description}</p>
+                <p className="text-sm font-normal">{frontMatter.description}</p>
                 <p className={`${frontMatter.tagShort} tag`}>{frontMatter.tag}</p>
               </a>
             </Link>
