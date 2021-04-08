@@ -7,7 +7,7 @@ export default function Header ({ title, subtitle }: {title: string, subtitle?: 
     )
   } else {
     return (
-      <div className="text-center">
+      <div className="text-center pb-8">
           <h1 className="text-5xl leading-normal font-bold">{title}</h1>
           <h3 className="text-lg leading-snug">{subtitle}</h3>
       </div>
