@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { GetStaticProps } from 'next'
@@ -18,23 +18,52 @@ export default function IndexPage ({ postData }:{
     description: string
   }[]
 }) {
+  const [searchVal, setSearchVal] = useState('')
+  const filteredPosts = postData
+    .sort((a,b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+    .filter((frontMatter) => frontMatter.title.toLowerCase().includes(searchVal.toLowerCase()))
   return (
     <>
     <NextSeo
       title="Projects - doamatto"
-      description = "I've made a lot of stuff over time. Here's a collection of it all."
+      description = {`I've made a lot of stuff over time. Here's a collection of it all. Currently have made ${postData.length}`}
     />
     <div>
       <Header title="Projects" />
+      <div className="relative w-full mb-4">
+          <input
+            aria-label="Search articles"
+            type="text"
+            onChange={(e) => setSearchVal(e.target.value)}
+            placeholder="Search articles"
+            className="px-4 py-2 border border-gray-300 dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+          />
+          <svg
+            className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
       <div className="projects">
-        {postData.map(({ title, date, slug, id, description, tag, tagShort }) => (
-          <section className="post" key={id} id={id}>
-            <Link href={`/projects/${slug}`}>
+        {!filteredPosts.length &&
+          <p>No projects found. Maybe you misspelt something?</p>
+        }
+        {filteredPosts.map((frontMatter) => (
+          <section className="post" key={frontMatter.id} id={frontMatter.id}>
+            <Link href={`/projects/${frontMatter.slug}`}>
               <a className="link">
-                <p className="minor">Last status update on {date}</p>
-                {title}
-                <p className="minor">{description}</p>
-                <p className={`${tagShort} tag`}>{tag}</p>
+                <p className="minor">Last status update on {frontMatter.date}</p>
+                {frontMatter.title}
+                <p className="minor">{frontMatter.description}</p>
+                <p className={`${frontMatter.tagShort} tag`}>{frontMatter.tag}</p>
               </a>
             </Link>
           </section>
