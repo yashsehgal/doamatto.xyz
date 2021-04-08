@@ -63,7 +63,7 @@ export default function IndexPage ({ postData }:{
           <section className="border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 rounded p-2 m-2 transition-colors post" key={frontMatter.id} id={frontMatter.id}>
             <Link href={`/projects/${frontMatter.slug}`}>
               <a className="text-xl font-bold">
-                <p className="text-sm font-normal">Last status update on {frontMatter.date}</p>
+                <p className="text-sm font-normal text-gray-800 dark:text-gray-300">Last status update on {frontMatter.date}</p>
                 {frontMatter.title}
                 <p className="text-sm font-normal">{frontMatter.description}</p>
                 <p className={`${frontMatter.tagShort} tag`}>{frontMatter.tag}</p>
