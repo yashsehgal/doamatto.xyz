@@ -88,6 +88,22 @@ module.exports = {
         source: '/favorites',
         destination: '/favourites',
         permanent: true
+      },
+
+      {
+        source: '/cinematography',
+        destination: '/cinema',
+        permanent: true
+      },
+      {
+        source: '/cine',
+        destination: '/cinema',
+        permanent: true
+      },
+      {
+        source: '/videos',
+        destination: '/cinema',
+        permanent: true
       }
     ]
   }
