@@ -1,18 +1,6 @@
 @import '../styles/colours';
 
 .header {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: -2rem;
-    padding-left: 2rem;
-
-    /* Sticky nav backdrop from Lee Robinson: https://leerob.io */
-    position: sticky;
-    z-index: 10;
-    top: 0;
-    backdrop-filter: saturate(180%) blur(20px);
-
     @media(max-width:500px) {
         height: 90px;
         h1 a, h1 a svg {
@@ -22,55 +10,18 @@
     }
     height: 128px;
     .logo {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        a { border: none; }
         @media(max-width: 500px) {
             a svg {
                 max-width: 90px;
                 max-height: 90px;
             }
         }
-        a:hover {
-            svg {
-                path {
-                    stroke: var(--light-purple);
-                    transition: 250ms ease-in-out all;
-                }
-            }
-        }
     }
     .nav {
-        display: flex;
-        vertical-align: middle;
-        align-items: center;
-        justify-content: center;
-        // margin-right: 2rem;
         ul {
-            padding: 0;
-            flex: 0 0 auto;
-            text-align: center;
-            display: flex;
             li {
-                &:before {
-                    width: 0;
-                    height: 0;
-                }
-                list-style: none;
-                margin: 0;
-                padding: .25rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 a {
-                    border: none;
-                    cursor: pointer;
                     margin: 0 0.8em;
-                    padding: .25rem;
-                    font-size: 1.1rem;
-                    text-decoration: none;
-                    transition: all 150ms ease-in-out;
                     @media (min-width: 500px) {
                         background-image: $nav-hover;
                         background-position: 0 0;
