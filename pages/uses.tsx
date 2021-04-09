@@ -144,6 +144,7 @@ export default function Uses () {
             <li>Anker PowerCore+ 26800PD</li>
             <li>Anker (SD/microSD) Card Reader</li>
             <li>Lightning to 3.5mm (sadly essential)</li>
+            <li>13-inch 2019 Razer Blade Stealth (512Go)</li>
             <li>
               SanDisk Ultra Dual Drive (256Go; great for people like me who use computers that use computers that have either USB-C or USB-A, but not both)
             </li>
