@@ -27,13 +27,13 @@ export default function IndexPage ({ postData }:{
       <Header title="Blog" />
       <div className="posts">
         {postData.map(({ title, description, slug, id, tag, tagShort }) => (
-          <section className="post" key={id} id={id}>
+          <section className="border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 rounded p-2 m-2 transition-colors post" key={id} id={id}>
             <Link href={`/blog/${slug}`}>
-              <a className="link">
+              <a className="text-xl font-bold">
                 {title}
-                <p className="minor">{description}</p>
+                <p className="text-sm font-normal">{description}</p>
                 <p className={`${tagShort} tag`}>{tag}</p>
-                </a>
+              </a>
             </Link>
           </section>
         ))}
