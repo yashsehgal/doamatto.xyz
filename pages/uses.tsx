@@ -65,6 +65,12 @@ export default function Uses () {
               url="https://figma.com"
               />
             <Item
+              title="Google Workspace"
+              imageId="google-workspace"
+              description="I'm not a huge fan of Google, to be honest. But Google Workspace checks all the boxes when it comes to being versitile and cheap. It's a nice bonus that I can sign extra DPAs to protect my data and others better, as well as get an SLA."
+              url="https://workspace.google.com"
+            />
+            <Item
               title="Gumroad"
               imageId="gumroad"
               description="Easily one of the best places for creators to sell their products online (be it digital or physical)."
