@@ -1,4 +1,5 @@
 import { default as Logo } from './logos/logo'
+import Link from 'next/link'
 const styles = require('./nav.module.scss')
 
 export default function nav () {
@@ -15,24 +16,23 @@ export default function nav () {
             </div>
             <nav className={styles.nav + "  flex items-center align-middle justify-center"}>
                 <ul className="p-0 flex text-center list-none">
-                    <li className="m-0 p-1 flex flex-col justify-center">
-                        <a href="/blog" title="Blog" className="border-none p-1 text-lg my-0 mx-3.5 transition- no-underline">
-                            Blog
-                        </a>
-                    </li>
-                    <li className="m-0 p-1 flex flex-col justify-center">
-                        <a href="/projects" title="Projects" className="border-none p-1 text-lg my-0 mx-3.5 transition- no-underline">
-                            Projects
-                        </a>
-                    </li>
-                    <li className="m-0 p-1 flex flex-col justify-center">
-                        <a href="/about" title="About" className="border-none p-1 text-lg my-0 mx-3.5 transition- no-underline">
-                            About
-                        </a>
-                    </li>
+                    <NavItem link="/blog" title="Blog" />
+                    <NavItem link="/projects" title="Projects" />
+                    <NavItem link="/about" title="About" />
                 </ul>
             </nav>
         </header>
       </>
   )
+}
+
+function NavItem({link, title}: {link:string,title:string}) {
+    return (
+        <li className="m-0 p-1 flex flex-col justify-center">
+            <Link href={link}>
+                <a title={title} className="border-none p-1 text-lg my-0 mx-3.5 transition-all no-underline">{title}</a>
+            </Link>
+        </li>
+
+    )
 }

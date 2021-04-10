@@ -11,28 +11,24 @@ export default function Footer () {
           </p>
           <div className="w-full grid grid-cols-1 pt-1 pb-1 sm:grid-cols-2">
             <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
-              <Link href="/dashboard">
-                <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Dashboard</a>
-              </Link>
-              <Link href="/minis">
-                <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Minis</a>
-              </Link>
-              <Link href="/uses">
-                <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Uses</a>
-              </Link>
+                <FooterLink link="/imprint" title="Dashboard" />
+                <FooterLink link="/imprint" title="Minis" />
+                <FooterLink link="/imprint" title="Uses" />
             </div>
             <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
-                <Link href="/imprint">
-                  <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Imprint</a>
-                </Link>
-                <Link href="/privacy">
-                  <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Privacy</a>
-                </Link>
-                <Link href="/sitemap">
-                  <a className="border-none hover:text-darkPurple dark:hover:text-lightPurple">Sitemap</a>
-                </Link>
+                <FooterLink link="/imprint" title="Imprint" />
+                <FooterLink link="/privacy" title="Privacy" />
+                <FooterLink link="/sitemap" title="Sitemap" />
             </div>
           </div>
         </footer>
+  )
+}
+
+function FooterLink({link, title}:{link:string,title:string}) {
+  return (
+    <Link href={link}>
+      <a title={title} className="border-none hover:text-darkPurple dark:hover:text-lightPurple">{title}</a>
+    </Link>
   )
 }
