@@ -12,7 +12,7 @@
     "@mdx-js/loader": "1.6.22",
     "@tailwindcss/typography": "0.4.0",
     "comma-number": "2.0.1",
-    "date-fns": "2.20.3",
+    "date-fns": "2.21.0",
     "gray-matter": "4.0.2",
     "isomorphic-unfetch": "3.1.0",
     "mdx-prism": "https://github.com/doamatto/mdx-prism#v0.3.2",
