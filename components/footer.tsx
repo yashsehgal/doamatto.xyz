@@ -11,9 +11,9 @@ export default function Footer () {
           </p>
           <div className="w-full grid grid-cols-1 pt-1 pb-1 sm:grid-cols-2">
             <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
-                <FooterLink link="/imprint" title="Dashboard" />
-                <FooterLink link="/imprint" title="Minis" />
-                <FooterLink link="/imprint" title="Uses" />
+                <FooterLink link="/dashboard" title="Dashboard" />
+                <FooterLink link="/minis" title="Minis" />
+                <FooterLink link="/uses" title="Uses" />
             </div>
             <div className="flex flex-col space-y-2 pt-2 w-full max-w-4">
                 <FooterLink link="/imprint" title="Imprint" />
