@@ -4,12 +4,8 @@ module.exports = {
       'i.scdn.co'
     ]
   },
-  i18n: {
-    locales: ['en', 'fr', 'jp'],
-    defaultLocale: 'en',
-    localeDetection: true
-  },
   webpack: (config) => {
+    require('./lib/sitemap.js')
     config.node = {
       fs: 'empty',
       net: 'empty',
@@ -17,9 +13,7 @@ module.exports = {
     }
     return config
   },
-  webpackDevMiddleware: config => {
-    return config
-  },
+  webpackDevMiddleware: config => { return config },
   async redirects () {
     return [
       {

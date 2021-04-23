@@ -15,9 +15,7 @@ yarn-error.log*
 
 # Generated files
 public/rss.xml
-public/robots.txt
 public/sitemap.xml
-lib/sitemap.js
 
 # Environment variables
 .env
