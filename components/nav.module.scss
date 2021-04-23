@@ -14,6 +14,8 @@
             a svg {
                 max-width: 90px;
                 max-height: 90px;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
     }
@@ -31,6 +33,8 @@
                         transition: background-position 250ms,
                                     color 250ms,
                                     background-size 250ms;
+                        margin-right: auto;
+                        margin-left: auto;
                         &:hover {
                             color: black;
                             background-position: 0 100%;
