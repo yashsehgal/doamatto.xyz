@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { GetStaticProps } from 'next'
@@ -12,6 +12,7 @@ export default function IndexPage ({ postData }:{
     title: string
     date: string
     slug: string
+    category: string
     id: string
     tag: string
     tagShort: string
@@ -20,8 +21,13 @@ export default function IndexPage ({ postData }:{
 }) {
   const [searchVal, setSearchVal] = useState('')
   const filteredPosts = postData
-    .sort((a,b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+    .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
     .filter((frontMatter) => frontMatter.title.toLowerCase().includes(searchVal.toLowerCase()))
+
+  /* const [category, setCategory] = useState('')
+  const sortedPosts = postData
+    .sort((a,b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+    .filter((fm) => fm.category.toLowerCase().includes(category)) */
   return (
     <>
     <NextSeo
@@ -30,7 +36,7 @@ export default function IndexPage ({ postData }:{
     />
     <div>
       <Header
-        title="Projects" 
+        title="Projects"
         subtitle= "I've made a lot of stuff over time. Here's a collection of it all."
       />
       <div className="relative w-full mb-4">
@@ -54,7 +60,14 @@ export default function IndexPage ({ postData }:{
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+      </div>
+      <div className="relative w-full mb-4">
+        <div className="grid grid-rows-1 auto-cols-auto justify-evenly">
+          <div className="">
+            {/* TODO: Make category item and add logic */}
+          </div>
         </div>
+      </div>
       <div className="grid grid-cols-1 justify-evenly sm:grid-cols-2 lg:grid-cols-3 projects">
         {!filteredPosts.length &&
           <p>No projects found. Maybe you misspelt something?</p>
